@@ -5,7 +5,7 @@ import discord
 def read_token():
     with open("token.txt", "r") as f:
         lines = f.readlines()
-        return lines [0].strip()
+        return lines[0].strip()
 
 token = read_token()
 
@@ -30,22 +30,50 @@ async def on_raw_reaction_add(payload):
     member = payload.member
 
     if message_id == 740298503854751815:
-        await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ,"
-                          f" READ the corresponding docs for further instructions. After you're done, fill out this form: https://forms.gle/sJab4HYuxdH6p9aP6 "
-                          f"& REPLY TO ME (yes this bot) WITH 'DONE' (caps matter) for a faster response time. Thank you for your interest! -NASA Space Monks!")
-# Reply and notify NASA Space Monks
+        await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," # change this later to remove the link
+                          f" READ the corresponding docs for further instructions. After you're done, please respond to me with 'APPLY' to begin your application process.")
+
+
+#APPLY: Respond with Apply to start applicaiton process
 @client.event
 async def on_message(message):
     if message.guild is None:
-        test = client.get_channel(738107566692761721)
-        NASA1 = client.get_user(315869723373862917)
-        NASA2 = client.get_user(208108164061593600)
-        NASA3 = client.get_user(472238811691352065)
-        NASA4 = client.get_user(564523794920767488)
+        if message.content.startswith('APPLY'):
+            await message.author.send('What roles are you applying for?')
+@client.event
+async def on_message(message):
+    if message.guild is None:
+        await message.author.send('How many chapters can you do per week?')
+@client.event
+async def on_message(message):
+    if message.guild is None:
+        await message.author.send('Do you understand that this is volunteer work?')
+@client.event
+async def on_message(message):
+    if message.guild is None:
+        await message.author.send('Link your test OR past work here (if test, give us permission to edit/suggest)')
+@client.event
+async def on_message(message):
+    if message.guild is None:
+        await message.author.send("Lastly, please type 'DONE' to submit your application.")
+
+@client.event
+async def on_message(message):
+    if message.guild is None:
         if message.content.startswith('DONE'):
-            await message.author.send('Thank you for applying! We will get back to you asap! -NASA Space Monks')
-            # Forward app to NASA Space Monks
-            await test.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+            channel = client.get_channel(738107566692761721)
+            NASA1 = client.get_user(315869723373862917)
+            NASA2 = client.get_user(208108164061593600)
+            NASA3 = client.get_user(472238811691352065)
+            NASA4 = client.get_user(564523794920767488)
+            await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
+
+            def check(m):
+             return m.content == 'DONE' and m.channel == channel
+
+            msg = await client.wait_for('DONE', check=check)
+            await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+
 
 
 # Run command: important always keep at the end
