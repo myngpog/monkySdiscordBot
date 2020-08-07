@@ -40,16 +40,16 @@ async def on_message(message):
     if message.guild is None:
         if message.content.startswith('APPLY'):
             await message.author.send('What roles are you applying for?')
-            frequency = input("How many chapters can you do per week?")
+            frequency = "How many chapters can you do per week?"
             if on_message(message):
                 await message.author.send({frequency})
-                understand = input("Do you understand that this is volunteer work?")
+                understand = "Do you understand that this is volunteer work?"
                 if on_message(message):
                     await message.author.send({understand})
-                    link = input("Link your test or past work (if test, make sure we have edit/suggestion perms)")
+                    link = "Link your test or past work (if test, make sure we have edit/suggestion perms)"
                     if on_message(message):
                         await message.author.send({link})
-                        finale = input("Lastly, please type 'DONE' to submit your application")
+                        finale = "Lastly, please type 'DONE' to submit your application"
                         if on_message(message):
                             await message.author.send({finale})
 
