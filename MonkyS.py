@@ -45,7 +45,7 @@ async def on_message(message):
         if message.content.startswith('DONE'):
             await message.author.send('Thank you for applying! We will get back to you asap! -NASA Space Monks')
             # Forward app to NASA Space Monks
-            await test.send(f'New app has been submitted {NASA1.mention}, {NASA2.mention}, {NASA3.mention}, {NASA4.mention}')
+            await test.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
 
 
 # Run command: important always keep at the end
