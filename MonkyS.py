@@ -40,9 +40,13 @@ async def on_message(message):
     if message.guild is None:
         if message.content.startswith('APPLY'):
             await message.author.send('What roles are you applying for?')
-            # Application questions
-            if on_message(message):
-                role = print.message.author.send("How many chapters can you do per week?")
+
+
+# Application questions
+@client.event
+async def on_message(message):
+    if message.guild is None:
+        roles = input.message.author.send('What roles are you applying for?')
 
 
 
