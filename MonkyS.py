@@ -42,7 +42,7 @@ async def on_message(message):
             await message.author.send('What roles are you applying for?')
             # Application questions
             if on_message(message):
-                role = print("How many chapters can you do per week?")
+                role = print.message.author.send("How many chapters can you do per week?")
 
 
 
