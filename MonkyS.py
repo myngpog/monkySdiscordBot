@@ -75,7 +75,7 @@ async def on_message(message):
 
 
             def check(m):
-             return m.content == 'DONE' and m.channel == channel
+                return m.content == 'DONE' and m.channel == channel
 
             msg = await client.wait_for('DONE', check=check)
 
