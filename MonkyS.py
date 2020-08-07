@@ -40,23 +40,18 @@ async def on_message(message):
     if message.guild is None:
         if message.content.startswith('APPLY'):
             await message.author.send('What roles are you applying for?')
-
-@client.event
-async def on_message(message):
-    if message.content.startswith('$greet'):
-        channel = client.get_channel(738107566692761721)
-        await channel.send('Say hello!')
-
-        def check(m):
-            return m.content == 'hello' and m.channel == channel
-
-        msg = await client.wait_for('message', check=check)
-        await channel.send('Hello {.author}!'.format(msg))
-
-
-
-
-
+            frequency = input("How many chapters can you do per week?")
+            if on_message(message):
+                await message.author.send({frequency})
+                understand = input("Do you understand that this is volunteer work?")
+                if on_message(message):
+                    await message.author.send({understand})
+                    link = input("Link your test or past work (if test, make sure we have edit/suggestion perms)")
+                    if on_message(message):
+                        await message.author.send({link})
+                        finale = input("Lastly, please type 'DONE' to submit your application")
+                        if on_message(message):
+                            await message.author.send({finale})
 
 
 
