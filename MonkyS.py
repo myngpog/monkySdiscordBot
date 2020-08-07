@@ -42,7 +42,7 @@ async def on_message(message):
         NASA2 = client.get_user(208108164061593600)
         NASA3 = client.get_user(472238811691352065)
         NASA4 = client.get_user(564523794920767488)
-        if message.content.startswith('IAMDONE'):
+        if message.content.startswith('DONE'):
             await message.author.send('Thank you for applying! We will get back to you asap! -NASA Space Monks')
             # Forward app to NASA Space Monks
             await test.send(f'New app has been submitted {NASA1.mention}, {NASA2.mention}, {NASA3.mention}, {NASA4.mention}')
