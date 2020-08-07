@@ -39,14 +39,19 @@ async def on_raw_reaction_add(payload):
 async def on_message(message):
     if message.guild is None:
         if message.content.startswith('APPLY'):
-            await message.author.send('What roles are you applying for?'):
+            await message.author.send('What roles are you applying for?')
 
-
-# Application questions
 @client.event
 async def on_message(message):
-    if message.guild is None:
-        roles = input.message.author.send('How many chapters can you do per week?')
+    if message.content.startswith('$greet'):
+        channel = client.get_channel(738107566692761721)
+        await channel.send('Say hello!')
+
+        def check(m):
+            return m.content == 'hello' and m.channel == channel
+
+        msg = await client.wait_for('message', check=check)
+        await channel.send('Hello {.author}!'.format(msg))
 
 
 
