@@ -42,20 +42,20 @@ async def on_message(message):
             await message.author.send('What roles are you applying for?')
 
             if on_message(message):
-                frequency = input("How many chapters can you do per week?")
-                await message.author.send({frequency})
+                frequency = ("How many chapters can you do per week?")
+                await message.author.send(frequency)
 
                 if on_message(message):
-                    understand = input("Do you understand that this is volunteer work?")
-                    await message.author.send({understand})
+                    understand = ("Do you understand that this is volunteer work?")
+                    await message.author.send(understand)
 
                     if on_message(message):
-                        link = input("Link your test or past work (if test, make sure we have edit/suggestion perms)")
-                        await message.author.send({link})
+                        link = ("Link your test or past work (if test, make sure we have edit/suggestion perms)")
+                        await message.author.send(link)
 
                         if on_message(message):
-                            finale = input("Lastly, please type 'DONE' to submit your application")
-                            await message.author.send({finale})
+                            finale = ("Lastly, please type 'DONE' to submit your application")
+                            await message.author.send(finale)
 
 
 
