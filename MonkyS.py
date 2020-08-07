@@ -41,20 +41,9 @@ async def on_message(message):
         if message.content.startswith('APPLY'):
             await message.author.send('What roles are you applying for?')
             # Application questions
-            role = print("What role(s) are you applying for?")
+            if on_message(message):
+                role = print("How many chapters can you do per week?")
 
-
-# DONE to submit and ping admins
-async def on_message(message):
-    if message.guild is None:
-        if message.content.startswith('DONE'):
-            channel = client.get_channel(738107566692761721)
-            NASA1 = client.get_user(315869723373862917)
-            NASA2 = client.get_user(208108164061593600)
-            NASA3 = client.get_user(472238811691352065)
-            NASA4 = client.get_user(564523794920767488)
-            await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
-            await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
 
 
 
