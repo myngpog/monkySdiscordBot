@@ -30,7 +30,7 @@ async def on_raw_reaction_add(payload):
     member = payload.member
 
     if message_id == 740298503854751815:
-        await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," # change this later to remove the link
+        await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," 
                           f" READ the corresponding docs for further instructions. After you're done, please respond to me with 'APPLY' to begin your application process.")
 
 
@@ -40,18 +40,22 @@ async def on_message(message):
     if message.guild is None:
         if message.content.startswith('APPLY'):
             await message.author.send('What roles are you applying for?')
+
 @client.event
 async def on_message(message):
     if message.guild is None:
         await message.author.send('How many chapters can you do per week?')
+
 @client.event
 async def on_message(message):
     if message.guild is None:
         await message.author.send('Do you understand that this is volunteer work?')
+
 @client.event
 async def on_message(message):
     if message.guild is None:
         await message.author.send('Link your test OR past work here (if test, give us permission to edit/suggest)')
+
 @client.event
 async def on_message(message):
     if message.guild is None:
@@ -67,13 +71,13 @@ async def on_message(message):
             NASA3 = client.get_user(472238811691352065)
             NASA4 = client.get_user(564523794920767488)
             await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
+            await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+
 
             def check(m):
              return m.content == 'DONE' and m.channel == channel
 
             msg = await client.wait_for('DONE', check=check)
-            await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
-
 
 
 # Run command: important always keep at the end
