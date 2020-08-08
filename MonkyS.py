@@ -50,13 +50,6 @@ async def on_message(message2):
         if message2.content.startswith('CANCEL'):
             await message2.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
-# Start of application process
-@client.event
-async def on_message(message):
-    if message.guild is None:
-        if message.content.startswith('APPLY'):
-            await message.author.send('What role(s) are you applying for?')
-
 
 
 # Run command: important always keep at the end
