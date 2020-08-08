@@ -11,7 +11,7 @@ token = read_token()
 
 client = discord.Client()
 
-#Welcome
+# Welcome
 @client.event
 async def on_member_join(member):
     channel = client.get_channel(736726612070105171)
@@ -59,11 +59,11 @@ async def on_message(message):
                 NASA2 = client.get_user(208108164061593600)
                 NASA3 = client.get_user(472238811691352065)
                 NASA4 = client.get_user(564523794920767488)
-                await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
-                # insert DM history here
+            await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
+            await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+            # insert DM history here
 
-                # CANCEL
-                await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+             # CANCEL
             if message.content.startswith('CANCEL'):
                 await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
