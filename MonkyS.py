@@ -33,28 +33,27 @@ async def on_raw_reaction_add(payload):
         await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," 
                           f" READ the corresponding docs for further instructions. After you're done, please respond to me with 'APPLY' to begin your application process.")
 
-# DONE or CANCEL
+#
 @client.event
-async def on_message(message2):
-    if message2.guild is None:
-        if message2.content.startswith('DONE'):
+async def on_message(message):
+    if message.guild is None:
+        # Application STarts
+        if message.client.startswith('APPLY'):
+            await message.author.send('What roles are you applying for?')
+
+# Done or cancel for application
+    if message.guild is None:
+        if message.content.startswith('DONE'):
             channel = client.get_channel(738107566692761721)
             NASA1 = client.get_user(315869723373862917)
             NASA2 = client.get_user(208108164061593600)
             NASA3 = client.get_user(472238811691352065)
             NASA4 = client.get_user(564523794920767488)
-            await message2.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
+            await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
             # insert DM history here
             await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
-        if message2.content.startswith('CANCEL'):
-            await message2.author.send('Sorry to see you go D^: we hope you continue to support us!')
-
-# Start of application process
-@client.event
-async def on_message(message):
-    if message.guild is None:
-        if message.client.startswith('APPLY'):
-            await message.author.send('What roles are you applying for?')
+        if message.content.startswith('CANCEL'):
+            await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
 
 # Run command: important always keep at the end
