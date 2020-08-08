@@ -51,8 +51,15 @@ async def on_message(message):
             if True: await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
             # Finale
             await client.wait_for('message', check=None)
-            if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or 'CANCEL' to cancel.")
+            if True: await message.author.send("Lastly, please react with '👍' to submit your application, or '👎' to cancel.")
+
             # DONE or CANCEL NEEDS WORKING
+
+            def check(reaction, user):
+                return user == message.author and str(reaction.emoji) == '👍'
+
+            await client.wait_for(on_raw_reaction_add, timeout=60.0, check=None)
+            if True: await message.author.send('Thank you for your application! We\'ll get back to you ASAP!')
 
 
 
