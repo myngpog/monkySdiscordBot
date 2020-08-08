@@ -40,20 +40,20 @@ async def on_raw_reaction_add(payload):
 async def on_message(message):
     if message.guild is None:
         if message.content.startswith('APPLY'):
-            def check(nomorespam):
-                return nomorespam.channel == message.channel
+            def check(no):
+                return no.channel == message.channel
             await message.author.send('What role(s) are you interested in applying for?')
             # Chapters
-            await client.wait_for('message', check=check())
+            await client.wait_for('message', check=check)
             if True: await message.author.send('How many chapters can you do per week?')
             # Volunteer
-            await client.wait_for('message', check=check())
+            await client.wait_for('message', check=check)
             if True: await message.author.send('Do you understand that this is volunteer work?')
             # Link
-            await client.wait_for('message', check=check())
+            await client.wait_for('message', check=check)
             if True: await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
             # Finale
-            await client.wait_for('message', check=check())
+            await client.wait_for('message', check=check)
             if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or 'CANCEL' to cancel.")
             # DONE or CANCEL NEEDS WORKING
             def check(d):
