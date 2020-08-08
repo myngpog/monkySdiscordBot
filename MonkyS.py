@@ -44,16 +44,13 @@ async def on_message(message):
             await client.wait_for('message', check=None)
             if True: await message.author.send('How many chapters can you do per week?')
             # Volunteer
-            message2 = (on_message)
-            await client.wait_for('message2', check=None)
+            await client.wait_for('message', check=None)
             if True: await message.author.send('Do you understand that this is volunteer work?')
             # Link
-            message3 = (on_message)
-            await client.wait_for('message3', check=None)
+            await client.wait_for('message', check=None)
             if True: await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
             # Finale
-            message4 = (on_message)
-            await client.wait_for('message4', check=None)
+            await client.wait_for('message', check=None)
             if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or 'CANCEL' to cancel.")
             # DONE or CANCEL
             if message.content.startswith('DONE'):
