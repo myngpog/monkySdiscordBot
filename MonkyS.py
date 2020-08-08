@@ -59,8 +59,8 @@ async def on_message(message):
                 NASA2 = client.get_user(208108164061593600)
                 NASA3 = client.get_user(472238811691352065)
                 NASA4 = client.get_user(564523794920767488)
-            await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
-            await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+                await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
+                await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
             # insert DM history here
 
              # CANCEL
