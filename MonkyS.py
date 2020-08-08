@@ -45,30 +45,33 @@ async def on_message(message):
             frequency = ("How many chapters can you do per week?")
             await message.author.send(frequency)
 
+            message2 = message
             await client.wait_for('message2')
             understand = ("Do you understand that this is volunteer work?")
             await message.author.send(understand)
 
+            message3 = message
             await client.wait_for('message3')
             link = ("Link your test or past work (if test, make sure we have edit/suggestion perms)")
             await message.author.send(link)
 
+            message4 = message
             await client.wait_for('message4')
             finale = ("Lastly, please type 'DONE' to submit your application. Or 'CANCEL' to cancel.")
             await message.author.send(finale)
 
-    @client.event
-    async def on_message(message):
-        if message.guild is None:
-            if message.content.startswith('DONE'):
-                channel = client.get_channel(738107566692761721)
-                NASA1 = client.get_user(315869723373862917)
-                NASA2 = client.get_user(208108164061593600)
-                NASA3 = client.get_user(472238811691352065)
-                NASA4 = client.get_user(564523794920767488)
-                await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
-                # insert DM history here
-                await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+@client.event
+async def on_message(message):
+    if message.guild is None:
+        if message.content.startswith('DONE'):
+            channel = client.get_channel(738107566692761721)
+            NASA1 = client.get_user(315869723373862917)
+            NASA2 = client.get_user(208108164061593600)
+            NASA3 = client.get_user(472238811691352065)
+            NASA4 = client.get_user(564523794920767488)
+            await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
+            # insert DM history here
+            await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
 
     @client.event
     async def on_message(message):
