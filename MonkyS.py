@@ -33,6 +33,13 @@ async def on_raw_reaction_add(payload):
         await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," 
                           f" READ the corresponding docs for further instructions. After you're done, please respond to me with 'APPLY' to begin your application process.")
 
+# Apply
+@client.event
+async def on_message(message):
+    if message.guild is None:
+        if message.client.startswith('APPLY'):
+            await message.author.send('What role would u like to apply for?')
+
 
 # DONE or CANCEL
 @client.event
