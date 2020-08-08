@@ -53,6 +53,10 @@ async def on_message(message):
             await client.wait_for('message', check=None)
             if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or 'CANCEL' to cancel.")
             # DONE or CANCEL NEEDS WORKING
+            if await client.wait_for('DONE', check=None):
+                await message.author.send('Thank you for applying! We\'ll get back to you ASAP!')
+            if await client.wait_for('CANCEL', check=None):
+                await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
 
 
