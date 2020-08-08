@@ -54,7 +54,7 @@ async def on_message(message):
             if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or 'CANCEL' to cancel.")
             # DONE or CANCEL NEEDS WORKING
             def check(m):
-                return m.content == 'DONE' and m.channel == message.author
+                return m.content == 'DONE'
             await client.wait_for('message', check=check)
             if True: await message.author.send('Thank you for your application! We\'ll get back to you ASAP!')
             channel2 = client.get_channel(738107566692761721)
