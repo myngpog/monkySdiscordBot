@@ -32,7 +32,7 @@ async def on_raw_reaction_add(payload):
     if message_id == 740298503854751815:
         await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," 
                           f" READ the corresponding docs for further instructions. After you're done, please respond to me with 'APPLY' to begin your application process."
-                          f"**If i somehow malfunction during application process, type 'APPLY' again until i am running smoothly again, thank you for your understnading**")
+                          f"**If i somehow malfunction during application process, answer all the questions in it's corresponding order and it'll still work**")
 
 
 # APPLY
@@ -64,11 +64,8 @@ async def on_message(message):
             NASA3 = client.get_user(472238811691352065)
             NASA4 = client.get_user(564523794920767488)
             if True: await channel2.send(f'New Monky application pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+            if False: await message.author.send("Sorry to see you go D^: we hope you continue to support us! If it was mistake, type 'APPLY' again to apply")
 
-            def check(c):
-                return c.content == 'CANCEL'
-            await client.wait_for('message', check=check)
-            if True: await message.author.send("Sorry to see you go D^: we hope you continue to support us! If it was mistake, type 'APPLY' again to apply")
 
 
 
