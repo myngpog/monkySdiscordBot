@@ -56,17 +56,17 @@ async def on_message(message):
             # DONE or CANCEL NEEDS WORKING
 
 
-            if await client.wait_for('reaction_add', timeout=60.0, check=None):
+            await client.wait_for('message', check=None):
                 channel = client.get_channel(738107566692761721)
                 NASA1 = client.get_user(315869723373862917)
                 NASA2 = client.get_user(208108164061593600)
                 NASA3 = client.get_user(472238811691352065)
                 NASA4 = client.get_user(564523794920767488)
-                await message.author.send('Thank you for your application! We\'ll get back to you ASAP!')
-                await channel.send(f'New Monky pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
-
-            if await client.wait_for('message', check=None):
-                await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
+                if message.content.startswith('DONE'):
+                    await message.author.send('Thank you for your application! We\'ll get back to you ASAP!'):
+                    await channel.send(f'New Monky pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+                if message.content.startswith('CANCEL'):
+                    await message.author.send('Sorry to see you go D^: we hope you continue to support us!'):
 
 
 
