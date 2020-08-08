@@ -38,7 +38,7 @@ async def on_raw_reaction_add(payload):
 @client.event
 async def on_message(message):
     if message.guild is None:
-        if message.content.startswith('APPLY'):
+        if message.client.startswith('APPLY'):
             await message.author.send('What roles are you applying for?')
 
 
