@@ -32,7 +32,7 @@ async def on_raw_reaction_add(payload):
     if message_id == 740298503854751815:
         await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," 
                           f" READ the corresponding docs for further instructions. After you're done, please respond to me with 'APPLY' to begin your application process."
-                          f"**If i somehow malfunction during application process, answer all the questions in it's corresponding order and it'll still work**")
+                          f" **If i somehow malfunction during application process, answer all the questions in it's corresponding order and it'll still work**")
 
 
 # APPLY
