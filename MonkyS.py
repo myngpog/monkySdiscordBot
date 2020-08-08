@@ -34,15 +34,6 @@ async def on_raw_reaction_add(payload):
                           f" READ the corresponding docs for further instructions. After you're done, please respond to me with 'APPLY' to begin your application process.")
 
 
-# Start of application process
-@client.event
-async def on_message(message):
-    if message.guild is None:
-        if message.content.startswith('APPLY'):
-            await message.author.send('What role(s) are you applying for?')
-
-
-
 # DONE or CANCEL
 @client.event
 async def on_message(message2):
@@ -58,6 +49,13 @@ async def on_message(message2):
             await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
         if message2.content.startswith('CANCEL'):
             await message2.author.send('Sorry to see you go D^: we hope you continue to support us!')
+
+# Start of application process
+@client.event
+async def on_message(message):
+    if message.guild is None:
+        if message.content.startswith('APPLY'):
+            await message.author.send('What role(s) are you applying for?')
 
 
 
