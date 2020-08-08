@@ -43,19 +43,19 @@ async def on_message(message):
 
             await client.wait_for('message')
             frequency = ("How many chapters can you do per week?")
-            if True: message.author.send(frequency)
+            await message.author.send(frequency)
 
             await client.wait_for('message')
             understand = ("Do you understand that this is volunteer work?")
-            if True: message.author.send(understand)
+            await message.author.send(understand)
 
             await client.wait_for('message')
             link = ("Link your test or past work (if test, make sure we have edit/suggestion perms)")
-            if True: message.author.send(link)
+            await message.author.send(link)
 
             await client.wait_for('message')
             finale = ("Lastly, please type 'DONE' to submit your application. Or 'CANCEL' to cancel.")
-            if True: message.author.send(finale)
+            await message.author.send(finale)
 
 @client.event
 async def on_message(message):
@@ -69,6 +69,12 @@ async def on_message(message):
             await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
             # insert DM history here
             await channel.send('New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+
+@client.event
+async def on_message(message):
+    if message.guild is None:
+        if message.content.startswith('CANCEL'):
+            await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
 
 # Run command: important always keep at the end
