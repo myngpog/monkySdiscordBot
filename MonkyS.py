@@ -41,25 +41,8 @@ async def on_message(message):
         if message.content.startswith('APPLY'):
             await message.author.send('What roles are you applying for?')
 
-            await client.wait_for('message')
-            frequency = ("How many chapters can you do per week?")
-            await message.author.send(frequency)
 
-            message2 = message
-            await client.wait_for('message2')
-            understand = ("Do you understand that this is volunteer work?")
-            await message.author.send(understand)
-
-            message3 = message
-            await client.wait_for('message3')
-            link = ("Link your test or past work (if test, make sure we have edit/suggestion perms)")
-            await message.author.send(link)
-
-            message4 = message
-            await client.wait_for('message4')
-            finale = ("Lastly, please type 'DONE' to submit your application. Or 'CANCEL' to cancel.")
-            await message.author.send(finale)
-
+# DONE or CANCEL
 @client.event
 async def on_message(message):
     if message.guild is None:
@@ -72,12 +55,9 @@ async def on_message(message):
             await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
             # insert DM history here
             await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+        if message.content.startswith('CANCEL'):
+            await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
-    @client.event
-    async def on_message(message):
-        if message.guild is None:
-            if message.content.startswith('CANCEL'):
-                await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
 
 # Run command: important always keep at the end
