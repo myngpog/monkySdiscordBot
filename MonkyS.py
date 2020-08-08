@@ -40,22 +40,24 @@ async def on_raw_reaction_add(payload):
 async def on_message(message):
     if message.guild is None:
         if message.content.startswith('APPLY'):
+            def check(nomorespam):
+                return nomorespam.channel == message.channel
             await message.author.send('What role(s) are you interested in applying for?')
             # Chapters
-            await client.wait_for('message', check=None)
+            await client.wait_for('message', check=check())
             if True: await message.author.send('How many chapters can you do per week?')
             # Volunteer
-            await client.wait_for('message', check=None)
+            await client.wait_for('message', check=check())
             if True: await message.author.send('Do you understand that this is volunteer work?')
             # Link
-            await client.wait_for('message', check=None)
+            await client.wait_for('message', check=check())
             if True: await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
             # Finale
-            await client.wait_for('message', check=None)
+            await client.wait_for('message', check=check())
             if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or 'CANCEL' to cancel.")
             # DONE or CANCEL NEEDS WORKING
             def check(d):
-                return d.content == 'DONE'
+                return d.content == 'DONE' and d.channel == message.channel
             if await client.wait_for('message', check=check):
                 channel2 = client.get_channel(738107566692761721)
                 NASA1 = client.get_user(315869723373862917)
@@ -65,7 +67,7 @@ async def on_message(message):
                 await message.author.send('Thank you for your application! We\'ll get back to you ASAP!')
                 await channel2.send(f'New Monky application pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
             def check(c):
-                return c.content == 'CANCEL'
+                return c.content == 'CANCEL' and c.channel == message.channel
             if await client.wait_for('message', check=check):
                 await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
