@@ -34,7 +34,7 @@ async def on_raw_reaction_add(payload):
                           f" READ the corresponding docs for further instructions. After you're done, please respond to me with 'APPLY' to begin your application process.")
 
 
-#APPLY: Respond with Apply to start applicaiton process
+# Start of application process
 @client.event
 async def on_message(message):
     if message.guild is None:
