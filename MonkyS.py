@@ -53,6 +53,7 @@ async def on_message(message):
             await client.wait_for('message', check=None)
             if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or 'CANCEL' to cancel.")
             # DONE or CANCEL
+            await client.wait_for('message', check=None)
             if message.content.startswith('DONE'):
                 channel = client.get_channel(738107566692761721)
                 NASA1 = client.get_user(315869723373862917)
