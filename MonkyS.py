@@ -42,16 +42,16 @@ async def on_message(message):
             await message.author.send('What roles are you applying for?')
 
             await client.wait_for('message')
-            await message.author.send('How many chapters can you do per week?')
+            if True: await message.author.send('How many chapters can you do per week?')
 
             await client.wait_for('message')
-            await message.author.send('Do you understand that this is volunteer work? Y/N')
+            if True: await message.author.send('Do you understand that this is volunteer work? Y/N')
 
             await client.wait_for('message')
-            await message.author.send('Link your test or past work (if test, make sure we have edit/suggest perms')
+            if True: await message.author.send('Link your test or past work (if test, make sure we have edit/suggest perms')
 
             await client.wait_for('message')
-            await message.author.send("Lastly, please type 'DONE' to submit your application OR 'CANCEL' to cancel your application.")
+            if True: await message.author.send("Lastly, please type 'DONE' to submit your application OR 'CANCEL' to cancel your application.")
 
 
 
