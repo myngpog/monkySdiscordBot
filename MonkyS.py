@@ -39,9 +39,7 @@ async def on_raw_reaction_add(payload):
 async def on_message(message):
     if message.guild is None:
         if message.content.startswith('APPLY'):
-            await message.author.send('What roles are you applying for?')
-
-            # hard part
+            await message.author.send('What role(s) are you applying for?')
 
 
 
