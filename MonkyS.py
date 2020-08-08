@@ -40,32 +40,32 @@ async def on_message(message):
     if message.guild is None:
         if message.content.startswith('APPLY'):
             await message.author.send('What role(s) are you interested in applying for?')
-                # Chapters
-                await client.wait_for('message', check=None)
-                if True: await message.author.send('How many chapters can you do per week?')
-                    # Volunteer
-                    await client.wait_for('message', check=None)
-                    if True: await message.author.send('Do you understand that this is volunteer work?')
-                        # Link
-                        await client.wait_for('message', check=None)
-                        if True: await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
-                            # Finale
-                            await client.wait_for('message', check=None)
-                            if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or 'CANCEL' to cancel.")
-                                # DONE or CANCEL
-                                if message.content.startswith('DONE'):
-                                    channel = client.get_channel(738107566692761721)
-                                NASA1 = client.get_user(315869723373862917)
-                                NASA2 = client.get_user(208108164061593600)
-                                NASA3 = client.get_user(472238811691352065)
-                                NASA4 = client.get_user(564523794920767488)
-                                await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
-                                # insert DM history here
+            # Chapters
+            await client.wait_for('message', check=None)
+            if True: await message.author.send('How many chapters can you do per week?')
+            # Volunteer
+            await client.wait_for('message', check=None)
+            if True: await message.author.send('Do you understand that this is volunteer work?')
+            # Link
+            await client.wait_for('message', check=None)
+            if True: await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
+            # Finale
+            await client.wait_for('message', check=None)
+            if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or 'CANCEL' to cancel.")
+            # DONE or CANCEL
+            if message.content.startswith('DONE'):
+                channel = client.get_channel(738107566692761721)
+                NASA1 = client.get_user(315869723373862917)
+                NASA2 = client.get_user(208108164061593600)
+                NASA3 = client.get_user(472238811691352065)
+                NASA4 = client.get_user(564523794920767488)
+                await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
+                # insert DM history here
 
-                                # CANCEL
-                                await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
-                                if message.content.startswith('CANCEL'):
-                                    await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
+                # CANCEL
+                await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+            if message.content.startswith('CANCEL'):
+                await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
 
 
