@@ -65,7 +65,7 @@ async def on_message(message):
                 await message.author.send('Thank you for your application! We\'ll get back to you ASAP!')
                 await channel.send(f'New Monky pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
 
-            if await client.wait_for('message = CANCEL', check=None):
+            if await client.wait_for('CANCEL', check=None):
                 await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
 
