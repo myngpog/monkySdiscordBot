@@ -45,15 +45,15 @@ async def on_message(message):
             frequency = ("How many chapters can you do per week?")
             await message.author.send(frequency)
 
-            await client.wait_for('message')
+            await client.wait_for('message2')
             understand = ("Do you understand that this is volunteer work?")
             await message.author.send(understand)
 
-            await client.wait_for('message')
+            await client.wait_for('message3')
             link = ("Link your test or past work (if test, make sure we have edit/suggestion perms)")
             await message.author.send(link)
 
-            await client.wait_for('message')
+            await client.wait_for('message4')
             finale = ("Lastly, please type 'DONE' to submit your application. Or 'CANCEL' to cancel.")
             await message.author.send(finale)
 
@@ -68,7 +68,7 @@ async def on_message(message):
                 NASA4 = client.get_user(564523794920767488)
                 await message.author.send('Thank you for your interest in joining Monky Scnas, we\'ll get back to you ASAP! :)')
                 # insert DM history here
-                await channel.send('New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+                await channel.send(f'New app has been submitted {NASA1}, {NASA2}, {NASA3}, {NASA4}')
 
     @client.event
     async def on_message(message):
