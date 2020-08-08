@@ -41,19 +41,19 @@ async def on_message(message):
         if message.content.startswith('APPLY'):
             await message.author.send('What roles are you applying for?')
 
-            await client.wait_for('message')
+            await client.wait_for(message)
             frequency = ("How many chapters can you do per week?")
             await message.author.send(frequency)
 
-            await client.wait_for('message')
+            await client.wait_for(message)
             understand = ("Do you understand that this is volunteer work?")
             await message.author.send(understand)
 
-            await client.wait_for('message')
+            await client.wait_for(message)
             link = ("Link your test or past work (if test, make sure we have edit/suggestion perms)")
             await message.author.send(link)
 
-            await client.wait_for('message')
+            await client.wait_for(message)
             finale = ("Lastly, please type 'DONE' to submit your application")
             await message.author.send(finale)
 
