@@ -51,7 +51,7 @@ async def on_message(message):
             if True: await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
             # Finale
             await client.wait_for('message', check=None)
-            if True: await message.author.send("Lastly, please react with '👍' to submit your application, or type 'CANCEL' to cancel.")
+            if True: await message.author.send("Lastly, please REACT with any emote to submit your application, or type 'CANCEL' to cancel.")
 
             # DONE or CANCEL NEEDS WORKING
 
