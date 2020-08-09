@@ -32,7 +32,7 @@ async def on_raw_reaction_add(payload):
     if message_id == 740298503854751815:
         await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," 
                           f" READ the corresponding docs for further instructions. After you're done, please respond to me with 'APPLY' to begin your application process."
-                          f" what are u ugys a**If i somehow malfunction during application process, answer all the questions in it's corresponding order and it'll still work**")
+                          f" ** If i somehow malfunction during application process, answer all the questions in it's corresponding order and it'll still work**")
 
 
 # APPLY
@@ -54,13 +54,11 @@ async def on_message(message):
             if True: await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
             # Finale
             await client.wait_for('message', check=check)
-            if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or don't respond to drop.")
+            if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or 'CANCEL' to cancel.")
             # DONE or CANCEL NEEDS WORKING
             def check(d):
                 return d.content == 'DONE' and d.channel == message.channel
-            def checkc(c):
-                return c.content == 'CANCEL' and c.channel == message.channel
-            if True: await client.wait_for('message', check=check):
+            if await client.wait_for('message', check=check):
                 channel2 = client.get_channel(738107566692761721)
                 NASA1 = client.get_user(315869723373862917)
                 NASA2 = client.get_user(208108164061593600)
@@ -68,8 +66,9 @@ async def on_message(message):
                 NASA4 = client.get_user(564523794920767488)
                 await message.author.send('Thank you for your application! We\'ll get back to you ASAP!')
                 await channel2.send(f'New Monky application pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
-            if else:
-            await client.wait_for('message', check=checkc):
+            def check(c):
+                return c.content == 'CANCEL' and c.channel == message.channel
+            if await client.wait_for('message', check=check):
                 await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
 
