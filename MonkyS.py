@@ -58,8 +58,6 @@ async def on_message(message):
             # DONE or CANCEL NEEDS WORKING
             def check(d):
                 return d.content == 'DONE' and d.channel == message.channel
-            def checkc(c):
-                return c.content == 'CANCEL' and c.channel == message.channel
             if True: await client.wait_for('message', check=check):
                 channel2 = client.get_channel(738107566692761721)
                 NASA1 = client.get_user(315869723373862917)
@@ -68,7 +66,9 @@ async def on_message(message):
                 NASA4 = client.get_user(564523794920767488)
                 await message.author.send('Thank you for your application! We\'ll get back to you ASAP!')
                 await channel2.send(f'New Monky application pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
-            if else:
+            def check(c):
+                return c.content == 'CANCEL' and c.channel == message.channel
+            if else: await client.wait_for('message', check=check):
                 await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
 
