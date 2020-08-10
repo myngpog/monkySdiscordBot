@@ -67,8 +67,6 @@ async def on_message(message):
                 await message.author.send('Thank you for your application! We\'ll get back to you ASAP!')
                 await channel2.send(f'New Monky application pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
 
-                await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
-
 
 
 # Run command: important always keep at the end
