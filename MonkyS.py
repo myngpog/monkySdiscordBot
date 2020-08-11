@@ -56,17 +56,32 @@ async def on_message(message):
             await client.wait_for('message', check=check)
             if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or don't reply to not submit lmao.")
 
+            # 2nd bruh bc im dumb
+            def check(s):
+                return (s.author == message.author and s.channel == message.channel)
+            E = 'DONE'
+            N = 'CANCEL'
+
+            bruh = await client.wait_for('message', check=check)
+
+            if int(message.content) == E:
+                await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
+
+            if int(message.content) == N:
+                await message.channel.send('Sorry to see you go D^: we hope you continue to support us!')
+
+
 
             # BRUH
             def check(x):
-                return (x.author == message.author and x.content == 'DONE') or (x.author == message.author and x.content == 'CANCEL')
-            D = message.content == 'DONE' and message.channel
-            C = message.content == 'CANCEL' and message.channel
+                return (x.author == message.author and x.channel == message.channel)
+            D = message.content == 'DONE'
+            C = message.content == 'CANCEL'
 
-            if await client.wait_for(message.content) == D:
+            if await client.wait_for('message') == D:
                 await message.author.send('Thank for you submitting your application!')
 
-            if await client.wait_for(message.content) == C:
+            if await client.wait_for('message') == C:
                 await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
             else:
