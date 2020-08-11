@@ -57,13 +57,15 @@ async def on_message(message):
             if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or 'CANCEL' to cancel.")
 
             # final step
-            def check(d):
-                if d == ('DONE' and d.channel == message.channel):
-                    return message.author.send('Thank you for your application! We\'ll get back to you ASAP!')
+            def check(INPUT):
+                if INPUT.content == "DONE":
+                    return "Thank you for your application! We\'ll get back to you ASAP!"
+                if INPUT.content == "CANCEL":
+                    return "Sorry to see you go D^: we hope you continue to support us!"
+                if INPUT.content != "DONE" or "CANCEL":
+                    return "Reply with DONE or CNANCEL"
 
-                # CANCEL
-                if d == ('CANCEL' and d.channel == message.channel):
-                    return message.author.send('Sorry to see you go D^: we hope you continue to support us!')
+            await message.author.send(check=check)
 
 # Run command: important always keep at the end
 client.run(token)
