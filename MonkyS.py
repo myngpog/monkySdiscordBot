@@ -71,8 +71,5 @@ async def on_message(message):
                 if d == ('CANCEL' and d.channel == message.channel):
                     return message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
-            await message.author.send(check=check)
-
-
 # Run command: important always keep at the end
 client.run(token)
