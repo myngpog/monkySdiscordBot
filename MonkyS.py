@@ -61,10 +61,10 @@ async def on_message(message):
             def check(c):
                 return (c.content == 'POG' and c.channel == message.channel) or (c.content == 'NOT POG' and c.channel == message.channel)
             await client.wait_for('message', check=check)
-            # if pog
-            await message.author.send('POGGERS')
-            # if NOT POG
-            await message.author.send('not pog')
+            if message.content == 'POG':
+                await message.author.send('POGGERS')
+            if message.content == 'NOT POG':
+                await message.author.send('not pog')
 
 
 
