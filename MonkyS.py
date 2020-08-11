@@ -59,16 +59,15 @@ async def on_message(message):
 
             # final step
             def check(d):
-                return d.channel == message.channel
+                return (d.content == 'CANCEL' and d.channel == message.channel) or (d.content == 'DONE' and d.channel == message.channel)
             await client.wait_for('message', check=check)
             channel2 = client.get_channel(738107566692761721)
             NASA1 = client.get_user(315869723373862917)
             NASA2 = client.get_user(208108164061593600)
             NASA3 = client.get_user(472238811691352065)
             NASA4 = client.get_user(564523794920767488)
-            if message.content.startswith('DONE'):
-                await message.author.send('Thank you for your application! We\'ll get back to you ASAP!')
-                await channel2.send(f'New Monky application, pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+            await message.author.send('Thank you for your application! We\'ll get back to you ASAP!')
+            await channel2.send(f'New Monky application, pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
 
             if message.content.startswith('CANCEL'):
                 await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
