@@ -54,7 +54,7 @@ async def on_message(message):
             if True: await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
             # Finale
             await client.wait_for('message', check=check)
-            if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or 'CANCEL' to cancel.")
+            if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or don't reply to not submit lmao.")
 
 
             # final step
@@ -69,8 +69,6 @@ async def on_message(message):
             await message.author.send('Thank you for your application! We\'ll get back to you ASAP!')
             await channel2.send(f'New Monky application, pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
 
-            if message.content == 'CANCEL':
-                await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
 
 
