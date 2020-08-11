@@ -63,10 +63,10 @@ async def on_message(message):
             D = message.content == 'DONE' and message.channel
             C = message.content == 'CANCEL' and message.channel
 
-            if await client.wait_for('message') == D:
+            if await client.wait_for(message.content) == D:
                 await message.author.send('Thank for you submitting your application!')
 
-            if await client.wait_for('message') == C:
+            if await client.wait_for(message.content) == C:
                 await message.author.send('Sorry to see you go D^: we hope you continue to support us!')
 
             else:
