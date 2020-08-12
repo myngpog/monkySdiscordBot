@@ -31,8 +31,8 @@ async def on_raw_reaction_add(payload):
 
     if message_id == 740298503854751815:
         await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," 
-                          f" READ the corresponding docs for further instructions. After you're done, please respond to me with 'APPLY' to begin your application process."
-                          f" ** If i somehow malfunction during application process, answer all the questions in it's corresponding order and it'll still work**")
+                          f" READ the corresponding docs for further instructions. After you're done, please react to this message with '👍' to begin your application process."
+                          f" ** If i somehow malfunction during the process, answer the questions in its corresponding order and it'll still work.**")
 
 
 # APPLY
@@ -45,16 +45,24 @@ async def on_message(message):
             await message.author.send('What role(s) are you interested in applying for?')
             # Chapters
             await client.wait_for('message', check=check)
-            if True: await message.author.send('How many chapters can you do per week?')
+            if str(message.content) == 'APPLY':
+                pass
+            await message.author.send('How many chapters can you do per week?')
             # Volunteer
             await client.wait_for('message', check=check)
-            if True: await message.author.send('Do you understand that this is volunteer work?')
+            if str(message.content) == 'APPLY':
+                pass
+            await message.author.send('Do you understand that this is volunteer work?')
             # Link
             await client.wait_for('message', check=check)
-            if True: await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
+            if str(message.content) == 'APPLY':
+                pass
+            await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
             # Finale
             await client.wait_for('message', check=check)
-            if True: await message.author.send("Lastly, please type 'DONE' to submit your application, or type 'CANCEL' to cancel lmao.")
+            if str(message.content) == 'APPLY':
+                pass
+            await message.author.send("Lastly, please type 'DONE' to submit your application, or type 'CANCEL' to cancel lmao.")
 
             # 2nd bruh bc im dumb
             def check(s):
