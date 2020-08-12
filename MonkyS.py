@@ -38,13 +38,12 @@ async def on_raw_reaction_add(payload):
 # APPLY
 @client.event
 async def on_message(message):
+    if message.guild is None:
+        if message.content.startswith == 'APPLY':
             def check(no):
-                return no.channel == message.channel and no.content == 'APPLY'
-            await client.wait_for('message', check=check, timeout=6900.0)
+                return no.channel == message.channel
             await message.author.send('What role(s) are you interested in applying for?')
             # Chapters
-            def check(yes):
-                return yes.channel == message.channel
             await client.wait_for('message', check=check)
             await message.author.send('How many chapters can you do per week?')
             # Volunteer
