@@ -59,16 +59,17 @@ async def on_message(message):
             # 2nd bruh bc im dumb
             def check(s):
                 return (s.author == message.author and s.channel == message.channel)
-            E = 'DONE'
-            N = 'CANCEL'
 
             bruh = await client.wait_for('message', check=check)
 
-            if str(bruh.content) == E:
+            if str(bruh.content) == 'DONE':
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
 
-            else:
+            if str(bruh.content) == 'CANCEL':
                 await message.channel.send('Sorry to see you go D^: we hope you continue to support us!')
+
+            else:
+                pass
 
 
             # final step
