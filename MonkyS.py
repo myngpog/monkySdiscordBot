@@ -39,29 +39,24 @@ async def on_raw_reaction_add(payload):
 @client.event
 async def on_message(message):
     if message.guild is None:
-        if str(message.content) == 'APPLY':
+        if message.content.startswith == 'APPLY':
             def check(no):
-                return no.channel == message.channel
+                return no.channel == message.channel and no.content == 'APPLY'
+            await client.wait_for('message', check=check, timeout=6900.0)
             await message.author.send('What role(s) are you interested in applying for?')
             # Chapters
+            def check(yes):
+                return yes.channel == message.channel
             await client.wait_for('message', check=check)
-            if str(message.content) == 'APPLY':
-                pass
             await message.author.send('How many chapters can you do per week?')
             # Volunteer
             await client.wait_for('message', check=check)
-            if str(message.content) == 'APPLY':
-                pass
             await message.author.send('Do you understand that this is volunteer work?')
             # Link
             await client.wait_for('message', check=check)
-            if str(message.content) == 'APPLY':
-                pass
             await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
             # Finale
             await client.wait_for('message', check=check)
-            if str(message.content) == 'APPLY':
-                pass
             await message.author.send("Lastly, please type 'DONE' to submit your application, or type 'CANCEL' to cancel lmao.")
 
             # 2nd bruh bc im dumb
