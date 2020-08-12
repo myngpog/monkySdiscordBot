@@ -64,10 +64,10 @@ async def on_message(message):
 
             bruh = await client.wait_for('message', check=check)
 
-            if bruh.contnet == E:
+            if str(bruh.content) == E:
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
 
-            if bruh.content == N:
+            if str(bruh.content) == N:
                 await message.channel.send('Sorry to see you go D^: we hope you continue to support us!')
 
             else:
