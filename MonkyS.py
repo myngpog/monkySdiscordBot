@@ -72,12 +72,6 @@ async def on_message(message):
                 await channel2.send(f'New application pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
             # expose DMs
-            channelxd = message.author
-            async for message in channelxd.history(limit=200):
-                if message.author == client.users:
-                    messages = await channelxd.history(limit=123).flatten()
-                    channelbruh = client.get_channel(738107566692761721)
-                    await message.channelbruh.send(message.content)
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
