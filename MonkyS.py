@@ -31,7 +31,7 @@ async def on_raw_reaction_add(payload):
 
     if message_id == 740298503854751815:
         await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," 
-                          f" READ the corresponding docs for further instructions. After you're done, please react to this message with '👍' to begin your application process."
+                          f" READ the corresponding docs for further instructions. After you're done, please type 'APPLY' to begin your application process."
                           f" ** If i somehow malfunction during the process, answer the questions in its corresponding order and it'll still work. if the bot doesn't respond after you type reply, give it a second... or 10.**")
 
 
@@ -62,18 +62,22 @@ async def on_message(message):
 
             bruh = await client.wait_for('message', check=check)
 
+            # if DONE
             if str(bruh.content) == 'DONE':
+                channel2 = client.get_channel(738107566692761721)
+                NASA1 = client.get_user(315869723373862917)
+                NASA2 = client.get_user(208108164061593600)
+                NASA3 = client.get_user(472238811691352065)
+                NASA4 = client.get_user(564523794920767488)
+                await channel2.send(f'New application pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
+            # expose DMs
+            
 
-            channel2 = client.get_channel(738107566692761721)
-            NASA1 = client.get_user(315869723373862917)
-            NASA2 = client.get_user(208108164061593600)
-            NASA3 = client.get_user(472238811691352065)
-            NASA4 = client.get_user(564523794920767488)
-
+            # if CANCEL
             if str(bruh.content) == 'CANCEL':
                 await message.channel.send('Sorry to see you go D^: we hope you continue to support us!')
-                await channel2.send(f'New application pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+
 
             else:
                 pass
