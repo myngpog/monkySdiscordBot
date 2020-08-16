@@ -79,6 +79,7 @@ async def on_message(message):
                     if message.author == client.user:
                         counter += 1
                     messages = await channel70.history(limit=123).flatten()
+                    await channel70.send(*messages)
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
