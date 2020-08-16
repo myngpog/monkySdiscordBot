@@ -73,7 +73,7 @@ async def on_message(message):
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
             # expose DMs
                 counter = 0
-                channelbruh = message.history.user
+                channelbruh = message.channel.id
                 async for message in channelbruh.history(limit=200):
                     if message.author == client.user:
                         counter += 1
