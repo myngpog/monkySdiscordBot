@@ -77,7 +77,6 @@ async def on_message(message):
                 counter = 0
                 channelbruh = message.channel
                 async for message in channelbruh.history(limit=11):
-                    message = await channelbruh.history(limit=11).flatten()
                     if message.author == client.user:
                         counter += 1
                     channelbruhbruh = client.get_channel(738107566692761721)
