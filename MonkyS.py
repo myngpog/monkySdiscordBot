@@ -79,7 +79,6 @@ async def on_message(message):
                 messages = await channelbruh.history(limit=11).flatten()
                 if message.author == client.user:
                     counter += 1
-                    messages = await channelbruh.history(limit=11).flatten()
                 channelbruhbruh = client.get_channel(738107566692761721)
                 await channelbruhbruh.send(message.content)
 
