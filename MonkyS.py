@@ -32,7 +32,7 @@ async def on_raw_reaction_add(payload):
     if message_id == 740298503854751815:
         await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," 
                           f" READ the corresponding docs for further instructions. After you're done, please type 'APPLY' to begin your application process."
-                          f" ** If i somehow malfunction and don't reply to you after you type 'DONE', kindly restart the application process xd.**")
+                          f" ** If i send 2 questions at a time, ANSWER THEM BOTH IN ONE MESSAGE to prevent an error.**")
 
 
 # APPLY
@@ -76,7 +76,7 @@ async def on_message(message):
                 # expose dms
                 counter = 0
                 channelbruh = message.channel
-                async for message in channelbruh.history(limit=11, oldest_first=True):
+                async for message in channelbruh.history(limit=11, after=(message.content =='APPLY')):
                     if message.author == client.user:
                         counter += 1
                     channelbruhbruh = client.get_channel(738107566692761721)
