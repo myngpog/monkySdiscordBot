@@ -76,11 +76,11 @@ async def on_message(message):
                 # expose dms
                 counter = 0
                 channelbruh = message.channel
-                async for message in channelbruh.history(limit=12):
+                async for message in channelbruh.history(limit=11):
+                    messages = await channelbruh.history(limit=11).flatten()
                     if message.author == client.user:
                         counter += 1
                     channelbruhbruh = client.get_channel(738107566692761721)
-                    messages = await channelbruh.history(limit=123).flatten()
                     await channelbruhbruh.send(message.content)
 
 
