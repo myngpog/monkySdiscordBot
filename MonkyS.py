@@ -65,11 +65,12 @@ async def on_message(message):
             # if DONE
             if str(bruh.content) == 'DONE':
                 channel2 = client.get_channel(738107566692761721)
+                newapplicant = message.author.id
                 NASA1 = client.get_user(315869723373862917)
                 NASA2 = client.get_user(208108164061593600)
                 NASA3 = client.get_user(472238811691352065)
                 NASA4 = client.get_user(564523794920767488)
-                await channel2.send(f'New application pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}')
+                await channel2.send(f'New application pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}. App from {newapplicant}')
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
 
                 # expose dms
