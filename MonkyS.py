@@ -73,14 +73,9 @@ async def on_message(message):
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
 
                 # expose DMs
-                counter = 0
-                channelbruh = message.channel.id
-                async for message in channelbruh.history(limit=69):
-                    if message.author == message.user.id:
-                        counter += 1
-                        messages = await channelbruh.history(limit=69).flatten()
-                        channelmonk = client.get_channel(738107566692761721)
-                        await message.channelmonk.send(*messages)
+                channelxd = client.get_channel(738107566692761721)
+                if message.guild is None and not message.author.bot:
+                    await channelxd.send(message.content)
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
