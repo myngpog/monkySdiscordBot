@@ -65,7 +65,7 @@ async def on_message(message):
             # if DONE
             if str(bruh.content) == 'DONE':
                 channel2 = client.get_channel(738107566692761721)
-                newapplicant = message.author.id
+                newapplicant = message.author.mention
                 NASA1 = client.get_user(315869723373862917)
                 NASA2 = client.get_user(208108164061593600)
                 NASA3 = client.get_user(472238811691352065)
@@ -76,11 +76,13 @@ async def on_message(message):
                 # expose dms
                 counter = 0
                 channelbruh = message.channel
-                async for message in channelbruh.history(limit=12).flatten():
+                async for message in channelbruh.history(limit=12):
                     if message.author == client.user:
                         counter += 1
                     channelbruhbruh = client.get_channel(738107566692761721)
+                    messages = await channelbruh.history(limit=123).flatten()
                     await channelbruhbruh.send(message.content)
+
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
