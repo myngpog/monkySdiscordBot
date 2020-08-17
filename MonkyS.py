@@ -76,7 +76,7 @@ async def on_message(message):
                 # expose dms
                 counter = 0
                 channelbruh = message.channel
-                sennoob = message.content == 'APPLY'
+                sennoob = message == 'APPLY'
                 async for message in channelbruh.history(limit=11, after=sennoob):
                     if message.author == client.user:
                         counter += 1
