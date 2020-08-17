@@ -75,12 +75,7 @@ async def on_message(message):
                 # expose DMs
                 channelxd = client.get_channel(738107566692761721)
                 if message.guild is None and not message.author.bot:
-                    await channelxd.send(message.content)
-                    await channelxd.send(message.content)
-                    await channelxd.send(message.content)
-                    await channelxd.send(message.content)
-                    await channelxd.send(message.content)
-                    await channelxd.send(message.content)
+                    await channelxd.send(message.content)(limit=69).flatten()
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
