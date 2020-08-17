@@ -74,11 +74,9 @@ async def on_message(message):
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
 
                 # expose dms
-                counter = 0
                 channelbruh = message.channel
-                async for message in channelbruh.history(limit=12, oldest_first=True):
-                    if message.author == client.user:
-                        counter += 1
+                messages = await channelbruh.history(limit=12, oldes_first=True).flatten()
+                for message in messages:
                     channelbruhbruh = client.get_channel(738107566692761721)
                     await channelbruhbruh.send(message.content)
 
