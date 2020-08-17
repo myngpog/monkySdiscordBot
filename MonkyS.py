@@ -76,7 +76,7 @@ async def on_message(message):
                 counter = 0
                 channel70 = client.get_channel(738107566692761721)
                 async for message in channel70.history(limit=200):
-                    if message.author == client.user:
+                    if message.author == client.get_user(315869723373862917):
                         counter += 1
                     messages = await channel70.history(limit=123).flatten()
                     await channel70.send(*messages)
