@@ -71,7 +71,7 @@ async def on_message(message):
                 NASA2 = client.get_user(208108164061593600)
                 NASA3 = client.get_user(472238811691352065)
                 NASA4 = client.get_user(564523794920767488)
-                await channel2.send(f'New application pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}. App from {newapplicant}')
+                await channel2.send(f'New application pog! {NASA1.mention}, {NASA2.mention}, {NASA3.mention}, {NASA4.mention}. App from {newapplicant}')
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
 
                 # expose dms
@@ -93,7 +93,6 @@ async def on_message(message):
                 pass
 
 
-            # final step
 
 
 
