@@ -32,7 +32,7 @@ async def on_raw_reaction_add(payload):
     if message_id == 740298503854751815:
         await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," 
                           f" READ the corresponding docs for further instructions. After you're done, please type 'APPLY' to begin your application process."
-                          f" ** If i send 2 questions at a time, ANSWER THEM BOTH IN ONE MESSAGE to prevent an error.**")
+                          f" ** Please bold your responses so blind ao3 (aoi) can see them better when we read over your app or else she'll berate you.**")
 
 
 # APPLY
@@ -43,19 +43,19 @@ async def on_message(message):
             def check(no):
                 return no.channel == message.channel
             ao3pog = await message.author.send('Application process started~')
-            await message.author.send('What role(s) are you interested in applying for?')
+            await message.author.send('*What role(s) are you interested in applying for?*')
             # Chapters
-            await client.wait_for('message', check=check)
-            await message.author.send('How many chapters can you do per week?')
+            await client.wait_for('**message**', check=check)
+            await message.author.send('*How many chapters can you do per week?*')
             # Volunteer
             await client.wait_for('message', check=check)
-            await message.author.send('Do you understand that this is volunteer work?')
+            await message.author.send('*Do you understand that this is volunteer work?*')
             # Link
             await client.wait_for('message', check=check)
-            await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
+            await message.author.send('*Link your test or past work (if test, make sure we have edit/suggestion perms)*')
             # Finale
             await client.wait_for('message', check=check)
-            await message.author.send("Lastly, please type 'DONE' to submit your application, or type 'CANCEL' to cancel lmao. If i don't respond after your reply, redo the app process again by typing 'APPLY'.")
+            await message.author.send("Lastly, please type 'DONE' to submit your application, or type 'CANCEL' to cancel lmao **(don't bold it)**. *If i don't respond after your reply, redo the app process again by typing 'APPLY'.*")
 
             # 2nd bruh bc im dumb
             def check(s):
@@ -77,7 +77,7 @@ async def on_message(message):
                 # expose dms
                 counter = 0
                 channelbruh = message.channel
-                async for message in channelbruh.history(limit=11, after=ao3pog):
+                async for message in channelbruh.history(limit=10, after=ao3pog):
                     if message.author == client.user:
                         counter += 1
                     channelbruhbruh = client.get_channel(738107566692761721)
