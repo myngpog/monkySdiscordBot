@@ -45,7 +45,7 @@ async def on_message(message):
             ao3pog = await message.author.send('Application process started~')
             await message.author.send('*What role(s) are you interested in applying for?*')
             # Chapters
-            await client.wait_for('**message**', check=check)
+            await client.wait_for('message', check=check)
             await message.author.send('*How many chapters can you do per week?*')
             # Volunteer
             await client.wait_for('message', check=check)
