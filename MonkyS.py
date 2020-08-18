@@ -42,7 +42,7 @@ async def on_message(message):
         if str(message.content) == 'APPLY':
             def check(no):
                 return no.channel == message.channel
-            await message.author.send('What role(s) are you interested in applying for?')
+            ao3pog = await message.author.send('What role(s) are you interested in applying for?')
             # Chapters
             await client.wait_for('message', check=check)
             await message.author.send('How many chapters can you do per week?')
@@ -76,7 +76,7 @@ async def on_message(message):
                 # expose dms
                 counter = 0
                 channelbruh = message.channel
-                async for message in channelbruh.history(limit=12, before=None, after=message('APPLY'), oldest_first=True):
+                async for message in channelbruh.history(limit=12, after=ao3pog):
                     if message.author == client.user:
                         counter += 1
                     channelbruhbruh = client.get_channel(738107566692761721)
