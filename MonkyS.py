@@ -42,7 +42,8 @@ async def on_message(message):
         if str(message.content) == 'APPLY':
             def check(no):
                 return no.channel == message.channel
-            ao3pog = await message.author.send('What role(s) are you interested in applying for?')
+            ao3pog = await message.author.send('Application process started~')
+            await message.author.send('What role(s) are you interested in applying for?')
             # Chapters
             await client.wait_for('message', check=check)
             await message.author.send('How many chapters can you do per week?')
