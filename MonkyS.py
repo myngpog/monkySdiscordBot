@@ -54,7 +54,7 @@ async def on_message(message):
             await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
             # Finale
             await client.wait_for('message', check=check)
-            await message.author.send("Lastly, please type 'DONE' to submit your application, or type 'CANCEL' to cancel lmao.")
+            await message.author.send("Lastly, please type 'DONE' to submit your application, or type 'CANCEL' to cancel lmao. If i don't respond after your reply, redo the app process again by typing 'APPLY'.")
 
             # 2nd bruh bc im dumb
             def check(s):
@@ -76,13 +76,12 @@ async def on_message(message):
                 # expose dms
                 counter = 0
                 channelbruh = message.channel
-                def bruhmessage(uwoah):
-                    ao3pog = message.content('APPLY')
-                async for message in channelbruh.history(limit=12, after=bruhmessage):
+                async for message in channelbruh.history(limit=12, oldest_first=True).flatten():
                     if message.author == client.user:
                         counter += 1
                     channelbruhbruh = client.get_channel(738107566692761721)
                     await channelbruhbruh.send(message.content)
+
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
