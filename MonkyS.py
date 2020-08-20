@@ -95,6 +95,7 @@ async def on_message(message):
                 pass
 
 # Send message every hour
+@client.event
 async def updateyoursheetsnoobs():
     await client.wait_until_ready()
     counter = 0
@@ -103,13 +104,12 @@ async def updateyoursheetsnoobs():
         counter += 1
         await channelmanjuu.send('update the sheets or else ao3 is gonna write you a paragraph!')
         await asyncio.sleep(60) # task runs every 60 seconds
+client.loop.create_task(updateyoursheetsnoobs())
 
 # bot playing game
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='monkys are looking for new recruits aha haa'))
-
-client.loop.create_task(updateyoursheetsnoobs())
 
 
 
