@@ -95,7 +95,7 @@ async def on_message(message):
                 pass
 
 # Send message every hour
-async def my_background_task():
+async def updateyoursheetsnoobs():
     await client.wait_until_ready()
     counter = 0
     channelmanjuu = client.get_channel(736735728364683264)
@@ -104,7 +104,7 @@ async def my_background_task():
         await channelmanjuu.send('update the sheets or else ao3 is gonna write you a paragraph!' or 'update the sheets or else peng is gonna become more retarded!' or 'update the sheets or else manjuu gonna overwork herself!' or 'update the sheets or else sen is going to suck at video game!')
         await asyncio.sleep(60) # task runs every 60 seconds
 
-client.loop.create_task(my_background_task())
+client.loop.create_task(updateyoursheetsnoobs())
 
 
 
