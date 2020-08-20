@@ -1,4 +1,5 @@
-import discord, asyncio
+import discord, asyncio, random, os
+
 
 #id: 736704193905164438
 
@@ -95,11 +96,16 @@ async def on_message(message):
 
 # Send message every hour
 @client.event
-async def updateyoursheetsnoobs():
-    channelmanjuu = client.get_channel(736735728364683264)
-    await channelmanjuu.send('update the sheets or else ao3 is gonna write you a paragraph!')
-    await asyncio.sleep(60) # task runs every 60 seconds
-client.loop.create_task(updateyoursheetsnoobs())
+async def time_check():
+    await client.wait_until_ready()
+    manjuubruh=client.get_channel(736735728364683264)
+    message = random.choice(
+        'update sheets or else ao3 gonna write you paragraph' or 'update sheets or else peng gonna be more retarded' or 'update sheets or else sen is gonna be bad at game' or 'update sheets or else manjuu gonna overwork herself')
+    while not client.is_closed:
+         await manjuubruh.send(message)
+         await asyncio.sleep(10)
+
+client.loop.create_task(time_check())
 
 # bot playing game
 @client.event
