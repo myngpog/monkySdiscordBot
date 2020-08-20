@@ -95,21 +95,18 @@ async def on_message(message):
             else:
                 pass
 
-# Send message every hour
-@tasks.loop(seconds=10)
-async def bruh():
-    counter = 0
-    await client.wait_until_ready()
-    manjuubruh = client.get_channel(736735728364683264)
-    await manjuubruh.send('update the sheets or else ao3 is gonna write you a paragraph.')
-    counter += 1
-
 
 # bot playing game
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='monkyS is looking for new recruits aha haa'))
 
+
+# Send message every hour
+@tasks.loop(seconds=10)
+async def bruh():
+    manjuubruh = client.get_channel(736735728364683264)
+    await manjuubruh.send('update the sheets or else ao3 is gonna write you a paragraph.')
 
 
 
