@@ -1,5 +1,4 @@
-import discord
-import asyncio
+import discord, asyncio
 
 #id: 736704193905164438
 
@@ -97,19 +96,15 @@ async def on_message(message):
 # Send message every hour
 @client.event
 async def updateyoursheetsnoobs():
-    await client.wait_until_ready()
-    counter = 0
     channelmanjuu = client.get_channel(736735728364683264)
-    while not client.is_closed:
-        counter += 1
-        await channelmanjuu.send('update the sheets or else ao3 is gonna write you a paragraph!')
-        await asyncio.sleep(60) # task runs every 60 seconds
+    await channelmanjuu.send('update the sheets or else ao3 is gonna write you a paragraph!')
+    await asyncio.sleep(60) # task runs every 60 seconds
 client.loop.create_task(updateyoursheetsnoobs())
 
 # bot playing game
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game(name='monkys are looking for new recruits aha haa'))
+    await client.change_presence(activity=discord.Game(name='monkyS is looking for new recruits aha haa'))
 
 
 
