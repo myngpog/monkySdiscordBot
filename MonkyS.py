@@ -101,7 +101,7 @@ async def updateyoursheetsnoobs():
     channelmanjuu = client.get_channel(736735728364683264)
     while not client.is_closed:
         counter += 1
-        await channelmanjuu.send('update the sheets or else ao3 is gonna write you a paragraph!', counter)
+        await channelmanjuu.send('update the sheets or else ao3 is gonna write you a paragraph!')
         await asyncio.sleep(60) # task runs every 60 seconds
 
 client.loop.create_task(updateyoursheetsnoobs())
