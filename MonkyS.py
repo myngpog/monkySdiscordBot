@@ -99,14 +99,20 @@ async def on_message(message):
 async def time_check():
     await client.wait_until_ready()
     manjuubruh=client.get_channel(736735728364683264)
-    await manjuubruh.send('update sheets or else ao3 is gonna write you a paragraph')
+    message = random.choice('update sheets or else ao3 gonna write you paragraph' or 'update sheets or else peng gonna be more retarded' or 'update sheets or else sen is gonna be bad at game' or 'update sheets or else manjuu gonna overwork herself')
+    await manjuubruh.send(message)
     await asyncio.sleep(10)
-client.loop.create_task(time_check)
+
+client.loop.create_task(time_check())
 
 # bot playing game
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='monkyS is looking for new recruits aha haa'))
+
+
+
+
 
 
 
