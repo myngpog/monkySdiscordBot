@@ -99,8 +99,7 @@ async def on_message(message):
 async def time_check():
     await client.wait_until_ready()
     manjuubruh=client.get_channel(736735728364683264)
-    message = random.choice(
-        'update sheets or else ao3 gonna write you paragraph' or 'update sheets or else peng gonna be more retarded' or 'update sheets or else sen is gonna be bad at game' or 'update sheets or else manjuu gonna overwork herself')
+    message = random.choice('update sheets or else ao3 gonna write you paragraph' or 'update sheets or else peng gonna be more retarded' or 'update sheets or else sen is gonna be bad at game' or 'update sheets or else manjuu gonna overwork herself')
     await manjuubruh.send(message)
     await asyncio.sleep(10)
 
