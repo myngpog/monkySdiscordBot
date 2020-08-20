@@ -97,10 +97,12 @@ async def on_message(message):
 
 # Send message every hour
 @tasks.loop(seconds=10)
-async def time_check():
+async def bruh():
+    counter = 0
     await client.wait_until_ready()
     manjuubruh = client.get_channel(736735728364683264)
     await manjuubruh.send('update the sheets or else ao3 is gonna write you a paragraph.')
+    counter += 1
 
 
 # bot playing game
