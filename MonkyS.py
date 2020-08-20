@@ -104,7 +104,7 @@ async def on_ready():
 
 # Send message every hour
 @tasks.loop(seconds=10)
-async def bruh():
+async def on_ready():
     manjuubruh = client.get_channel(736735728364683264)
     await manjuubruh.send('update the sheets or else ao3 is gonna write you a paragraph.')
 
