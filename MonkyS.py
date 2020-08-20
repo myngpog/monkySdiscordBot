@@ -1,4 +1,5 @@
 import discord
+import asyncio
 
 #id: 736704193905164438
 
@@ -6,6 +7,7 @@ def read_token():
     with open("token.txt", "r") as f:
         lines = f.readlines()
         return lines[0].strip()
+
 
 token = read_token()
 
@@ -92,7 +94,16 @@ async def on_message(message):
             else:
                 pass
 
+# Send message every hour
+async def background_loop():
+    await client.wait_until_ready()
+    while not client.is_closed:
+        channelstaff = client.get_channel(736735728364683264)
+        messages = ["Update the sheets noobs please D: don't wanna be retarded like ~~sen~~ i mean peng", "Update the sheets or else you're gonna get it from AO3", "Update the sheets and Truck-kun will come for you pog!"]
+        await channelstaff.send("Update the sheets noobs please D:" or "Update the sheets or else you're gonna get it from AO3" or "Update the sheets and Truck-kun will come for you pog!")
+        await asyncio.sleep(120)
 
+client.loop.create_task(background_loop())
 
 
 
