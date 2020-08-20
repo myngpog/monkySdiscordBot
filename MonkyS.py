@@ -101,9 +101,8 @@ async def time_check():
     manjuubruh=client.get_channel(736735728364683264)
     message = random.choice(
         'update sheets or else ao3 gonna write you paragraph' or 'update sheets or else peng gonna be more retarded' or 'update sheets or else sen is gonna be bad at game' or 'update sheets or else manjuu gonna overwork herself')
-    while not client.is_closed:
-         await manjuubruh.send(message)
-         await asyncio.sleep(10)
+    await manjuubruh.send(message)
+    await asyncio.sleep(10)
 
 client.loop.create_task(time_check())
 
