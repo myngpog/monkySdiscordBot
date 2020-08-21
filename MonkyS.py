@@ -105,6 +105,7 @@ async def on_ready():
 
 
 # Send message every hour
+@client.event
 async def background_loop():
     await client.wait_until_ready()
     while not client.is_closed:
