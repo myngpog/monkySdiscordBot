@@ -106,9 +106,7 @@ async def on_ready():
 # upload image
     await client.wait_for('message', check=None)
     ao3 = client.get_channel(738107566692761721)
-    with open('ao3', 'rb') as f:
-        picture = discord.File(f)
-        await ao3.send(ao3, picture)
+    await ao3.send('https://i.imgur.com/00mZeGt.png')
 
 
 # Run command: important always keep at the end
