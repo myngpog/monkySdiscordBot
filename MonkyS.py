@@ -1,5 +1,6 @@
 from discord.ext import commands
 import discord, asyncio, random
+from discord import File
 
 
 #id: 736704193905164438
@@ -103,16 +104,10 @@ async def on_message(message):
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='monkyS is looking for new recruits aha haa'))
 
-
-
 @client.event
 async def on_ready():
-    ao3bruh=client.get_channel(738107566692761721)
-    ao3=discord.File("C:\Users\miku3\OneDrive\Pictures\CLRD\Monky", filename="ao3 update the sheets.png")
-    embed = discord.Embed()
-    embed.set_image(url="attachment://bruh_update_sheets.png")
-    await ao3bruh.send(file=ao3, embed=embed)
-
+    bruh = client.get_channel(738107566692761721)
+    await bruh.send_file('ao3.png')
 
 
 # Run command: important always keep at the end
