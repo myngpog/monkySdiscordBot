@@ -113,8 +113,7 @@ async def background_loop():
         await manjuubruh.send(random.choice(messages))
         await asyncio.sleep(10)
 
-
-
+client.loop.create_task(background_loop())
 
 
 
