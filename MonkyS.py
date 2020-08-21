@@ -111,7 +111,7 @@ async def background_loop():
         images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png")
         await ao3.send(random.choice(images))
         await asyncio.sleep(10)
-
+client.loop.create_task(background_loop())
 
 # Run command: important always keep at the end
 client.run(token)
