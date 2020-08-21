@@ -104,9 +104,18 @@ async def on_message(message):
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='monkyS is looking for new recruits aha haa'))
 # upload image
-    ao3 = client.get_channel(738107566692761721)
-    images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png")
-    await ao3.send(random.choice(images))
+    @client.loop
+    async def bacground_task():
+        await client.wait_until_ready()
+        counter = 0
+        ao3 = client.get_channel(738107566692761721)
+        while not client.is_closed():
+            counter +=1
+            images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png")
+            await ao3.send(random.choice(images))
+            await asyncio.sleep(10)
+
+    client.loop.create_task(bacground_task())
 
 
 # Run command: important always keep at the end
