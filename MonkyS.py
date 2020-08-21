@@ -105,11 +105,12 @@ async def on_ready():
     await client.change_presence(activity=discord.Game(name='monkyS is looking for new recruits aha haa'))
 # upload image
 async def background_loop():
-    await client.wait_for('message', check=None)
-    ao3 = client.get_channel(738107566692761721)
-    images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png")
-    await ao3.send(random.choice(images))
-    await asyncio.sleep(10)
+    await client.wait_until_ready()
+    while not client.is_closed:
+        ao3 = client.get_channel(738107566692761721)
+        images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png")
+        await ao3.send(random.choice(images))
+        await asyncio.sleep(10)
 
 
 # Run command: important always keep at the end
