@@ -103,7 +103,12 @@ async def on_message(message):
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='monkyS is looking for new recruits aha haa'))
-
+# upload image
+    await client.wait_for('message', check=None)
+    ao3 = client.get_channel(738107566692761721)
+    with open('ao3', 'rb') as f:
+        picture = discord.File(f)
+        await ao3.send(ao3, picture)
 
 
 # Run command: important always keep at the end
