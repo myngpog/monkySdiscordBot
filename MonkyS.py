@@ -106,8 +106,8 @@ async def on_ready():
 
 # Send message every hour
 async def background_loop():
-    await bot.wait_until_ready()
-    while not bot.is_closed:
+    await client.wait_until_ready()
+    while not client.is_closed:
         manjuubruh = client.get_channel(736735728364683264)
         messages = ("update sheets or else ao3 is gonna write you a paragraph!", "update sheets or else peng is gonna become more retarded!", "update sheets or else manjuu gonna overwork herself!", "update sheets or else sen suck more at games!")
         await manjuubruh.send(random.choice(messages))
