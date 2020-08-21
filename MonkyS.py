@@ -104,10 +104,6 @@ async def on_message(message):
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='monkyS is looking for new recruits aha haa'))
 
-@client.event
-async def on_ready():
-    bruh = client.get_channel(738107566692761721)
-    await bruh.send(file=discord.File('ao3.png'))
 
 
 # Run command: important always keep at the end
