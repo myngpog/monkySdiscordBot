@@ -104,18 +104,14 @@ async def on_ready():
     await client.change_presence(activity=discord.Game(name='monkyS is looking for new recruits aha haa'))
 
 
-# Send message every hour
+
 @client.event
-async def background_loop():
-    await client.wait_until_ready()
-    while not client.is_closed:
-        manjuubruh = client.get_channel(736735728364683264)
-        messages = ("update sheets or else ao3 is gonna write you a paragraph!", "update sheets or else peng is gonna become more retarded!", "update sheets or else manjuu gonna overwork herself!", "update sheets or else sen suck more at games!")
-        await manjuubruh.send(random.choice(messages))
-        await asyncio.sleep(10)
-
-client.loop.create_task(background_loop())
-
+async def on_ready():
+    ao3bruh=client.get_channel(738107566692761721)
+    ao3=discord.File("C:\Users\miku3\OneDrive\Pictures\CLRD\Monky", filename="ao3 update the sheets.png")
+    embed = discord.Embed()
+    embed.set_image(url="attachment://bruh_update_sheets.png")
+    await ao3bruh.send(file=ao3, embed=embed)
 
 
 
