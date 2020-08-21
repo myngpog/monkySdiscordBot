@@ -100,13 +100,14 @@ async def on_message(message):
 
 
 # bot playing game
-@client.event
+@client.loop
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='monkyS is looking for new recruits aha haa'))
 # upload image
     await client.wait_for('message', check=None)
     ao3 = client.get_channel(738107566692761721)
-    await ao3.send('https://i.imgur.com/00mZeGt.png')
+    images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png")
+    await ao3.send(random.choice(images))
 
 
 # Run command: important always keep at the end
