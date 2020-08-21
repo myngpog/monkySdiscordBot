@@ -107,7 +107,7 @@ async def on_ready():
 @client.event
 async def on_ready():
     bruh = client.get_channel(738107566692761721)
-    await bruh.send_file('ao3.png')
+    await bruh.send(file=discord.File('ao3.png'))
 
 
 # Run command: important always keep at the end
