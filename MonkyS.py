@@ -108,11 +108,11 @@ async def on_ready():
 # upload image
 async def update_your_sheets():
     await client.wait_until_ready()
-    ao3 = client.get_channel(738107566692761721)
+    ao3 = client.get_channel(736735728364683264)
     while not client.is_closed():
         images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png")
         await ao3.send(random.choice(images))
-        await asyncio.sleep(10)
+        await asyncio.sleep(3600)
 
 
 # Run command: important always keep at the end
