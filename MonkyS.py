@@ -1,5 +1,5 @@
 from discord.ext import tasks, commands
-import discord, asyncio, random
+import discord
 
 
 #id: 736704193905164438
@@ -11,6 +11,8 @@ def read_token():
 
 
 token = read_token()
+
+bot = commands.Bot(command_prefix='.')
 
 client = discord.Client()
 
@@ -107,6 +109,7 @@ async def on_ready():
 async def on_ready():
     manjuubruh = client.get_channel(736735728364683264)
     await manjuubruh.send('update the sheets or else ao3 is gonna write you a paragraph.')
+
 
 
 
