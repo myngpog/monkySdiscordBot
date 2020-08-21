@@ -104,7 +104,6 @@ async def on_message(message):
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='monkyS is looking for new recruits aha haa'))
 # upload image
-    await client.wait_for('message', check=None)
     ao3 = client.get_channel(738107566692761721)
     images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png")
     await ao3.send(random.choice(images))
