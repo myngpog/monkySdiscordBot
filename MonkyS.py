@@ -1,5 +1,5 @@
-from discord.ext import tasks, commands
-import discord
+from discord.ext import commands
+import discord, asyncio, random
 
 
 #id: 736704193905164438
@@ -105,10 +105,13 @@ async def on_ready():
 
 
 # Send message every hour
-@tasks.loop(seconds=10)
-async def on_ready():
-    manjuubruh = client.get_channel(736735728364683264)
-    await manjuubruh.send('update the sheets or else ao3 is gonna write you a paragraph.')
+async def background_loop():
+    await bot.wait_until_ready()
+    while not bot.is_closed:
+        manjuubruh = client.get_channel(736735728364683264)
+        messages = ("update sheets or else ao3 is gonna write you a paragraph!", "update sheets or else peng is gonna become more retarded!", "update sheets or else manjuu gonna overwork herself!", "update sheets or else sen suck more at games!")
+        await manjuubruh.send(random.choice(messages))
+        await asyncio.sleep(10)
 
 
 
