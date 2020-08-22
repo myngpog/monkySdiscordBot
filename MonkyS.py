@@ -114,11 +114,8 @@ async def update_your_sheets():
         await asyncio.sleep(43200)
 
 # Check roster
-async def bruh():
     staff = client.get_channel(736735728364683264)
-    def check(bruh):
-        return bruh.channel == staff
-    await client.wait_for('"!assprincess', check=check)
+    await client.wait_for('"!assprincess', check=None)
     await staff.send("https://i.imgur.com/Xcu7aBk.jpg")
 
 
