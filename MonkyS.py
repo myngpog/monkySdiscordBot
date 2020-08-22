@@ -114,10 +114,7 @@ async def update_your_sheets():
         await asyncio.sleep(43200)
 
 # Check roster
-    staff = client.get_channel(736735728364683264)
-    message = "!assprincess"
-    await client.wait_for(message, check=None)
-    await staff.send("https://i.imgur.com/Xcu7aBk.jpg")
+
 
 
 # Run command: important always keep at the end
