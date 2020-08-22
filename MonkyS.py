@@ -114,6 +114,14 @@ async def update_your_sheets():
         await ao3.send(random.choice(images))
         await asyncio.sleep(43200)
 
+# Check roster
+async def roster():
+    staff = client.get_channel(736735728364683264)
+    def check(bruh):
+        return bruh.channel == staff
+    await client.wait_for('!assprincess', check=check)
+    await staff.send("*The Assassin Princess isn't so easy to mess with???* **RP:** @Athena (temp) **TL:** @S1ngle **PR:** @pillowsholdwords **CLRD:** @Mei // @이년아 (temp) **TS:** @leaf leaf (temp) **QC:** @bream girl! (temp)")
+
 
 # Run command: important always keep at the end
 client.loop.create_task(update_your_sheets())
