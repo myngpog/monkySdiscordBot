@@ -115,7 +115,8 @@ async def update_your_sheets():
 
 # Check roster
     staff = client.get_channel(736735728364683264)
-    await client.wait_for('"!assprincess', check=None)
+    message = "!assprincess"
+    await client.wait_for(message, check=None)
     await staff.send("https://i.imgur.com/Xcu7aBk.jpg")
 
 
