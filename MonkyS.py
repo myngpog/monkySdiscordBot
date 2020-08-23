@@ -1,4 +1,3 @@
-from discord.ext import commands
 import discord, asyncio, random
 
 
@@ -11,8 +10,6 @@ def read_token():
 
 
 token = read_token()
-
-bot = commands.Bot(command_prefix='.')
 
 client = discord.Client()
 
