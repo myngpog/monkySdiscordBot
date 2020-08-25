@@ -106,7 +106,7 @@ async def update_your_sheets():
     await client.wait_until_ready()
     ao3 = client.get_channel(736735728364683264)
     while not client.is_closed():
-        images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png")
+        images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png", "https://i.imgur.com/efwN7Sc.jpg", "https://i.imgur.com/G4FPSnw.jpg")
         await ao3.send(random.choice(images))
         await asyncio.sleep(43200)
 
