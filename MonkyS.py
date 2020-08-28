@@ -93,21 +93,20 @@ async def on_message(message):
             # Else
             else:
                 pass
+
     # Staff welcome message
-    if message.channel == client.get_channel(736735728364683264):
-        if str(message.content.startswith) == '-welcome':
-            welcomepog = client.get_channel(736735728364683264)
-            def check(welcome):
-                return welcome.channel == client.get_channel(736735728364683264)
-            email = client.get_channel(736992278308192326)
-            links = client.get_channel(736741434652360765)
-            allocations = client.get_channel(736747201275101234)
-            updates = client.get_channel(736747148263292929)
+    welcomepog = client.get_channel(736735728364683264)
+    email = client.get_channel(736992278308192326)
+    links = client.get_channel(736741434652360765)
+    allocations = client.get_channel(736747201275101234)
+    updates = client.get_channel(736747148263292929)
+    if message.channel == welcomepog:
+        if str(message.content.startswith) == '~welcome':
             await welcomepog.send(f"Welcome! To start off, please put your email under {email.mention} for future references."
                                   f"**Fill out the staff spreadsheet** under {links.mention}, our scans drive link is also under there."
                                   f"After you're done with a chapter, please update under {updates.mention} and *update the sheets*"
                                   f"To see what series you're assigned, look under {allocations.mention}."
-                                  f"Once again, welcome!", check=check(welcomepog))
+                                  f"Once again, welcome!")
 
 
 # bot playing game
