@@ -110,7 +110,7 @@ async def on_message(message):
                                   f" To see what series you're assigned, look under {allocations.mention}."
                                   f" Once again, welcome!")
 
-    #roset check
+    #roster check
     if message.channel == welcomepog or secret or confused:
         if str(message.content) == "-halp":
             await message.channel.send("**Series abbreviations:** TMM for Take My Money, APITS for A Place in the Sun, IAM for I am Han Sanqian, "
@@ -122,12 +122,16 @@ async def on_message(message):
             await message.channel.send("**BTY Staff-** **RP**: Aeris, **TL**: Peng, **PR**: sam, **CLRD** Yesen, **TS**: Yesen/Peng, **QC**: Peng")
         if str(message.content) == '-APITS':
             await message.channel.send("**APITS Staff-** **RP**: Aeris, **TL**: Sen, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura")
+
+    if message.channel == welcomepog or secret or confused:
         if str(message.conent) == '-IAM':
             await message.channel.send("**IAM Staff-** **RP**: Aeris, **TL**: Remy, **PR**: pillow, **CLRD** amiee/Mei, **TS**: Sarcasm, **QC**: Peng")
         if str(message.content) == '-DIE':
             await message.channel.send ("**DIE Staff-** IDFK b/c it's been on hiatus for how long?")
         if str(message.content) == '-OG':
             await message.channel.send("**OG Staff-** **RP**: Peng, **TL**: Peng, **PR**: sam, **CLRD** Peng/varies, **TS**: leaf, **QC**: Peng, **ON CONFIRMED HIATUS**")
+
+    if message.channel == welcomepog or secret or confused:
         if str(message.content) == '-OPO':
             await message.channel.send("**OPO Staff-** **RP**: sunglasses, **TL**: clownii, **PR**: aoieuy, **CLRD** KlauSilver, **TS**: Peng, **QC**: aoieuy")
         if str(message.content) == '-ATL':
