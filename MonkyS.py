@@ -107,6 +107,8 @@ async def on_message(message):
                                   f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
                                   f" To see what series you're assigned, look under {allocations.mention}."
                                   f" Once again, welcome!")
+
+    #roset check
     if message.channel == welcomepog:
         if str(message.content) == '-TMM':
             await welcomepog.send("**TMM Staff:** **RP**: Aeris, **TL**: Sen, **PR**: pillow, **CLRD** differs, **TS**: Sen/Peng, **QC**: Ryuu")
@@ -126,7 +128,6 @@ async def update_your_sheets():
         await ao3.send(random.choice(images))
         await asyncio.sleep(43200)
 
-# Check roster
 # penguin penguin penguin penguin penguin
 
 
