@@ -95,7 +95,7 @@ async def on_message(message):
                 pass
     # Staff welcome message
     if message.channel == client.get_channel(736735728364683264):
-        if str(message.content.startswith) == '!welcome':
+        if str(message.content.startswith) == '-welcome':
             welcomepog = client.get_channel(736735728364683264)
             def check(welcome):
                 return welcome.channel == client.get_channel(736735728364683264)
