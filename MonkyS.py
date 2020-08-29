@@ -123,7 +123,7 @@ async def on_message(message):
         if str(message.content) == '-APITS':
             await message.channel.send("**APITS Staff-** **RP**: Aeris, **TL**: Sen, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura")
         if str(message.content) == '-IAM':
-            await message.channel.send("**IAM Staff-** **RP**: Aeris, **TL**: Remy, **PR**: pillow, **CLRD** amiee/Mei, **TS**: Sarcasm, **QC**: Peng")
+            await message.channel.send("**IAM Staff-** **RP**: Aeris, **TL**: Remy, **PR**: pillow, **CLRD** amiee/Mei, **TS**: Sarcasm, **QC**: Naka")
         if str(message.content) == '-DIE':
             await message.channel.send("**DIE Staff-** IDFK b/c it's been on hiatus for how long?")
         if str(message.content) == '-OG':
