@@ -173,9 +173,9 @@ async def on_message(message):
         if str(message.content) == '-TMM':
             await secret.send("**TMM Staff-** **RP**: Aeris, **TL**: Sen, **PR**: pillow, **CLRD** differs, **TS**: Sen/Peng, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
         if str(message.content) == '-BTY':
-            await secret.send("**BTY Staff-** **RP**: Aeris, **TL**: Peng, **PR**: sam, **CLRD** Yesen, **TS**: Yesen/Peng, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
+            await secret.send("**BTY Staff-** **RP**: Peng, **TL**: serendipity, **PR**: sam, **CLRD** Yesen, **TS**: Yesen/Peng, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
         if str(message.content) == '-APITS':
-            await secret.send("**APITS Staff-** **RP**: Aeris, **TL**: Sen, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
+            await secret.send("**APITS Staff-** **RP**: Aeris, **TL**: serendipity, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
         if str(message.content) == '-IAM':
             await secret.send("**IAM Staff-** **RP**: Aeris, **TL**: Remy, **PR**: pillow, **CLRD** amiee/Mei, **TS**: Sarcasm, **QC**: Naka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
         if str(message.content) == '-DIE':
