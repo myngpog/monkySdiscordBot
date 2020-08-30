@@ -119,7 +119,7 @@ async def on_message(message):
         if str(message.content) == '-TMM':
             await welcomepog.send("**TMM Staff-** **RP**: Aeris, **TL**: Sen, **PR**: pillow, **CLRD** differs, **TS**: Sen/Peng, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
         if str(message.content) == '-BTY':
-            await welcomepog.send("**BTY Staff-** **RP**: Peng, **TL**: serendipity, **PR**: sam, **CLRD** Yesen, **TS**: Yesen/Peng, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
+            await welcomepog.send("**BTY Staff-** **RP**: Aeris, **TL**: serendipity, **PR**: sam, **CLRD** Yesen, **TS**: Yesen/Peng, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
         if str(message.content) == '-APITS':
             await welcomepog.send("**APITS Staff-** **RP**: Aeris, **TL**: serendipity, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
         if str(message.content) == '-IAM':
@@ -146,7 +146,7 @@ async def on_message(message):
         if str(message.content) == '-TMM':
             await confused.send("**TMM Staff-** **RP**: Aeris, **TL**: Sen, **PR**: pillow, **CLRD** differs, **TS**: Sen/Peng, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
         if str(message.content) == '-BTY':
-            await confused.send("**BTY Staff-** **RP**: Peng, **TL**: serendipity, **PR**: sam, **CLRD** Yesen, **TS**: Yesen/Peng, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
+            await confused.send("**BTY Staff-** **RP**: Aeris, **TL**: serendipity, **PR**: sam, **CLRD** Yesen, **TS**: Yesen/Peng, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
         if str(message.content) == '-APITS':
             await confused.send("**APITS Staff-** **RP**: Aeris, **TL**: serendipity, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
         if str(message.content) == '-IAM':
@@ -173,7 +173,7 @@ async def on_message(message):
         if str(message.content) == '-TMM':
             await secret.send("**TMM Staff-** **RP**: Aeris, **TL**: Sen, **PR**: pillow, **CLRD** differs, **TS**: Sen/Peng, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
         if str(message.content) == '-BTY':
-            await secret.send("**BTY Staff-** **RP**: Peng, **TL**: serendipity, **PR**: sam, **CLRD** Yesen, **TS**: Yesen/Peng, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
+            await secret.send("**BTY Staff-** **RP**: Aeris, **TL**: serendipity, **PR**: sam, **CLRD** Yesen, **TS**: Yesen/Peng, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
         if str(message.content) == '-APITS':
             await secret.send("**APITS Staff-** **RP**: Aeris, **TL**: serendipity, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
         if str(message.content) == '-IAM':
