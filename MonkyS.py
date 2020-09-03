@@ -171,13 +171,13 @@ async def on_message(message):
                                        "**OPO** for One Plus One, **OG** for Ordinary Girl (*on haitus*), **DIE** for Someday, I want to die (*hiatus?*), "
                                        "**BTY** for Blind to You, **ATL** for A Tail Love, **-drive to get drive link**")
         if str(message.content) == '-TMM':
-            await secret.send("**TMM Staff-** **RP**: Aeris, **TL**: Sen, **PR**: pillow, **CLRD** differs, **TS**: Sen/Peng, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
+            await secret.send("**TMM Staff-** **RP**: Aeris, **TL**: Sen/serendipity, **PR**: pillow, **CLRD** differs, **TS**: Sen/serendipity, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
         if str(message.content) == '-BTY':
-            await secret.send("**BTY Staff-** **RP**: Aeris, **TL**: serendipity, **PR**: sam, **CLRD** Yesen, **TS**: Yesen/Peng, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
+            await secret.send("**BTY Staff-** **RP**: Aeris, **TL**: evstormx, **PR**: sam, **CLRD** Yesen, **TS**: Yesen/Sarcasm, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
         if str(message.content) == '-APITS':
-            await secret.send("**APITS Staff-** **RP**: Aeris, **TL**: serendipity, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
+            await secret.send("**APITS Staff-** **RP**: Aeris, **TL**: Sen, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
         if str(message.content) == '-IAM':
-            await secret.send("**IAM Staff-** **RP**: Aeris, **TL**: Remy, **PR**: pillow, **CLRD** amiee/Mei, **TS**: Sarcasm, **QC**: Naka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
+            await secret.send("**IAM Staff-** **RP**: Aeris, **TL**: Remy, **PR**: pillow, **CLRD** amiee/Mei, **TS**: Sarcasm, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
         if str(message.content) == '-DIE':
             await secret.send("**DIE Staff-** IDFK b/c it's been on hiatus for how long? https://drive.google.com/drive/folders/17owmv_ccNQydyq52-V2q74C4g7zQreBl?usp=sharing")
         if str(message.content) == '-OG':
