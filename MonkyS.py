@@ -100,7 +100,6 @@ async def on_message(message):
     confused = client.get_channel(736741523051511851)
     email = client.get_channel(736992278308192326)
     links = client.get_channel(736741434652360765)
-    allocations = client.get_channel(736747201275101234)
     updates = client.get_channel(736747148263292929)
 
     #roster check
@@ -135,7 +134,7 @@ async def on_message(message):
             await welcomepog.send(f"Welcome! To start off, please put your email under {email.mention} for future references."
                                   f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
                                   f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
-                                  f" To see what series you're assigned, look under {allocations.mention}."
+                                  f" To see what series you're assigned, look at sheets or use bot commands in {confused.mention}."
                                   f" Once again, welcome!")
 
     #confused channel
