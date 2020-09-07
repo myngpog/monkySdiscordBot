@@ -102,13 +102,6 @@ async def on_message(message):
     links = client.get_channel(736741434652360765)
     allocations = client.get_channel(736747201275101234)
     updates = client.get_channel(736747148263292929)
-    if message.channel == welcomepog:
-        if str(message.content) == '-whalecum':
-            await welcomepog.send(f"Welcome! To start off, please put your email under {email.mention} for future references."
-                                  f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
-                                  f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
-                                  f" To see what series you're assigned, look under {allocations.mention}."
-                                  f" Once again, welcome!")
 
     #roster check
     if message.channel == welcomepog:
@@ -197,6 +190,15 @@ async def on_message(message):
             await secret.send('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
         if str(message.content) == '-sheets':
             await secret.send('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
+
+    #whalecum
+    if message.channel == welcomepog:
+        if str(message.content) == "-whalecum":
+            await welcomepog.send(f"Welcome! To start off, please put your email under {email.mention} for future references."
+                                  f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
+                                  f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
+                                  f" To see what series you're assigned, look under {allocations.mention}."
+                                  f" Once again, welcome!")
 
 
 # bot playing game
