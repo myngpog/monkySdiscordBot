@@ -123,7 +123,7 @@ async def on_message(message):
         if str(message.content) == '-OPO':
             await welcomepog.send("**OPO Staff-** **RP**: sunglasses, **TL**: clownii, **PR**: aoieuy, **CLRD** KlauSilver, **TS**: Peng, **QC**: aoieuy https://drive.google.com/drive/folders/1vTqtWK-ykrgZ03MbMyKNpsmww8rZ7Uwf?usp=sharing")
         if str(message.content) == '-ATL':
-            await welcomepog.send("**ATL Staff-** **RP**: Mei, **TL**: mnajuu, **PR**: Taesu, **CLRD** sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
+            await welcomepog.send("**ATL Staff-** **RP**: Mei, **TL**: Narichi, **PR**: Taesu, **CLRD** sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
         if str(message.content) == '-drive':
             await welcomepog.send('https://drive.google.com/drive/folders/1gBRNYPAqWtQ26j1uCoCqioWBoAg0nXJa?usp=sharing')
         if str(message.content) == '-YL':
@@ -158,7 +158,7 @@ async def on_message(message):
         if str(message.content) == '-OPO':
             await confused.send("**OPO Staff-** **RP**: sunglasses, **TL**: clownii, **PR**: aoieuy, **CLRD** KlauSilver, **TS**: Peng, **QC**: aoieuy https://drive.google.com/drive/folders/1vTqtWK-ykrgZ03MbMyKNpsmww8rZ7Uwf?usp=sharing")
         if str(message.content) == '-ATL':
-            await confused.send("**ATL Staff-** **RP**: Mei, **TL**: mnajuu, **PR**: Taesu, **CLRD** sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
+            await confused.send("**ATL Staff-** **RP**: Mei, **TL**: Narichi, **PR**: Taesu, **CLRD** sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
         if str(message.content) == '-drive':
             await confused.send('https://drive.google.com/drive/folders/1gBRNYPAqWtQ26j1uCoCqioWBoAg0nXJa?usp=sharing')
         if str(message.content) == '-YL':
@@ -188,7 +188,7 @@ async def on_message(message):
         if str(message.content) == '-OPO':
             await secret.send("**OPO Staff-** **RP**: sunglasses, **TL**: clownii, **PR**: aoieuy, **CLRD** KlauSilver, **TS**: Peng, **QC**: aoieuy https://drive.google.com/drive/folders/1vTqtWK-ykrgZ03MbMyKNpsmww8rZ7Uwf?usp=sharing")
         if str(message.content) == '-ATL':
-            await secret.send("**ATL Staff-** **RP**: Mei, **TL**: mnajuu, **PR**: Taesu, **CLRD** sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
+            await secret.send("**ATL Staff-** **RP**: Mei, **TL**: Narichi, **PR**: Taesu, **CLRD** sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
         if str(message.content) == '-drive':
             await secret.send('https://drive.google.com/drive/folders/1gBRNYPAqWtQ26j1uCoCqioWBoAg0nXJa?usp=sharing')
         if str(message.content) == '-YL':
