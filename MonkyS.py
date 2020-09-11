@@ -115,7 +115,7 @@ async def on_message(message):
         if str(message.content) == '-APITS':
             await welcomepog.send("**APITS Staff-** **RP**: Aeris, **TL**: Sen, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
         if str(message.content) == '-IAM':
-            await welcomepog.send("**IAM Staff-** **RP**: Aeris, **TL**: Remy, **PR**: pillow, **CLRD** amiee/Mei, **TS**: Sarcasm, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
+            await welcomepog.send("**IAM Staff-** **RP**: Aeris, **TL**: Remy, **PR**: pillow, **CLRD** minan, **TS**: Sarcasm, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
         if str(message.content) == '-DIE':
             await welcomepog.send("**DIE Staff-** IDFK b/c it's been on hiatus for how long? https://drive.google.com/drive/folders/17owmv_ccNQydyq52-V2q74C4g7zQreBl?usp=sharing")
         if str(message.content) == '-OG':
@@ -150,7 +150,7 @@ async def on_message(message):
         if str(message.content) == '-APITS':
             await confused.send("**APITS Staff-** **RP**: Aeris, **TL**: Sen, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
         if str(message.content) == '-IAM':
-            await confused.send("**IAM Staff-** **RP**: Aeris, **TL**: Remy, **PR**: pillow, **CLRD** amiee/Mei, **TS**: Sarcasm, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
+            await confused.send("**IAM Staff-** **RP**: Aeris, **TL**: Remy, **PR**: pillow, **CLRD** minan, **TS**: Sarcasm, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
         if str(message.content) == '-DIE':
             await confused.send("**DIE Staff-** IDFK b/c it's been on hiatus for how long? https://drive.google.com/drive/folders/17owmv_ccNQydyq52-V2q74C4g7zQreBl?usp=sharing")
         if str(message.content) == '-OG':
@@ -180,7 +180,7 @@ async def on_message(message):
         if str(message.content) == '-APITS':
             await secret.send("**APITS Staff-** **RP**: Aeris, **TL**: Sen, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
         if str(message.content) == '-IAM':
-            await secret.send("**IAM Staff-** **RP**: Aeris, **TL**: Remy, **PR**: pillow, **CLRD** amiee/Mei, **TS**: Sarcasm, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
+            await secret.send("**IAM Staff-** **RP**: Aeris, **TL**: Remy, **PR**: pillow, **CLRD** minan, **TS**: Sarcasm, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
         if str(message.content) == '-DIE':
             await secret.send("**DIE Staff-** IDFK b/c it's been on hiatus for how long? https://drive.google.com/drive/folders/17owmv_ccNQydyq52-V2q74C4g7zQreBl?usp=sharing")
         if str(message.content) == '-OG':
