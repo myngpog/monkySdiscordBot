@@ -211,7 +211,7 @@ async def update_your_sheets():
     while not client.is_closed():
         images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png", "https://i.imgur.com/efwN7Sc.jpg", "https://i.imgur.com/G4FPSnw.jpg")
         await ao3.send(random.choice(images))
-        await asyncio.sleep(43200)
+        await asyncio.sleep(86400)
 
 # penguin penguin penguin penguin penguin
 
