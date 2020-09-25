@@ -136,6 +136,8 @@ async def on_message(message):
                                   f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
                                   f" To see what series you're assigned, look at sheets or use bot commands in {confused.mention}."
                                   f" Once again, welcome!")
+        if str(message.content) == '-hiatus':
+            await welcomepog.send('Hiatus people: Sen (college apps), Seren (shcool), pillows (school), gina (bored at scnalating), Yesen (school), Yuni (accident)')
 
     #confused channel
     if message.channel == confused:
@@ -165,7 +167,8 @@ async def on_message(message):
             await confused.send('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
         if str(message.content) == '-sheets':
             await confused.send('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
-
+        if str(message.content) == '-hiatus':
+            await confused.send('Hiatus people: Sen (college apps), Seren (shcool), pillows (school), gina (bored at scnalating), Yesen (school), Yuni (accident)')
 
     #secret channel
     if message.channel == secret:
@@ -195,6 +198,8 @@ async def on_message(message):
             await secret.send('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
         if str(message.content) == '-sheets':
             await secret.send('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
+        if str(message.content) == '-hiatus':
+            await secret.send('Hiatus people: Sen (college apps), Seren (shcool), pillows (school), gina (bored at scnalating), Yesen (school), Yuni (accident)')
 
 
 
