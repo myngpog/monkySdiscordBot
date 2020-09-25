@@ -1,7 +1,7 @@
 import discord, asyncio, random
 
 
-#id: 736704193905164438
+#id: 759141852950822924
 
 def read_token():
     with open("token.txt", "r") as f:
