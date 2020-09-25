@@ -201,7 +201,7 @@ async def on_message(message):
 # bot playing game
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game(name="we're looking for CLRDS & KTLs! Staff, type -halp for help"))
+    await client.change_presence(activity=discord.Game(name="we're looking for everything! Staff, type -halp for help"))
 
 
 # upload image
