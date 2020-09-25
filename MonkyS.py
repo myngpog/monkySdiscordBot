@@ -219,7 +219,7 @@ async def update_your_sheets():
         await asyncio.sleep(86400)
 
 
-# penguin penguin penguin penguin
+# penguin penguin penguin
 
 
 # Run command: important always keep at the end
