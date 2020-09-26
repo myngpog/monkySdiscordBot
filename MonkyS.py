@@ -15,11 +15,11 @@ client = discord.Client()
 
 # Welcome
 @client.event
-async def on_member_join(member):
+async def on_member_join(meme):
     welcomechannel = client.get_channel(736726612070105171)
     channel2 = client.get_channel(736727913793192026)
     channel3 = client.get_channel(736739974153633843)
-    await welcomechannel.send(f"Welcome to the jungle {member.mention}! Please look under {channel2.mention} for rules, then {channel3.mention} to be freed into the wild aha haa. pls stay")
+    await welcomechannel.send(f"Welcome to the jungle {meme.mention}! Please look under {channel2.mention} for rules, then {channel3.mention} to be freed into the wild aha haa. pls stay")
 
 # Recruitment - Msg + Reactions
 @client.event
