@@ -19,7 +19,10 @@ async def on_member_join(member):
     channel = client.get_channel(736726612070105171)
     rules= client.get_channel(736727913793192026)
     getinhere = client.get_channel(736739974153633843)
-    await channel.send(f"Welcome to the jungle {member.mention}! Please look under {rules.mention}, then {getinhere.mention} to be freed into the wild aha haa. pls stay")
+    if not member.bot:
+        await channel.send(f"Welcome to the jungle {member.mention}! Please look under {rules.mention}, then {getinhere.mention} to be freed into the wild aha haa. pls stay")
+    else:
+        await channel.send(f"New bot pog, {member.name}, someone pls give it bot role lmao.")
 
 # Recruitment - Msg + Reactions
 @client.event
