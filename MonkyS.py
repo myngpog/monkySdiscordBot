@@ -15,11 +15,11 @@ client = discord.Client()
 
 # Welcome
 @client.event
-async def on_member_join(meme):
-    welcomechannel = client.get_channel(736726612070105171)
-    channel2 = client.get_channel(736727913793192026)
-    channel3 = client.get_channel(736739974153633843)
-    await welcomechannel.send(f"Welcome to the jungle {meme.mention}! Please look under {channel2.mention} for rules, then {channel3.mention} to be freed into the wild aha haa. pls stay")
+async def on_member_join(member):
+    welcome = client.get_channel(736726612070105171)
+    rules= client.get_channel(736727913793192026)
+    getinhere = client.get_channel(736739974153633843)
+    await welcome.send(f"Welcome to the jungle {member.mention}! Please look under {rules.mention}, then {getinhere.mention} to be freed into the wild aha haa. pls stay")
 
 # Recruitment - Msg + Reactions
 @client.event
@@ -206,7 +206,7 @@ async def on_message(message):
 # bot playing game
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game(name="we're looking for every role! Staff, type -halp for help"))
+    await client.change_presence(activity=discord.Game(name="we're looking for every role!"))
 
 
 # upload image
