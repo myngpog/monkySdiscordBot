@@ -112,7 +112,7 @@ async def on_message(message):
                                        "**OPO** for One Plus One, **OG** for Ordinary Girl (*on haitus*), **DIE** for Someday, I want to die (*hiatus?*), "
                                        "**BTY** for Blind to You, **ATL** for A Tail Love **-drive to get drive link**")
         if str(message.content) == '-TMM':
-            await welcomepog.send("**TMM Staff-** **RP**: Aeris, **TL**: Sen/serendipity, **PR**: pillow, **CLRD** differs, **TS**: Sen/serendipity, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
+            await welcomepog.send("**TMM Staff-** **RP**: Aeris, **TL**: San/serendipity/Sen, **PR**: pillow, **CLRD** differs, **TS**: IDK/Sen, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
         if str(message.content) == '-BTY':
             await welcomepog.send("**BTY Staff-** **RP**: Aeris, **TL**: evstormx, **PR**: sam, **CLRD** Yesen/Moon, **TS**: Yesen/Sarcasm, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
         if str(message.content) == '-APITS':
@@ -124,9 +124,9 @@ async def on_message(message):
         if str(message.content) == '-OG':
             await welcomepog.send("**OG Staff-** **RP**: Peng, **TL**: Peng, **PR**: sam, **CLRD** Peng/varies, **TS**: leaf, **QC**: Peng, **ON CONFIRMED HIATUS** https://drive.google.com/drive/folders/1c4z_7VA4vFgBNPb2bnlGKsHZcdqfGbBN?usp=sharing")
         if str(message.content) == '-OPO':
-            await welcomepog.send("**OPO Staff-** **RP**: sunglasses, **TL**: clownii, **PR**: aoieuy, **CLRD** KlauSilver, **TS**: Peng, **QC**: aoieuy https://drive.google.com/drive/folders/1vTqtWK-ykrgZ03MbMyKNpsmww8rZ7Uwf?usp=sharing")
+            await welcomepog.send("**OPO Staff-** **RP**: sunglasses, **TL**: manjuu, **PR**: aoieuy, **CLRD** KlauSilver, **TS**: Peng, **QC**: aoieuy https://drive.google.com/drive/folders/1vTqtWK-ykrgZ03MbMyKNpsmww8rZ7Uwf?usp=sharing")
         if str(message.content) == '-ATL':
-            await welcomepog.send("**ATL Staff-** **RP**: Mei, **TL**: Narichi, **PR**: Taesu, **CLRD** sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
+            await welcomepog.send("**ATL Staff-** **RP**: Mei, **TL**: Narichi/manjuu, **PR**: Taesu, **CLRD** sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
         if str(message.content) == '-drive':
             await welcomepog.send('https://drive.google.com/drive/folders/1gBRNYPAqWtQ26j1uCoCqioWBoAg0nXJa?usp=sharing')
         if str(message.content) == '-YL':
