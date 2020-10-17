@@ -116,100 +116,108 @@ async def on_message(message):
         if str(message.content) == '-TMM':
             await welcomepog.send("**TMM Staff-** **RP**: Aeris, **TL**: San, **PR**: pillow, **CLRD** differs, **TS**: FAKE_SMILE, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
         if str(message.content) == '-BTY':
-            await welcomepog.send("**BTY Staff-** **RP**: Mei, **TL**: evstormx, **PR**: sam, **CLRD** Yesen/Moon, **TS**: aoieuy, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
+            await welcomepog.send("**BTY Staff-** **RP**: Mei, **TL**: evstormx, **PR**: sam, **CLRD** Yesen/Moon, **TS**: nabi, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
         if str(message.content) == '-APITS':
-            await welcomepog.send("**APITS Staff-** **RP**: Mei, **TL**: Sen, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
+            await welcomepog.send("**APITS Staff-** **RP**: Mei, **TL**: Sen, **PR**: Peng, **CLRD** minan, **TS**: WANHEDA, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
         if str(message.content) == '-IAM':
-            await welcomepog.send("**IAM Staff-** **RP**: Mei, **TL**: Remy, **PR**: shelly, **CLRD** minan, **TS**: Sarcasm, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
+            await welcomepog.send("**IAM Staff-** **RP**: Mei, **TL**: Remy, **PR**: shelly, **CLRD** minan/Kaiser, **TS**: Sarcasm/WANHEDA, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
         if str(message.content) == '-DIE':
             await welcomepog.send("**DIE Staff-** IDFK b/c it's been on hiatus for how long? https://drive.google.com/drive/folders/17owmv_ccNQydyq52-V2q74C4g7zQreBl?usp=sharing")
         if str(message.content) == '-OG':
             await welcomepog.send("**OG Staff-** **RP**: Peng, **TL**: Peng, **PR**: sam, **CLRD** Peng/varies, **TS**: leaf, **QC**: Peng, **ON CONFIRMED HIATUS** https://drive.google.com/drive/folders/1c4z_7VA4vFgBNPb2bnlGKsHZcdqfGbBN?usp=sharing")
         if str(message.content) == '-ATL':
-            await welcomepog.send("**ATL Staff-** **RP**: Mei, **TL**: Nezucoat/Narichi/manjuu, **PR**: shilawlygawd, **CLRD** sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
+            await welcomepog.send("**ATL Staff-** **RP**: Mei, **TL**: Nezucoat/Narichi, **PR**: shilawlygawd, **CLRD**: sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
         if str(message.content) == '-drive':
             await welcomepog.send('https://drive.google.com/drive/folders/1gBRNYPAqWtQ26j1uCoCqioWBoAg0nXJa?usp=sharing')
         if str(message.content) == '-YL':
             await welcomepog.send('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
         if str(message.content) == '-sheets':
             await welcomepog.send('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
+        if str(message.conent) == '-BUD':
+            await welcomepog.send('**BUD Staff-** **RP**: Mei, **TL**: manjuu, **PR**: Jerm, **CLRD**: aoieuy/Meryl, **TS**: calvo, **QC**: Peng https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
+        if str(message.content) == '-hiatus':
+            await welcomepog.send('Hiatus people: Seren (shcool), pillows (school), gina (bored at scnalating), Yesen (school), Taesu (school)')
         if str(message.content) == '-whalecum':
             await welcomepog.send(f"Welcome! To start off, please put your email under {email.mention} for future references."
                                   f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
                                   f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
                                   f" To see what series you're assigned, look at sheets or use bot commands in {confused.mention}."
                                   f" Once again, welcome!")
-        if str(message.content) == '-hiatus':
-            await welcomepog.send('Hiatus people: Sen (college apps), Seren (shcool), pillows (school), gina (bored at scnalating), Yesen (school), Yuni (accident)')
 
     #confused channel
     if message.channel == confused:
         if str(message.content) == "-halp":
-            await confused.send("**Series abbreviations:** **TMM** for Take My Money, **APITS** for A Place in the Sun, **IAM** for I am Han Sanqian, "
-                                       "**OG** for Ordinary Girl (*on haitus*), **DIE** for Someday, I want to die (*hiatus?*), "
-                                       "**BTY** for Blind to You, **ATL** for A Tail Love, **-drive to get drive link**")
+            await welcomepog.send(
+                "**Series abbreviations:** **TMM** for Take My Money, **APITS** for A Place in the Sun, **IAM** for I am Han Sanqian, "
+                "**OG** for Ordinary Girl (*on haitus*), **DIE** for Someday, I want to die (*hiatus?*), "
+                "**BTY** for Blind to You, **ATL** for A Tail Love **-drive to get drive link**")
         if str(message.content) == '-dropped':
-            await welcomepog.send('**Dropped series -** One Plus One')
+            await confused.send('**Dropped series -** One Plus One')
         if str(message.content) == '-TMM':
             await confused.send("**TMM Staff-** **RP**: Aeris, **TL**: San, **PR**: pillow, **CLRD** differs, **TS**: FAKE_SMILE, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
         if str(message.content) == '-BTY':
-            await confused.send("**BTY Staff-** **RP**: Mei, **TL**: evstormx, **PR**: sam, **CLRD** Yesen/Moon, **TS**: aoieuy, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
+            await confused.send("**BTY Staff-** **RP**: Mei, **TL**: evstormx, **PR**: sam, **CLRD** Yesen/Moon, **TS**: nabi, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
         if str(message.content) == '-APITS':
-            await confused.send("**APITS Staff-** **RP**: Mei, **TL**: Sen, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
+            await confused.send("**APITS Staff-** **RP**: Mei, **TL**: Sen, **PR**: Peng, **CLRD** minan, **TS**: WANHEDA, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
         if str(message.content) == '-IAM':
-            await confused.send("**IAM Staff-** **RP**: Mei, **TL**: Remy, **PR**: shelly, **CLRD** minan, **TS**: Sarcasm, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
+            await confused.send("**IAM Staff-** **RP**: Mei, **TL**: Remy, **PR**: shelly, **CLRD** minan/Kaiser, **TS**: Sarcasm/WANHEDA, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
         if str(message.content) == '-DIE':
             await confused.send("**DIE Staff-** IDFK b/c it's been on hiatus for how long? https://drive.google.com/drive/folders/17owmv_ccNQydyq52-V2q74C4g7zQreBl?usp=sharing")
         if str(message.content) == '-OG':
             await confused.send("**OG Staff-** **RP**: Peng, **TL**: Peng, **PR**: sam, **CLRD** Peng/varies, **TS**: leaf, **QC**: Peng, **ON CONFIRMED HIATUS** https://drive.google.com/drive/folders/1c4z_7VA4vFgBNPb2bnlGKsHZcdqfGbBN?usp=sharing")
         if str(message.content) == '-ATL':
-            await confused.send("**ATL Staff-** **RP**: Mei, **TL**: Nezucoat/manjuu/Narichi, **PR**: shilawlygawd, **CLRD** sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
+            await confused.send("**ATL Staff-** **RP**: Mei, **TL**: Nezucoat/Narichi, **PR**: shilawlygawd, **CLRD**: sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
         if str(message.content) == '-drive':
             await confused.send('https://drive.google.com/drive/folders/1gBRNYPAqWtQ26j1uCoCqioWBoAg0nXJa?usp=sharing')
         if str(message.content) == '-YL':
             await confused.send('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
         if str(message.content) == '-sheets':
             await confused.send('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
+        if str(message.conent) == '-BUD':
+            await confused.send('**BUD Staff-** **RP**: Mei, **TL**: manjuu, **PR**: Jerm, **CLRD**: aoieuy/Meryl, **TS**: calvo, **QC**: Peng https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
         if str(message.content) == '-hiatus':
-            await confused.send('Hiatus people: Sen (college apps), Seren (school, not sure if coming back), gina (bored of scnalating, not sure if coming back), Yesen (school)')
+            await confused.send('Hiatus people: Seren (shcool), pillows (school), gina (bored at scnalating), Yesen (school), Taesu (school)')
 
     #secret channel
     if message.channel == secret:
         if str(message.content) == "-halp":
-            await secret.send("**Series abbreviations:** **TMM** for Take My Money, **APITS** for A Place in the Sun, **IAM** for I am Han Sanqian, "
-                                       "**OG** for Ordinary Girl (*on haitus*), **DIE** for Someday, I want to die (*hiatus?*), "
-                                       "**BTY** for Blind to You, **ATL** for A Tail Love, **-drive to get drive link**")
+            await secret.send(
+                "**Series abbreviations:** **TMM** for Take My Money, **APITS** for A Place in the Sun, **IAM** for I am Han Sanqian, "
+                "**OG** for Ordinary Girl (*on haitus*), **DIE** for Someday, I want to die (*hiatus?*), "
+                "**BTY** for Blind to You, **ATL** for A Tail Love **-drive to get drive link**")
         if str(message.content) == '-dropped':
-            await welcomepog.send('**Dropped series -** One Plus One')
+            await secret.send('**Dropped series -** One Plus One')
         if str(message.content) == '-TMM':
             await secret.send("**TMM Staff-** **RP**: Aeris, **TL**: San, **PR**: pillow, **CLRD** differs, **TS**: FAKE_SMILE, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
         if str(message.content) == '-BTY':
-            await secret.send("**BTY Staff-** **RP**: Mei, **TL**: evstormx, **PR**: sam, **CLRD** Yesen/Moon, **TS**: aoieuy, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
+            await secret.send("**BTY Staff-** **RP**: Mei, **TL**: evstormx, **PR**: sam, **CLRD** Yesen/Moon, **TS**: nabi, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
         if str(message.content) == '-APITS':
-            await secret.send("**APITS Staff-** **RP**: Mei, **TL**: Sen, **PR**: Peng, **CLRD** Aeris, **TS**: leaf, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
+            await secret.send("**APITS Staff-** **RP**: Mei, **TL**: Sen, **PR**: Peng, **CLRD** minan, **TS**: WANHEDA, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
         if str(message.content) == '-IAM':
-            await secret.send("**IAM Staff-** **RP**: Mei, **TL**: Remy, **PR**: shelly, **CLRD** minan, **TS**: Sarcasm, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
+            await secret.send("**IAM Staff-** **RP**: Mei, **TL**: Remy, **PR**: shelly, **CLRD** minan/Kaiser, **TS**: Sarcasm/WANHEDA, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
         if str(message.content) == '-DIE':
             await secret.send("**DIE Staff-** IDFK b/c it's been on hiatus for how long? https://drive.google.com/drive/folders/17owmv_ccNQydyq52-V2q74C4g7zQreBl?usp=sharing")
         if str(message.content) == '-OG':
             await secret.send("**OG Staff-** **RP**: Peng, **TL**: Peng, **PR**: sam, **CLRD** Peng/varies, **TS**: leaf, **QC**: Peng, **ON CONFIRMED HIATUS** https://drive.google.com/drive/folders/1c4z_7VA4vFgBNPb2bnlGKsHZcdqfGbBN?usp=sharing")
         if str(message.content) == '-ATL':
-            await secret.send("**ATL Staff-** **RP**: Mei, **TL**: Nezucoat/manjuu/Narichi, **PR**: shilawlygawd, **CLRD** sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
+            await secret.send("**ATL Staff-** **RP**: Mei, **TL**: Nezucoat/Narichi, **PR**: shilawlygawd, **CLRD**: sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
         if str(message.content) == '-drive':
             await secret.send('https://drive.google.com/drive/folders/1gBRNYPAqWtQ26j1uCoCqioWBoAg0nXJa?usp=sharing')
         if str(message.content) == '-YL':
             await secret.send('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
         if str(message.content) == '-sheets':
             await secret.send('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
+        if str(message.conent) == '-BUD':
+            await secret.send('**BUD Staff-** **RP**: Mei, **TL**: manjuu, **PR**: Jerm, **CLRD**: aoieuy/Meryl, **TS**: calvo, **QC**: Peng https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
         if str(message.content) == '-hiatus':
-            await secret.send('Hiatus people: Sen (college apps), Seren (shcool), pillows (school), gina (bored at scnalating), Yesen (school), Yuni (accident)')
+            await secret.send('Hiatus people: Seren (shcool), pillows (school), gina (bored at scnalating), Yesen (school), Taesu (school)')
 
 
 
 # bot playing game
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game(name="we're looking for every role!"))
+    await client.change_presence(activity=discord.Game(name="we're recruiting every role!"))
 
 
 # upload image
