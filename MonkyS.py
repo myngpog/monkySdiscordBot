@@ -113,7 +113,7 @@ async def on_message(message):
     TMM = ("**TMM Staff-** **RP**: Aeris, **TL**: San, **PR**: pillow, **CLRD** differs, **TS**: FAKE_SMILE, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
     BTY = ("**BTY Staff-** **RP**: Mei, **TL**: evstormx, **PR**: sam, **CLRD** Yesen/Moon, **TS**: WANHEDA, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
     APITS = ("**APITS Staff-** **RP**: Mei, **TL**: Sen, **PR**: Peng, **CLRD** minan, **TS**: WANHEDA, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
-    IAM = ("**IAM Staff-** **RP**: Mei, **TL**: Remy, **PR**: shelly, **CLRD** minan/Kaiser, **TS**: Sarcasm/WANHEDA, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
+    IAM = ("**IAM Staff-** **RP**: Mei, **TL**: Remy, **PR**: Kyv, **CLRD** minan/Kaiser, **TS**: Sarcasm/WANHEDA, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
     DIE = ("**DIE Staff-** IDFK b/c it's been on hiatus for how long? https://drive.google.com/drive/folders/17owmv_ccNQydyq52-V2q74C4g7zQreBl?usp=sharing")
     OG = ("**OG Staff-** **RP**: Peng, **TL**: Peng, **PR**: sam, **CLRD** Peng/varies, **TS**: leaf, **QC**: Peng, **ON CONFIRMED HIATUS** https://drive.google.com/drive/folders/1c4z_7VA4vFgBNPb2bnlGKsHZcdqfGbBN?usp=sharing")
     ATL = ("**ATL Staff-** **RP**: Mei, **TL**: Nezucoat/Narichi, **PR**: shilawlygawd, **CLRD**: sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
