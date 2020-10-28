@@ -155,12 +155,10 @@ async def on_message(message):
             await welcomepog.send(YL)
         if str(message.content) == '-sheets':
             await welcomepog.send(sheets)
-        if str(message.conent) == '-BUD':
+        if str(message.content) == '-BUD':
             await welcomepog.send(BUD)
         if str(message.content) == '-hiatus':
             await welcomepog.send(hiatus)
-        if str(message.content) == '-whalecum':
-            await welcomepog.send(welcome)
 
     #confused channel
     if message.channel == confused:
