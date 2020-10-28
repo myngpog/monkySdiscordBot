@@ -121,7 +121,7 @@ async def on_message(message):
     YL = ('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
     sheets = ('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
     BUD = ('**BUD Staff-** **RP**: Mei, **TL**: manjuu, **PR**: Jerm, **CLRD**: Meryl, **TS**: calvo, **QC**: Peng https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
-    hiatus = ('Hiatus people: Seren (shcool), pillows (school), gina (bored at scnalating), Yesen (school), Taesu (school)')
+    hiatus = ('**Hiatus people:** Seren (shcool), gina (bored at scnalating), Yesen (school), Taesu (school)')
     welcome = (f"Welcome! To start off, please put your email under {email.mention} for future references."
                f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
                f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
@@ -159,6 +159,8 @@ async def on_message(message):
             await welcomepog.send(BUD)
         if str(message.content) == '-hiatus':
             await welcomepog.send(hiatus)
+        if str(message.content) == '-whalecum':
+            await welcomepog.send(welcome)
 
     #confused channel
     if message.channel == confused:
@@ -186,7 +188,7 @@ async def on_message(message):
             await confused.send(YL)
         if str(message.content) == '-sheets':
             await confused.send(sheets)
-        if str(message.conent) == '-BUD':
+        if str(message.content) == '-BUD':
             await confused.send(BUD)
         if str(message.content) == '-hiatus':
             await confused.send(hiatus)
@@ -217,7 +219,7 @@ async def on_message(message):
             await secret.send(YL)
         if str(message.content) == '-sheets':
             await secret.send(sheets)
-        if str(message.conent) == '-BUD':
+        if str(message.content) == '-BUD':
             await secret.send(BUD)
         if str(message.content) == '-hiatus':
             await secret.send(hiatus)
