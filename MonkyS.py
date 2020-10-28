@@ -122,7 +122,11 @@ async def on_message(message):
     sheets = ('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
     BUD = ('**BUD Staff-** **RP**: Mei, **TL**: manjuu, **PR**: Jerm, **CLRD**: Meryl, **TS**: calvo, **QC**: Peng https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
     hiatus = ('Hiatus people: Seren (shcool), pillows (school), gina (bored at scnalating), Yesen (school), Taesu (school)')
-
+    welcome = (f"Welcome! To start off, please put your email under {email.mention} for future references."
+               f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
+               f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
+               f" To see what series you're assigned, look at sheets or use bot commands in {confused.mention}."
+               f" Once again, welcome!")
 
 
     #staff shenanimonks
@@ -156,11 +160,7 @@ async def on_message(message):
         if str(message.content) == '-hiatus':
             await welcomepog.send(hiatus)
         if str(message.content) == '-whalecum':
-            await welcomepog.send(f"Welcome! To start off, please put your email under {email.mention} for future references."
-                                  f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
-                                  f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
-                                  f" To see what series you're assigned, look at sheets or use bot commands in {confused.mention}."
-                                  f" Once again, welcome!")
+            await welcomepog.send(welcome)
 
     #confused channel
     if message.channel == confused:
