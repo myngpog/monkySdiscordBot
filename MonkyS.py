@@ -110,18 +110,17 @@ async def on_message(message):
             "**OG** for Ordinary Girl (*on haitus*), **DIE** for Someday, I want to die (*hiatus?*), "
             "**BTY** for Blind to You, **ATL** for A Tail Love **-drive to get drive link**")
     droppedseries = ('**Dropped series -** One Plus One')
-    TMM = ("**TMM Staff-** **RP**: Aeris, **TL**: San, **PR**: pillow, **CLRD** differs, **TS**: FAKE_SMILE, **QC**: Ryuu https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
-    BTY = ("**BTY Staff-** **RP**: Mei, **TL**: evstormx, **PR**: sam, **CLRD** Yesen/Moon, **TS**: WANHEDA, **QC**: Peng https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
-    APITS = ("**APITS Staff-** **RP**: Mei, **TL**: Sen, **PR**: Peng, **CLRD** Kaiser, **TS**: WANHEDA, **QC**: Asura https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
-    IAM = ("**IAM Staff-** **RP**: Mei, **TL**: Remy, **PR**: Kyv, **CLRD** minan, **TS**: Sarcasm, **QC**: Yourexnaka https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
-    DIE = ("**DIE Staff-** IDFK b/c it's been on hiatus for how long? https://drive.google.com/drive/folders/17owmv_ccNQydyq52-V2q74C4g7zQreBl?usp=sharing")
-    OG = ("**OG Staff-** **RP**: Peng, **TL**: Peng, **PR**: sam, **CLRD** Peng/varies, **TS**: leaf, **QC**: Peng, **ON CONFIRMED HIATUS** https://drive.google.com/drive/folders/1c4z_7VA4vFgBNPb2bnlGKsHZcdqfGbBN?usp=sharing")
-    ATL = ("**ATL Staff-** **RP**: Mei, **TL**: Nezucoat, **PR**: onigiri, **CLRD**: sunglasses, **TS**: leaf, **QC**: manjuu https://drive.google.com/drive/folders/131qm3Sv0jdEfV5lmPiK3UhatYlGvbVra?usp=sharing")
+    TMM = ("https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
+    BTY = ("https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
+    APITS = ("https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
+    IAM = ("https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
+    DIE = ("it's been on hiatus for how long? https://drive.google.com/drive/folders/17owmv_ccNQydyq52-V2q74C4g7zQreBl?usp=sharing")
+    OG = ("**ON CONFIRMED HIATUS** https://drive.google.com/drive/folders/1c4z_7VA4vFgBNPb2bnlGKsHZcdqfGbBN?usp=sharing")
     drive = ('https://drive.google.com/drive/folders/1gBRNYPAqWtQ26j1uCoCqioWBoAg0nXJa?usp=sharing')
     YL = ('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
     sheets = ('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
-    BUD = ('**BUD Staff-** **RP**: Mei, **TL**: manjuu, **PR**: Jerm, **CLRD**: Meryl, **TS**: calvo, **QC**: Peng https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
-    hiatus = ('**Hiatus people:** Seren (shcool), gina (bored at scnalating), Yesen (school), Taesu (school)')
+    BUD = ('https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
+    hiatus = ('**Hiatus people:** idk xd')
     welcome = (f"Welcome! To start off, please put your email under {email.mention} for future references."
                f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
                f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
@@ -147,8 +146,6 @@ async def on_message(message):
             await welcomepog.send(DIE)
         if str(message.content) == '-OG':
             await welcomepog.send(OG)
-        if str(message.content) == '-ATL':
-            await welcomepog.send(ATL)
         if str(message.content) == '-drive':
             await welcomepog.send(drive)
         if str(message.content) == '-YL':
@@ -180,8 +177,6 @@ async def on_message(message):
             await confused.send(DIE)
         if str(message.content) == '-OG':
             await confused.send(OG)
-        if str(message.content) == '-ATL':
-            await confused.send(ATL)
         if str(message.content) == '-drive':
             await confused.send(drive)
         if str(message.content) == '-YL':
@@ -211,8 +206,6 @@ async def on_message(message):
             await secret.send(DIE)
         if str(message.content) == '-OG':
             await secret.send(OG)
-        if str(message.content) == '-ATL':
-            await secret.send(ATL)
         if str(message.content) == '-drive':
             await secret.send(drive)
         if str(message.content) == '-YL':
