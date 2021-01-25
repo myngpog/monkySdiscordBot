@@ -70,9 +70,9 @@ async def on_message(message):
 
             # if DONE
             if str(bruh.content) == 'DONE':
-                await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
                 secret = client.get_channel(736704193905164441)
-                await secret.send("jfiseojfioesfiojoi")
+                (await message.channel.send('Thank you for your application! We will get back to you ASAP!'))
+                (await secret.send("jfiseojfioesfiojoi"))
 
 
 
@@ -214,13 +214,13 @@ async def on_ready():
 
 
 # upload image
-!async def update_your_sheets():
+async def update_your_sheets():
     await client.wait_until_ready()
     ao3 = client.get_channel(736735728364683264)
     while not client.is_closed():
         images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png", "https://i.imgur.com/efwN7Sc.jpg", "https://i.imgur.com/G4FPSnw.jpg")
         await ao3.send(random.choice(images))
-        await asyncio.sleep(86400)
+        await asyncio.sleep(172800)
 
 
 # penguin penguin penguin
