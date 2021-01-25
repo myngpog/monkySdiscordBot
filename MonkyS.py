@@ -1,6 +1,5 @@
 import discord, asyncio, random
 
-print(discord.__version__)
 
 #id: 739660030512595054
 
