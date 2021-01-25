@@ -214,7 +214,7 @@ async def on_ready():
 
 
 # upload image
-async def update_your_sheets():
+!async def update_your_sheets():
     await client.wait_until_ready()
     ao3 = client.get_channel(736735728364683264)
     while not client.is_closed():
