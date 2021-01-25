@@ -70,23 +70,24 @@ async def on_message(message):
 
             # if DONE
             if str(bruh.content) == 'DONE':
-                channel2 = client.get_channel(738107566692761721)
+                test = client.get_channel(738107566692761721)
                 newapplicant = message.author.mention
-                NASA1 = client.get_user(315869723373862917)
-                NASA2 = client.get_user(208108164061593600)
-                NASA3 = client.get_user(472238811691352065)
-                NASA4 = client.get_user(564523794920767488)
-                await channel2.send(f'New application pog! {NASA1.mention}, {NASA2.mention}, {NASA3.mention}, {NASA4.mention}. App from {newapplicant}')
+                peng = client.get_user(315869723373862917)
+                aoi = client.get_user(472238811691352065)
+                manjuu = client.get_user(564523794920767488)
+                sen = client.get_user(208108164061593600)
+                await test.send(f"New applicant pog! {peng.mention}, {aoi.mention}, {manjuu.mention}, {sen.mention}. App from {newapplicant.mention}")
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
 
-                # expose dms
-                counter = 0
-                channelbruh = message.channel
-                async for message in channelbruh.history(limit=10, after=ao3pog):
-                    if message.author == client.user:
-                        counter += 1
-                    channelbruhbruh = client.get_channel(738107566692761721)
-                    await channelbruhbruh.send(message.content)
+            # expose dms
+            counter = 0
+            channelbruh = message.channel
+            async for message in channelbruh.history(limit=0, after=ao3pog):
+                if message.author == client.user:
+                    counter += 1
+                testchannel = client.get_channel(738107566692761721)
+                await testchannel.send(message.content)
+
 
 
             # if CANCEL
