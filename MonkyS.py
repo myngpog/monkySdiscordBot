@@ -10,6 +10,9 @@ def read_token():
 
 token = read_token()
 
+intents = discord.Intents.default()
+intents.members = True
+
 client = commands.Bot(command_prefix = "-", intents = discord.Intents.all())
 
 # Welcome
@@ -84,7 +87,8 @@ async def on_message(message):
                 async for message in channelbruh.history(limit=10, after=ao3pog):
                     if message.author == client.user:
                         counter += 1
-                        await test.send(message.content)
+                        messages = await channelbruh.history(limit=10).flatten()
+                        await test.send(messages)
 
 
             # if CANCEL
