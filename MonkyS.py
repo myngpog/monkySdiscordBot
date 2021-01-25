@@ -84,7 +84,7 @@ async def on_message(message):
                 # expose dms
                 counter = 0
                 channelbruh = message.channel
-                async for message in channelbruh.history(limit=10, after=ao3pog).flatten():
+                async for message in channelbruh.history(limit=10, after=ao3pog):
                     if message.author == newapplicant:
                         counter += 1
                         await test.history(message.content)
