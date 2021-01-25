@@ -1,4 +1,5 @@
 import discord, asyncio, random
+from discord.ext import commands
 
 #id: 739660030512595054
 
@@ -9,8 +10,7 @@ def read_token():
 
 token = read_token()
 
-intents = discord.Intents.all()
-client = discord.Client()
+client = commands.Bot(command_prefix = "!")
 
 # Welcome
 @client.event
