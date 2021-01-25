@@ -70,20 +70,18 @@ async def on_message(message):
 
             # if DONE
             if str(bruh.content) == 'DONE':
-                peng = client.get_user(315869723373862917)
                 newapplicant = message.author.mention
                 test = client.get_channel(738107566692761721)
                 (await message.channel.send('Thank you for your application! We will get back to you ASAP!'))
-                (await test.send(f"New application pog! {peng.mention}. App from {newapplicant}"))
+                (await test.send(f"New application pog! App from {newapplicant}"))
 
                 # expose dms
                 counter = 0
-                channelbruh = message.channel
-                async for message in channelbruh.history(limit=0, after=ao3pog):
+                dm = message.channel
+                async for message in dm.history(limit=0, after=ao3pog):
                     if message.author == client.user:
                         counter += 1
-                        testchannel = client.get_channel(738107566692761721)
-                        await testchannel.send(message.content)
+                        await test.send(message.content)
 
 
             # if CANCEL
