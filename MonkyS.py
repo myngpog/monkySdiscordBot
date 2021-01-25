@@ -72,7 +72,7 @@ async def on_message(message):
             if str(bruh.content) == 'DONE':
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
                 test = client.get_channel(803346994496012289)
-                newapplicant = message.author.mention
+                newapplicant = message.author
                 peng = client.get_user(315869723373862917)
                 aoi = client.get_user(472238811691352065)
                 manjuu = client.get_user(564523794920767488)
