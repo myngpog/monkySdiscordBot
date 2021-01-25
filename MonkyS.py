@@ -1,6 +1,5 @@
 import discord, asyncio, random
 
-
 #id: 739660030512595054
 
 def read_token():
