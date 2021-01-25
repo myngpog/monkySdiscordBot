@@ -75,13 +75,14 @@ async def on_message(message):
                 (await message.channel.send('Thank you for your application! We will get back to you ASAP!'))
                 (await test.send(f"New application pog! App from {newapplicant}"))
 
-                # expose dms
-                counter = 0
-                dm = message.channel
-                async for message in dm.history(limit=0, after=ao3pog):
-                    if message.author == client.user:
-                        counter += 1
-                        await test.send(message.content)
+            # expose dms
+            counter = 0
+            channelbruh = message.channel
+            async for message in channelbruh.history(limit=0, after=ao3pog):
+                if message.author == client.user:
+                    counter += 1
+                    testchannel = client.get_channel(738107566692761721)
+                    await testchannel.send(message.content)
 
 
             # if CANCEL
