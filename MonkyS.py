@@ -10,9 +10,7 @@ def read_token():
 
 token = read_token()
 
-intents = discord.Intents.default()
-intents.members = True
-client = commands.Bot(command_prefix = "-", intents = intents)
+client = commands.Bot(command_prefix = "-", intents = discord.Intents.all())
 
 # Welcome
 @client.event
@@ -72,9 +70,13 @@ async def on_message(message):
             # if DONE
             if str(bruh.content) == 'DONE':
                 newapplicant = message.author.mention
+                NASA1 = client.get_user(315869723373862917)
+                NASA2 = client.get_user(208108164061593600)
+                NASA3 = client.get_user(472238811691352065)
+                NASA4 = client.get_user(564523794920767488)
                 test = client.get_channel(738107566692761721)
                 (await message.channel.send('Thank you for your application! We will get back to you ASAP!'))
-                (await test.send(f"New application pog! App from {newapplicant}"))
+                (await test.send(f'New application pog! {NASA1.mention}, {NASA2.mention}, {NASA3.mention}, {NASA4.mention}. App from {newapplicant}'))
 
             # expose dms
             counter = 0
