@@ -72,16 +72,9 @@ async def on_message(message):
             if str(bruh.content) == 'DONE':
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
                 test = client.get_channel(803346994496012289)
-                await test.send(f"New applicant pog! <@&736722688575537233> . App from {message.author.mention}")
+                await test.send(f"New applicant pog! App from {message.author.mention}")
 
-            # expose dms
-            counter = 0
-            channelbruh = message.channel
-            async for message in channelbruh.history(limit=0, after=ao3pog):
-                if message.author == client.user:
-                    counter += 1
-                    testchannel = client.get_channel(803346994496012289)
-                    await testchannel.send(message.content)
+
 
 
 
