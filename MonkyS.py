@@ -1,5 +1,7 @@
 import discord, asyncio, random
 
+print(discord.__version__)
+
 #id: 739660030512595054
 
 def read_token():
@@ -10,7 +12,7 @@ def read_token():
 
 token = read_token()
 
-client = discord.Client()
+client = discord.Client(intents = discord.Intents.all())
 
 # Welcome
 @client.event
