@@ -62,17 +62,13 @@ async def on_message(message):
             await client.wait_for('message', check=check)
             await message.author.send("Lastly, please type 'DONE' to submit your application, or type 'CANCEL' to cancel lmao **(don't bold it)**. *If i don't respond after your reply, redo the app process again by typing 'APPLY'.*")
 
-            # 2nd bruh bc im dumb
-            def check(s):
-                return (s.author == message.author and s.channel == message.channel)
+
 
             bruh = await client.wait_for('message', check=check)
 
             # if DONE
             if str(bruh.content) == 'DONE':
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
-                test = client.get_channel(803346994496012289)
-                await test.send(f"New applicant pog! App from {message.author.mention}")
 
 
 
