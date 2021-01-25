@@ -9,8 +9,7 @@ def read_token():
 
 token = read_token()
 
-print(discord.__version__)
-
+intents = discord.Intents.all()
 client = discord.Client()
 
 # Welcome
