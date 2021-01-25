@@ -72,11 +72,7 @@ async def on_message(message):
             if str(bruh.content) == 'DONE':
                 await message.channel.send('Thank you for your application! We\'ll get back to you ASAP!')
                 test = client.get_channel(803346994496012289)
-                peng = client.get_user(315869723373862917)
-                aoi = client.get_user(472238811691352065)
-                manjuu = client.get_user(564523794920767488)
-                sen = client.get_user(208108164061593600)
-                await test.send(f"New applicant pog! {peng.mention}, {aoi.mention}, {manjuu.mention}, {sen.mention}. App from {message.author.mention}")
+                await test.send(f"New applicant pog! <@&736722688575537233> . App from {message.author.mention}")
 
             # expose dms
             counter = 0
