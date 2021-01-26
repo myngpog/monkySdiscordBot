@@ -123,6 +123,12 @@ async def on_message(message):
     YL = ('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
     sheets = ('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
     BUD = ('https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
+    welcome = (
+        f"Welcome! To start off, please put your email under {email.mention} for future references."
+        f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
+        f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
+        f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {confused.mention}."
+        f" Once again, welcome!")
 
 
     #staff shenanimonks
@@ -151,22 +157,13 @@ async def on_message(message):
             await welcomepog.send(sheets)
         if str(message.content) == '-BUD':
             await welcomepog.send(BUD)
+        if str(message.content) == '-whalecum':
+            await welcomepog.send(welcome)
 
         #hiatus
         if str(message.content) == '-hiatus':
             await welcomepog.send('**Hiatus people: ** idfk ill fix this later')
 
-
-        #welcome
-        if str(message.content) == '-whalecum':
-            user = message.mentions[0]
-            welcome = (
-                f"Welcome {user.mention}! To start off, please put your email under {email.mention} for future references."
-                f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
-                f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
-                f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {confused.mention}."
-                f" Once again, welcome!")
-            await welcomepog.send(welcome)
 
     #confused channel
     if message.channel == confused:
@@ -197,7 +194,7 @@ async def on_message(message):
         if str(message.content) == '-hiatus':
             await confused.send('**Hiatus people: **')
 
-    #secret channel
+    #monky shrine
     if message.channel == secret:
         if str(message.content) == "-halp":
             await welcomepog.send(helpmepls)
