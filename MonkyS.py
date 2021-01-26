@@ -86,9 +86,8 @@ async def on_message(message):
                 @client.command()
                 async def history(ctx, limit: int = 10):
                     messages = await message.channel.history(limit=limit).flatten()
-                    with open("channel_messages.txt"):
-                        channelbruhbruh = client.get_channel(738107566692761721)
-                        await channelbruhbruh.send(messages)
+                    channelbruhbruh = client.get_channel(738107566692761721)
+                    await channelbruhbruh.send(messages)
 
 
             # if CANCEL
