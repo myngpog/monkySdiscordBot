@@ -157,7 +157,7 @@ async def on_message(message):
             await welcomepog.send(sheets)
         if str(message.content) == '-BUD':
             await welcomepog.send(BUD)
-        if str(message.content) == '-whalecum':
+        if str(message.content.startswith) == '-whalecum':
             await welcomepog.send(welcome)
 
         #hiatus
