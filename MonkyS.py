@@ -159,7 +159,7 @@ async def on_message(message):
             await welcomepog.send(BUD)
         if str(message.content) == '-whalecum':
             user = message.mentions
-            await welcomepog.send(f'Welcome {user.mention}!' + welcome)
+            await welcomepog.send(welcome)
 
         #hiatus
         if str(message.content) == '-hiatus':
