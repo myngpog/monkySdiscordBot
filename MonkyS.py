@@ -158,9 +158,10 @@ async def on_message(message):
 
 
         #welcome
-        if str(message.content.startswith) == '-whalecum':
+        if str(message.content) == '-whalecum':
+            user = message.mentions[0]
             welcome = (
-                f"Welcome! To start off, please put your email under {email.mention} for future references."
+                f"Welcome {user.mention}! To start off, please put your email under {email.mention} for future references."
                 f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
                 f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
                 f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {confused.mention}."
