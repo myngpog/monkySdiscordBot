@@ -15,17 +15,6 @@ intents.members = True
 
 client = commands.Bot(command_prefix = "-", intents = discord.Intents.all())
 
-# Welcome
-@client.event
-async def on_member_join(member):
-    channel = client.get_channel(736726612070105171)
-    rules = client.get_channel(736727913793192026)
-    getinhere = client.get_channel(736739974153633843)
-    if not member.bot:
-        await channel.send(f"Welcome to the jungle {member.mention}! Please look under {rules.mention}, then {getinhere.mention} to be freed into the wild aha haa. pls stay")
-    else:
-        await channel.send(f"New bot pog, {member.name}, someone pls give it bot role lmao.")
-
 # Recruitment - Msg + Reactions
 @client.event
 async def on_raw_reaction_add(payload):
@@ -106,6 +95,7 @@ async def on_message(message):
     email = client.get_channel(736992278308192326)
     links = client.get_channel(736741434652360765)
     updates = client.get_channel(736747148263292929)
+    user = message.mentions[0]
 
 
     # Variables because APCSP is actually good for something
@@ -158,7 +148,7 @@ async def on_message(message):
         if str(message.content) == '-BUD':
             await welcomepog.send(BUD)
         if str(message.content) == '-whalecum':
-            await welcomepog.send(f"Welcome {message.mentions[0].mention}! To start off, please put your email under {email.mention} for future references."
+            await welcomepog.send(f"Welcome {user.mention}! To start off, please put your email under {email.mention} for future references."
         f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
         f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
         f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {confused.mention}."
