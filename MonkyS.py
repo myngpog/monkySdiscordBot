@@ -84,12 +84,11 @@ async def on_message(message):
                 # expose dms
                 counter = 0
                 channelbruh = message.channel
-                messages = await channelbruh.history(limit=10, after=ao3pog).flatten()
-                async for message in channelbruh.history():
+                async for message in channelbruh.history(limit=10, after=ao3pog):
                     if message.author == client.user:
                         counter += 1
                     channelbruhbruh = client.get_channel(738107566692761721)
-                    await channelbruhbruh.send(f"{messages.content}")
+                    await channelbruhbruh.send(message.content)
 
 
             # if CANCEL
@@ -124,10 +123,10 @@ async def on_message(message):
     sheets = ('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
     BUD = ('https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
     hiatus = ('**Hiatus people:** idk xd')
-    welcome = (f"Welcome! To start off, please put your email under {email.mention} for future references."
+    welcome = (f"To start off, please put your email under {email.mention} for future references."
                f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
                f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
-               f" To see what series you're assigned, look at sheets or use bot commands in {confused.mention}."
+               f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {confused.mention}."
                f" Once again, welcome!")
 
 
@@ -159,8 +158,10 @@ async def on_message(message):
             await welcomepog.send(BUD)
         if str(message.content) == '-hiatus':
             await welcomepog.send(hiatus)
-        if str(message.content) == '-whalecum':
-            await welcomepog.send(welcome + "f{user.mention}")
+        #welcome
+        if str(message.content.startswith) == '-whalecum':
+            user = message.mention[0]
+            await welcomepog.send(f'Welcome {user.mention}' + welcome)
 
     #confused channel
     if message.channel == confused:
@@ -225,7 +226,7 @@ async def on_message(message):
 # bot playing game
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game(name="we're recruiting every role!"))
+    await client.change_presence(activity=discord.Game(name="wear a mask and wash your hands kekw + we're recruiting!"))
 
 
 # upload image
