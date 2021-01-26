@@ -107,9 +107,6 @@ async def on_message(message):
     links = client.get_channel(736741434652360765)
     updates = client.get_channel(736747148263292929)
 
-    #empty list of hiatus people
-    h = []
-
 
     # Variables because APCSP is actually good for something
     helpmepls = ("**Series abbreviations:** **TMM** for Take My Money, **APITS** for A Place in the Sun, **IAM** for I am Han Sanqian, "
@@ -156,21 +153,14 @@ async def on_message(message):
             await welcomepog.send(BUD)
 
         #hiatus
-        if str(message.content.startswith) == '-hiatusadd':
-            hiatusUser = message.mentions[0]
-            h.append(hiatusUser)
-            if str(message.content.startswith == 'hiatusremove'):
-                hiatusUser = message.mentions[0]
-                h.remove(hiatusUser)
         if str(message.content) == '-hiatus':
-            await welcomepog.send('**Hiatus people: **', h)
+            await welcomepog.send('**Hiatus people: ** idfk ill fix this later')
 
 
         #welcome
         if str(message.content.startswith) == '-whalecum':
-            user = message.mentions
             welcome = (
-                f"Welcome {user.mention}! To start off, please put your email under {email.mention} for future references."
+                f"Welcome! To start off, please put your email under {email.mention} for future references."
                 f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
                 f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
                 f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {confused.mention}."
@@ -204,7 +194,7 @@ async def on_message(message):
         if str(message.content) == '-BUD':
             await confused.send(BUD)
         if str(message.content) == '-hiatus':
-            await confused.send('**Hiatus people: **', h)
+            await confused.send('**Hiatus people: **')
 
     #secret channel
     if message.channel == secret:
@@ -233,7 +223,7 @@ async def on_message(message):
         if str(message.content) == '-BUD':
             await secret.send(BUD)
         if str(message.content) == '-hiatus':
-            await secret.send('**Hiatus people: **', h)
+            await secret.send('**Hiatus people: **')
 
 
 
