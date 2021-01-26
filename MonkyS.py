@@ -81,13 +81,14 @@ async def on_message(message):
                 (await message.channel.send('Thank you for your application! We will get back to you ASAP!'))
                 (await test.send(f'New application pog! {NASA1.mention}, {NASA2.mention}, {NASA3.mention}, {NASA4.mention}. App from {newapplicant}'))
 
-
-                #experiment
-                @client.command()
-                async def history(ctx, limit: int = 10):
-                    messages = await message.channel.history(limit=limit).flatten()
+                # expose dms
+                counter = 0
+                channelbruh = message.channel
+                async for message in channelbruh.history(limit=10, after=ao3pog):
+                    if message.author == client.user:
+                        counter += 1
                     channelbruhbruh = client.get_channel(738107566692761721)
-                    await channelbruhbruh.send(messages)
+                    await channelbruhbruh.send(message.content)
 
 
             # if CANCEL
