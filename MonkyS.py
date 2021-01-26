@@ -84,8 +84,8 @@ async def on_message(message):
                 # expose dms
                 counter = 0
                 channelbruh = message.channel
-                async for message in channelbruh.history(limit=10, after=ao3pog):
-                    messages = await channelbruh.history.flatten()
+                messages = await channelbruh.history(limit=10, after=ao3pog).flatten()
+                async for message in channelbruh.history():
                     if message.author == client.user:
                         counter += 1
                     channelbruhbruh = client.get_channel(738107566692761721)
@@ -160,7 +160,7 @@ async def on_message(message):
         if str(message.content) == '-hiatus':
             await welcomepog.send(hiatus)
         if str(message.content) == '-whalecum':
-            await welcomepog.send(welcome)
+            await welcomepog.send(welcome + "f{user.mention}")
 
     #confused channel
     if message.channel == confused:
