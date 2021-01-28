@@ -80,8 +80,7 @@ async def on_message(message):
                         text = message.content
                         return text
                     channelbruhbruh = client.get_channel(738107566692761721)
-                    final = message()
-                    await channelbruhbruh.send(final)
+                    await channelbruhbruh.send(message.content)
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
