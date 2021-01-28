@@ -80,9 +80,8 @@ async def on_message(message):
                     messages = message.content.split('\n')
                 for message in messages:
                     dm.append(message.content)
-                final1 = "```" + '\n'.join([''.join(map(str, item)) for item in dm]) + "```"
-                final2 = '\n'.join(final1)
-                await channelbruhbruh.send(final2)
+                final = "```" + '\n\n'.join([''.join(map(str, item)) for item in dm]) + "```"
+                await channelbruhbruh.send(final)
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
