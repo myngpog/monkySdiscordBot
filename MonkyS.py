@@ -78,7 +78,7 @@ async def on_message(message):
                     counter += 1
                 for message in messages:
                     channelbruhbruh = client.get_channel(738107566692761721)
-                    text = message.content(10)
+                    text = message.content + message.content + message.content + message.content + message.content + message.content + message.content + message.content + message.content + message.content
                     await channelbruhbruh.send(text)
 
             # if CANCEL
