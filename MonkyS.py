@@ -73,11 +73,12 @@ async def on_message(message):
                 # expose dms
                 counter = 0
                 channelbruh = message.channel
-                async for message in channelbruh.history(limit=10, after=ao3pog).flatten():
+                messages = await channelbruh.history(limit=10, after=ao3pog).flatten()
+                async for message in channelbruh.history():
                     if message.author == client.user:
                         counter += 1
                     channelbruhbruh = client.get_channel(738107566692761721)
-                    await channelbruhbruh.send(message.content)
+                    await channelbruhbruh.send(messages.content)
 
 
             # if CANCEL
