@@ -71,14 +71,15 @@ async def on_message(message):
                 (await test.send(f'New application pog! {NASA1}, {NASA2}, {NASA3}, {NASA4}. App from {newapplicant}'))
 
                 # expose dms
+                dm = []
                 counter = 0
                 channelbruh = message.channel
-                messages = await channelbruh.history(limit=10, after=ao3pog).flatten()
+                messages = await channelbruh.history(limit=10, after=ao3pog).flatten(dm)
                 if message.author == client.user:
                     counter += 1
                 for message in messages:
                     channelbruhbruh = client.get_channel(738107566692761721)
-                    text = message.content
+                    text = dm
                     await channelbruhbruh.send(text)
 
             # if CANCEL
