@@ -81,6 +81,9 @@ async def on_message(message):
                     messages = message.content.split('\n')
                 for message in messages:
                     dm.append(message.content)
+                #make list not a string
+                '\n'.join(dm)
+                ''.join(dm)
                 final = "```" + str(dm) + "```"
                 await channelbruhbruh.send(final)
 
