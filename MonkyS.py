@@ -124,40 +124,38 @@ async def on_message(message):
 
 # should look to changing these into function with parameters
     #staff shenanimonks
-    def channelcommands(commandchannel):
-        if message.channel == commandchannel:
-            if str(message.content) == "-halp":
-                await commandchannel.send (helpmepls)
-            if str(message.content) == '-dropped':
-                await commandchannel.send(droppedseries)
-            if str(message.content) == '-TMM':
-                await commandchannel.send(TMM)
-            if str(message.content) == '-BTY':
-                await commandchannel.send(BTY)
-            if str(message.content) == '-APITS':
-                await commandchannel.send(APITS)
-            if str(message.content) == '-IAM':
-                await commandchannel.send(IAM)
-            if str(message.content) == '-DIE':
-                await commandchannel.send(DIE)
-            if str(message.content) == '-OG':
-                await commandchannel.send(OG)
-            if str(message.content) == '-drive':
-                await commandchannel.send(drive)
-            if str(message.content) == '-YL':
-                await commandchannel.send(YL)
-            if str(message.content) == '-sheets':
-                await commandchannel.send(sheets)
-            if str(message.content) == '-BUD':
-                await commandchannel.send(BUD)
-            if str(message.content) == '-whalecum':
-                await commandchannel.send(welcome)
+    if message.channel == staff_shenanimonks:
+        if str(message.content) == "-halp":
+            await staff_shenanimonks.send (helpmepls)
+        if str(message.content) == '-dropped':
+            await staff_shenanimonks.send(droppedseries)
+        if str(message.content) == '-TMM':
+            await staff_shenanimonks.send(TMM)
+        if str(message.content) == '-BTY':
+            await staff_shenanimonks.send(BTY)
+        if str(message.content) == '-APITS':
+            await staff_shenanimonks.send(APITS)
+        if str(message.content) == '-IAM':
+            await staff_shenanimonks.send(IAM)
+        if str(message.content) == '-DIE':
+            await staff_shenanimonks.send(DIE)
+        if str(message.content) == '-OG':
+            await staff_shenanimonks.send(OG)
+        if str(message.content) == '-drive':
+            await staff_shenanimonks.send(drive)
+        if str(message.content) == '-YL':
+            await staff_shenanimonks.send(YL)
+        if str(message.content) == '-sheets':
+            await staff_shenanimonks.send(sheets)
+        if str(message.content) == '-BUD':
+            await staff_shenanimonks.send(BUD)
+        if str(message.content) == '-whalecum':
+            await staff_shenanimonks.send(welcome)
 
         #hiatus
-            if str(message.content) == '-hiatus':
-                await commandchannel.send('**Hiatus people: ** idfk ill fix this later')
+        if str(message.content) == '-hiatus':
+            await staff_shenanimonks.send('**Hiatus people: ** idfk ill fix this later')
 
-    channelcommands(staff_shenanimonks)
 
     #not_bot channel
     if message.channel == not_bot:
