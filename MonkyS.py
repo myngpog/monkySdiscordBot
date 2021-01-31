@@ -243,6 +243,7 @@ async def on_message(message):
     hiatus_List = []
     if message.channel == bot_test:
         if message.content.startswith("-hiatusadd"):
+            await bot_test.send("Add yourself to our hiatus list by giving us the name you go by on the sheets. Ex: Peng, aoieuy, manjuu, sen")
             msg = client.wait_for('message')
             if msg:
                 hiatus_List.append(message.content)
