@@ -185,13 +185,6 @@ async def on_message(message):
         f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing -halp."
         f" Once again, welcome!")
 
-        # hiatus shenanigans
-        hiatus = []
-        name = message.content[0]
-        if message.content.starswith("-hiatusadd" + name):
-            hiatus.append(name)
-            finalhiatus = "**Staff on hiatus/quit**" + '\n'.join([''.join(map(str, item)) for item in hiatus])
-            await actual_work.send(finalhiatus)
 
 
     #not_bot channel
@@ -249,6 +242,13 @@ async def on_message(message):
             await monky_shrine.send(sheets)
         if str(message.content) == '-BUD':
             await monky_shrine.send(BUD)
+        # hiatus shenanigans
+        hiatus = []
+        if message.content.starswith("-hiatusadd"):
+            name = message.mention[0]
+            hiatus.append(name)
+            finalhiatus = "**Staff on hiatus/quit**" + '\n'.join([''.join(map(str, item)) for item in hiatus])
+            await monky_shrine.send(finalhiatus)
 
 
 
