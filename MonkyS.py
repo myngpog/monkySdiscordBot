@@ -98,7 +98,7 @@ async def on_message(message):
     email = client.get_channel(736992278308192326)
     links = client.get_channel(736741434652360765)
     updates = client.get_channel(736747148263292929)
-    staff_shenanimonks = client.get_channel(736735728364683264)
+    ss = client.get_channel(736735728364683264)
 
 
     # Variables because APCSP is actually good for something
@@ -135,13 +135,13 @@ async def on_message(message):
 
 # should look to changing these into function with parameters
     #staff shenanimonks
-    if message.channel == staff_shenanimonks:
+    if message.channel == ss:
         if str(message.content) == "-abb":
-            await staff_shenanimonks.send(abb)
+            await ss.send(abb)
         if str(message.content == "-whalecum"):
-            await staff_shenanimonks(welcome)
+            await ss(welcome)
         if str(message.content) == "-halp":
-            await staff_shenanimonks.send(bot_help)
+            await ss.send(bot_help)
 
     #actual work channel
     if message.channel == actual_work:
@@ -171,6 +171,8 @@ async def on_message(message):
             await actual_work.send(BUD)
         if str(message.content) == "-halp":
             await actual_work.send(bot_help)
+        if str(message.content) == "-whalecum":
+            await actual_work.send(welcome)
 
         # hiatus shenanigans
         hiatus = []
