@@ -102,15 +102,15 @@ async def on_message(message):
 
 
     # Variables because APCSP is actually good for something
-    helpmepls = ("**Series abbreviations:** **TMM** for Take My Money, **APITS** for A Place in the Sun, **IAM** for I am Han Sanqian, "
-            "**OG** for Ordinary Girl (*on haitus*), **DIE** for Someday, I want to die (*hiatus?*), "
-            "**BTY** for Blind to You, **ATL** for A Tail Love **-drive to get drive link**")
-    droppedseries = ('**Dropped series -** One Plus One')
+    abb = ("**Series abbreviations:** \n**TMM** for Take My Money \n**APITS** for A Place in the Sun \n**IAM** for I am Han Sanqian"
+            "\n**OG** for Ordinary Girl (*on haitus*) "
+            "\n**BTY** for Blind to You \n **-drive to get drive link**")
+    droppedseries = ('**Dropped series -** One Plus One, Someday I want to die, Young Lady')
     TMM = ("https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
     BTY = ("https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
     APITS = ("https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
     IAM = ("https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
-    DIE = ("it's been on hiatus for how long? https://drive.google.com/drive/folders/17owmv_ccNQydyq52-V2q74C4g7zQreBl?usp=sharing")
+    DIE = ("dropped, the raws page was taken down")
     OG = ("**ON CONFIRMED HIATUS** https://drive.google.com/drive/folders/1c4z_7VA4vFgBNPb2bnlGKsHZcdqfGbBN?usp=sharing")
     drive = ('https://drive.google.com/drive/folders/1gBRNYPAqWtQ26j1uCoCqioWBoAg0nXJa?usp=sharing')
     YL = ('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
@@ -120,21 +120,33 @@ async def on_message(message):
         f"Welcome! To start off, please put your email under {email.mention} for future references."
         f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
         f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
-        f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention}."
+        f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing -halp."
         f" Once again, welcome!")
+    bot_help = ("Thank you for using the bot~\n"
+                "-halp for bot help lol\n"
+                "-abb for series abbreviations\n"
+                "-[Series abbreviation] for the link to the series drive\n"
+                "-sheets for link to sheets\n"
+                "-drive for link to drive\n"
+                "-dropped for our dropped series\n"
+                "-hiatusadd [name] to add yourself to our hiatus list\n"
+                "-hiatusremove [name on hiatus list] to remove yourself from our hiatus list\n")
+
 
 # should look to changing these into function with parameters
     #staff shenanimonks
     if message.channel == staff_shenanimonks:
-        if str(message.content) == "-halp":
-            await staff_shenanimonks.send(helpmepls)
+        if str(message.content) == "-abb":
+            await staff_shenanimonks.send(abb)
         if str(message.content == "-whalecum"):
             await staff_shenanimonks(welcome)
+        if str(message.content) == "-halp":
+            await staff_shenanimonks.send(bot_help)
 
     #actual work channel
     if message.channel == actual_work:
-        if str(message.content) == "-halp":
-            await actual_work.send (helpmepls)
+        if str(message.content) == "-abb":
+            await actual_work.send (abb)
         if str(message.content) == '-dropped':
             await actual_work.send(droppedseries)
         if str(message.content) == '-TMM':
@@ -157,16 +169,19 @@ async def on_message(message):
             await actual_work.send(sheets)
         if str(message.content) == '-BUD':
             await actual_work.send(BUD)
+        if str(message.content) == "-halp":
+            await actual_work.send(bot_help)
 
-        #hiatus
+        # hiatus shenanigans
+        hiatus = []
         if str(message.content) == '-hiatus':
             await actual_work.send('**Hiatus people: ** idfk ill fix this later')
 
 
     #not_bot channel
     if message.channel == not_bot:
-        if str(message.content) == "-halp":
-            await not_bot.send (helpmepls)
+        if str(message.content) == "-abb":
+            await not_bot.send (abb)
         if str(message.content) == '-dropped':
             await not_bot.send(droppedseries)
         if str(message.content) == '-TMM':
@@ -189,13 +204,13 @@ async def on_message(message):
             await not_bot.send(sheets)
         if str(message.content) == '-BUD':
             await not_bot.send(BUD)
-        if str(message.content) == '-hiatus':
-            await not_bot.send('**Hiatus people: **')
+        if str(message.content) == "-halp":
+            await not_bot.send(bot_help)
 
     #monky shrine
     if message.channel == monky_shrine:
-        if str(message.content) == "-halp":
-            await monky_shrine.send(helpmepls)
+        if str(message.content) == "-abb":
+            await monky_shrine.send(abb)
         if str(message.content) == '-dropped':
             await monky_shrine.send(droppedseries)
         if str(message.content) == '-TMM':
@@ -218,8 +233,7 @@ async def on_message(message):
             await monky_shrine.send(sheets)
         if str(message.content) == '-BUD':
             await monky_shrine.send(BUD)
-        if str(message.content) == '-hiatus':
-            await monky_shrine.send('**Hiatus people: **')
+
 
 
 
@@ -229,13 +243,14 @@ async def on_ready():
     await client.change_presence(activity=discord.Game(name="wear a mask and wash your hands kekw + we're recruiting!"))
 
 
-# upload image
+# update the sheets image
 async def update_your_sheets():
     await client.wait_until_ready()
-    ao3 = client.get_channel(736735728364683264)
+    staff_shenanimonks = client.get_channel(736735728364683264)
     while not client.is_closed():
         images = ("https://i.imgur.com/CxgOaFc.png", "https://i.imgur.com/00mZeGt.png", "https://i.imgur.com/efwN7Sc.jpg", "https://i.imgur.com/G4FPSnw.jpg")
-        await ao3.send(random.choice(images))
+        await staff_shenanimonks.send(random.choice(images))
+        # frequency is every 2 days
         await asyncio.sleep(172800)
 
 
