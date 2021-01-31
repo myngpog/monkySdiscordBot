@@ -246,8 +246,8 @@ async def on_message(message):
 
     #bot testing tingz
     if message.channel == bot_test:
-        if message.content.starswith("-hiatus add"):
-            await monky_shrine.send("peng big dumb")
+        if message.content.starswith("-hiatusadd"):
+            await bot_test.send("peng big dumb")
 
 
 
