@@ -99,6 +99,7 @@ async def on_message(message):
     links = client.get_channel(736741434652360765)
     updates = client.get_channel(736747148263292929)
     ss = client.get_channel(736735728364683264)
+    bot_test = client.get_channel(738107566692761721)
 
 
     # Variables because APCSP is actually good for something
@@ -242,8 +243,9 @@ async def on_message(message):
             await monky_shrine.send(sheets)
         if str(message.content) == '-BUD':
             await monky_shrine.send(BUD)
-        # hiatus shenanigans
-        hiatus = []
+
+    #bot testing tingz
+    if message.channel == bot_test:
         if message.content.starswith("-hiatus add"):
             await monky_shrine.send("peng big dumb")
 
