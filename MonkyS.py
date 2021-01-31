@@ -244,11 +244,8 @@ async def on_message(message):
             await monky_shrine.send(BUD)
         # hiatus shenanigans
         hiatus = []
-        if message.content.starswith("-hiatusadd"):
-            name = message.mention[0]
-            hiatus.append(name)
-            finalhiatus = "**Staff on hiatus/quit**" + '\n'.join([''.join(map(str, item)) for item in hiatus])
-            await monky_shrine.send(finalhiatus)
+        if message.content.starswith("-hiatus add"):
+            await monky_shrine.send("peng big dumb")
 
 
 
