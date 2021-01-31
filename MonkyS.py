@@ -240,14 +240,17 @@ async def on_message(message):
             await monky_shrine.send(BUD)
 
     #bot testing tingz
-    def hiatus():
-        hiatus_List = []
-        if message.channel == bot_test:
-            if message.content.startswith("-hiatus add"):
-                hiatus_List.append(message.content)
-                bot_test.send("this is so sad peng" + str(hiatus_List))
+    hiatus_List = []
+    if message.channel == bot_test:
+        if message.content.startswith("-hiatusadd"):
+            msg = client.wait_for('message')
+            if msg:
+                hiatus_List.append(str(msg))
+                await bot_test("Added to hiatus list! When you are off hiatus, please do -hiatusremove [the name you inputted]")
+        if message.content.startswith("-hiatus"):
+            people = "\n".join(map(str, hiatus_List))
+            await bot_test.send("**People on hiatus:**\n" + people)
 
-    hiatus()
 
 
 
