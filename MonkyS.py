@@ -240,9 +240,10 @@ async def on_message(message):
 
     #bot testing tingz
     hiatus_List = []
+    hiatus_Add = "-hiatus add"
     if message.channel == bot_test:
-        if message.content.startswith("-hiatus add"):
-            hiatus_List.append(message.content)
+        if message.content.startswith(hiatus_Add):
+            hiatus_List.append(message.content - hiatus_Add)
             await bot_test.send("this is so sad peng" + str(hiatus_List))
 
 
