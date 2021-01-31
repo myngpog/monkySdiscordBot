@@ -242,7 +242,8 @@ async def on_message(message):
     hiatus_List = []
     if message.channel == bot_test:
         if message.content.startswith("-hiatus add"):
-            await bot_test.send("this is so sad peng")
+            hiatus_List.append(message.content)
+            await bot_test.send("this is so sad peng" + str(hiatus_List))
 
 
 
