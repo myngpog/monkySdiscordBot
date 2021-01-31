@@ -92,9 +92,9 @@ async def on_message(message):
                 pass
 
     # Staff welcome message
-    welcomepog = client.get_channel(736735728364683264)
-    secret = client.get_channel(736704193905164441)
-    confused = client.get_channel(736741523051511851)
+    staff_shenanimonks = client.get_channel(736735728364683264)
+    monky_shrine = client.get_channel(736704193905164441)
+    not_bot = client.get_channel(736741523051511851)
     email = client.get_channel(736992278308192326)
     links = client.get_channel(736741434652360765)
     updates = client.get_channel(736747148263292929)
@@ -119,101 +119,103 @@ async def on_message(message):
         f"Welcome! To start off, please put your email under {email.mention} for future references."
         f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
         f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
-        f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {confused.mention}."
+        f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention}."
         f" Once again, welcome!")
 
-
+# should look to changing these into function with parameters
     #staff shenanimonks
-    if message.channel == welcomepog:
-        if str(message.content) == "-halp":
-            await welcomepog.send (helpmepls)
-        if str(message.content) == '-dropped':
-            await welcomepog.send(droppedseries)
-        if str(message.content) == '-TMM':
-            await welcomepog.send(TMM)
-        if str(message.content) == '-BTY':
-            await welcomepog.send(BTY)
-        if str(message.content) == '-APITS':
-            await welcomepog.send(APITS)
-        if str(message.content) == '-IAM':
-            await welcomepog.send(IAM)
-        if str(message.content) == '-DIE':
-            await welcomepog.send(DIE)
-        if str(message.content) == '-OG':
-            await welcomepog.send(OG)
-        if str(message.content) == '-drive':
-            await welcomepog.send(drive)
-        if str(message.content) == '-YL':
-            await welcomepog.send(YL)
-        if str(message.content) == '-sheets':
-            await welcomepog.send(sheets)
-        if str(message.content) == '-BUD':
-            await welcomepog.send(BUD)
-        if str(message.content) == '-whalecum':
-            await welcomepog.send(welcome)
+    def channelcommands(commandchannel):
+        if message.channel == commandchannel:
+            if str(message.content) == "-halp":
+                await commandchannel.send (helpmepls)
+            if str(message.content) == '-dropped':
+                await commandchannel.send(droppedseries)
+            if str(message.content) == '-TMM':
+                await commandchannel.send(TMM)
+            if str(message.content) == '-BTY':
+                await commandchannel.send(BTY)
+            if str(message.content) == '-APITS':
+                await commandchannel.send(APITS)
+            if str(message.content) == '-IAM':
+                await commandchannel.send(IAM)
+            if str(message.content) == '-DIE':
+                await commandchannel.send(DIE)
+            if str(message.content) == '-OG':
+                await commandchannel.send(OG)
+            if str(message.content) == '-drive':
+                await commandchannel.send(drive)
+            if str(message.content) == '-YL':
+                await commandchannel.send(YL)
+            if str(message.content) == '-sheets':
+                await commandchannel.send(sheets)
+            if str(message.content) == '-BUD':
+                await commandchannel.send(BUD)
+            if str(message.content) == '-whalecum':
+                await commandchannel.send(welcome)
 
         #hiatus
-        if str(message.content) == '-hiatus':
-            await welcomepog.send('**Hiatus people: ** idfk ill fix this later')
+            if str(message.content) == '-hiatus':
+                await commandchannel.send('**Hiatus people: ** idfk ill fix this later')
 
+    channelcommands(staff_shenanimonks)
 
-    #confused channel
-    if message.channel == confused:
+    #not_bot channel
+    if message.channel == not_bot:
         if str(message.content) == "-halp":
-            await confused.send (helpmepls)
+            await not_bot.send (helpmepls)
         if str(message.content) == '-dropped':
-            await confused.send(droppedseries)
+            await not_bot.send(droppedseries)
         if str(message.content) == '-TMM':
-            await confused.send(TMM)
+            await not_bot.send(TMM)
         if str(message.content) == '-BTY':
-            await confused.send(BTY)
+            await not_bot.send(BTY)
         if str(message.content) == '-APITS':
-            await confused.send(APITS)
+            await not_bot.send(APITS)
         if str(message.content) == '-IAM':
-            await confused.send(IAM)
+            await not_bot.send(IAM)
         if str(message.content) == '-DIE':
-            await confused.send(DIE)
+            await not_bot.send(DIE)
         if str(message.content) == '-OG':
-            await confused.send(OG)
+            await not_bot.send(OG)
         if str(message.content) == '-drive':
-            await confused.send(drive)
+            await not_bot.send(drive)
         if str(message.content) == '-YL':
-            await confused.send(YL)
+            await not_bot.send(YL)
         if str(message.content) == '-sheets':
-            await confused.send(sheets)
+            await not_bot.send(sheets)
         if str(message.content) == '-BUD':
-            await confused.send(BUD)
+            await not_bot.send(BUD)
         if str(message.content) == '-hiatus':
-            await confused.send('**Hiatus people: **')
+            await not_bot.send('**Hiatus people: **')
 
     #monky shrine
-    if message.channel == secret:
+    if message.channel == monky_shrine:
         if str(message.content) == "-halp":
-            await welcomepog.send(helpmepls)
+            await monky_shrine.send(helpmepls)
         if str(message.content) == '-dropped':
-            await secret.send(droppedseries)
+            await monky_shrine.send(droppedseries)
         if str(message.content) == '-TMM':
-            await secret.send(TMM)
+            await monky_shrine.send(TMM)
         if str(message.content) == '-BTY':
-            await secret.send(BTY)
+            await monky_shrine.send(BTY)
         if str(message.content) == '-APITS':
-            await secret.send(APITS)
+            await monky_shrine.send(APITS)
         if str(message.content) == '-IAM':
-            await secret.send(IAM)
+            await monky_shrine.send(IAM)
         if str(message.content) == '-DIE':
-            await secret.send(DIE)
+            await monky_shrine.send(DIE)
         if str(message.content) == '-OG':
-            await secret.send(OG)
+            await monky_shrine.send(OG)
         if str(message.content) == '-drive':
-            await secret.send(drive)
+            await monky_shrine.send(drive)
         if str(message.content) == '-YL':
-            await secret.send(YL)
+            await monky_shrine.send(YL)
         if str(message.content) == '-sheets':
-            await secret.send(sheets)
+            await monky_shrine.send(sheets)
         if str(message.content) == '-BUD':
-            await secret.send(BUD)
+            await monky_shrine.send(BUD)
         if str(message.content) == '-hiatus':
-            await secret.send('**Hiatus people: **')
+            await monky_shrine.send('**Hiatus people: **')
 
 
 
