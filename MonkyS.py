@@ -240,10 +240,9 @@ async def on_message(message):
 
     #bot testing tingz
     hiatus_List = []
-    name = message.content[0]
     if message.channel == bot_test:
-        if message.content.startswith("-whalecum" + name):
-            hiatus_List.append(name)
+        if message.content.startswith("-hiatus add" + message.content):
+            hiatus_List.append(message.content)
             hiatus_Final = '**People on hiatus/quit**' + '\n'.join([''.join(map(str, item)) for item in hiatus_List])
             await bot_test.send(hiatus_Final)
 
