@@ -117,12 +117,6 @@ async def on_message(message):
     YL = ('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
     sheets = ('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
     BUD = ('https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
-    welcome = (
-        f"Welcome! To start off, please put your email under {email.mention} for future references."
-        f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
-        f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
-        f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing -halp."
-        f" Once again, welcome!")
     bot_help = ("```Thank you for using the bot~\n"
                 "-halp for bot help lol\n"
                 "-abb for series abbreviations\n"
@@ -245,9 +239,13 @@ async def on_message(message):
             await monky_shrine.send(BUD)
 
     #bot testing tingz
+    hiatus_List = []
+    name = message.content[0]
     if message.channel == bot_test:
-        if message.content.starswith("-hiatusadd"):
-            await bot_test.send("peng big dumb")
+        if message.content.startswith("-whalecum" + name):
+            hiatus_List.append(name)
+            hiatus_Final = '**People on hiatus/quit**' + '\n'.join([''.join(map(str, item)) for item in hiatus_List])
+            await bot_test.send(hiatus_Final)
 
 
 
