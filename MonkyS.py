@@ -104,7 +104,7 @@ async def on_message(message):
     # Variables because APCSP is actually good for something
     abb = ("**Series abbreviations:** \n**TMM** for Take My Money \n**APITS** for A Place in the Sun \n**IAM** for I am Han Sanqian"
             "\n**OG** for Ordinary Girl (*on haitus*) "
-            "\n**BTY** for Blind to You \n **-drive to get drive link**")
+            "\n**BTY** for Blind to You \n -drive to get drive link")
     droppedseries = ('**Dropped series -** One Plus One, Someday I want to die, Young Lady')
     TMM = ("https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
     BTY = ("https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
@@ -122,7 +122,7 @@ async def on_message(message):
         f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
         f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing -halp."
         f" Once again, welcome!")
-    bot_help = ("Thank you for using the bot~\n"
+    bot_help = ("```Thank you for using the bot~\n"
                 "-halp for bot help lol\n"
                 "-abb for series abbreviations\n"
                 "-[Series abbreviation] for the link to the series drive\n"
@@ -130,7 +130,7 @@ async def on_message(message):
                 "-drive for link to drive\n"
                 "-dropped for our dropped series\n"
                 "-hiatusadd [name] to add yourself to our hiatus list\n"
-                "-hiatusremove [name on hiatus list] to remove yourself from our hiatus list\n")
+                "-hiatusremove [name on hiatus list] to remove yourself from our hiatus list```")
 
 
 # should look to changing these into function with parameters
