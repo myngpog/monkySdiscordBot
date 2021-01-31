@@ -128,6 +128,7 @@ async def on_message(message):
                 "-hiatusremove [name on hiatus list] to remove yourself from our hiatus list```")
 
 
+#should also look into changing on_message() to prefixes
 # should look to changing these into function with parameters
     #staff shenanimonks
     if message.channel == ss:
@@ -240,10 +241,9 @@ async def on_message(message):
 
     #bot testing tingz
     hiatus_List = []
-    hiatus_Add = "-hiatus add"
     if message.channel == bot_test:
-        if message.content.startswith(hiatus_Add):
-            hiatus_List.append(message.content - hiatus_Add)
+        if message.content.startswith("-hiatus add", message.content):
+            hiatus_List.append(message.content)
             await bot_test.send("this is so sad peng" + str(hiatus_List))
 
 
