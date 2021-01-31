@@ -245,7 +245,7 @@ async def on_message(message):
         if message.content.startswith("-hiatusadd"):
             msg = client.wait_for('message')
             if msg:
-                hiatus_List.append(str(msg))
+                hiatus_List.append(message.content)
                 await bot_test("Added to hiatus list! When you are off hiatus, please do -hiatusremove [the name you inputted]")
         if str(message.content) == "-hiatus":
             people = "\n".join(map(str, hiatus_List))
