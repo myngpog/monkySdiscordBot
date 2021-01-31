@@ -138,7 +138,7 @@ async def on_message(message):
     if message.channel == ss:
         if str(message.content) == "-abb":
             await ss.send(abb)
-        if str(message.content == "-whalecum"):
+        if str(message.content) == "-whalecum":
             await ss(welcome)
         if str(message.content) == "-halp":
             await ss.send(bot_help)
