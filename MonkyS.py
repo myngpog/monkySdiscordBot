@@ -92,12 +92,13 @@ async def on_message(message):
                 pass
 
     # Staff welcome message
-    staff_shenanimonks = client.get_channel(736735728364683264)
+    actual_work = client.get_channel(750183897165463653)
     monky_shrine = client.get_channel(736704193905164441)
     not_bot = client.get_channel(736741523051511851)
     email = client.get_channel(736992278308192326)
     links = client.get_channel(736741434652360765)
     updates = client.get_channel(736747148263292929)
+    staff_shenanimonks = client.get_channel(736735728364683264)
 
 
     # Variables because APCSP is actually good for something
@@ -126,35 +127,40 @@ async def on_message(message):
     #staff shenanimonks
     if message.channel == staff_shenanimonks:
         if str(message.content) == "-halp":
-            await staff_shenanimonks.send (helpmepls)
+            await staff_shenanimonks.send(helpmepls)
+        if str(message.content == "-whalecum"):
+            await staff_shenanimonks(welcome)
+
+    #actual work channel
+    if message.channel == actual_work:
+        if str(message.content) == "-halp":
+            await actual_work.send (helpmepls)
         if str(message.content) == '-dropped':
-            await staff_shenanimonks.send(droppedseries)
+            await actual_work.send(droppedseries)
         if str(message.content) == '-TMM':
-            await staff_shenanimonks.send(TMM)
+            await actual_work.send(TMM)
         if str(message.content) == '-BTY':
-            await staff_shenanimonks.send(BTY)
+            await actual_work.send(BTY)
         if str(message.content) == '-APITS':
-            await staff_shenanimonks.send(APITS)
+            await actual_work.send(APITS)
         if str(message.content) == '-IAM':
-            await staff_shenanimonks.send(IAM)
+            await actual_work.send(IAM)
         if str(message.content) == '-DIE':
-            await staff_shenanimonks.send(DIE)
+            await actual_work.send(DIE)
         if str(message.content) == '-OG':
-            await staff_shenanimonks.send(OG)
+            await actual_work.send(OG)
         if str(message.content) == '-drive':
-            await staff_shenanimonks.send(drive)
+            await actual_work.send(drive)
         if str(message.content) == '-YL':
-            await staff_shenanimonks.send(YL)
+            await actual_work.send(YL)
         if str(message.content) == '-sheets':
-            await staff_shenanimonks.send(sheets)
+            await actual_work.send(sheets)
         if str(message.content) == '-BUD':
-            await staff_shenanimonks.send(BUD)
-        if str(message.content) == '-whalecum':
-            await staff_shenanimonks.send(welcome)
+            await actual_work.send(BUD)
 
         #hiatus
         if str(message.content) == '-hiatus':
-            await staff_shenanimonks.send('**Hiatus people: ** idfk ill fix this later')
+            await actual_work.send('**Hiatus people: ** idfk ill fix this later')
 
 
     #not_bot channel
