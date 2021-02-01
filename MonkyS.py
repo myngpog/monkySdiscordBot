@@ -242,14 +242,8 @@ async def on_message(message):
 
     #bot testing tingz
     @bot.commands
-    async def hiatusadd(ctx,*args):
-        bot_test = client.get_channel(738107566692761721)
-        hiatus_List = []
-        await ctx.send("Added to hiatus list! When you are off hiatus, please do -hiatusremove [the name you inputted]")
-        hiatus_List.append(args)
-
-        if message.content.startswith("-hiatus"):
-            await ctx.send('People on hiatus' + '\n\n'.join([''.join(map(str, args)) for args in hiatus_List]))
+    async def test(ctx, *args):
+        await ctx.send('{} arguments: {}'.format(len(args), ', '.join(args)))
 
 
 # bot playing game
