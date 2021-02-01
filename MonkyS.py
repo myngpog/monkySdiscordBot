@@ -244,14 +244,14 @@ async def on_message(message):
 hiatus_List = []
 @client.command()
 async def hiatusadd(ctx, arg):
-    if (ctx.message.channel.id == 738107566692761721 or 736704193905164441 or 736741523051511851 or 750183897165463653):
+    if (ctx.message.channel.id == (738107566692761721) or (736704193905164441) or (736741523051511851) or (750183897165463653)):
         messages = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         for ctx.message in messages:
             hiatus_List.append(arg)
 
 @client.command()
 async def hiatus(ctx):
-    if (ctx.message.channel.id == 738107566692761721 or 736704193905164441 or 736741523051511851 or 750183897165463653):
+    if (ctx.message.channel.id == (738107566692761721) or (736704193905164441) or (736741523051511851) or (750183897165463653)):
         await ctx.send(f'**Staff on hiatus/quit:**' + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
 
 
