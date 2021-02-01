@@ -242,8 +242,11 @@ async def on_message(message):
 
 #bot testing tingz
 @client.command()
-async def ping(ctx):
-    await ctx.send('Pong!')
+async def hiatusadd(ctx, arg):
+    hiatus_List = []
+    hiatus_List.append(arg)
+    await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
+
 
 
 
