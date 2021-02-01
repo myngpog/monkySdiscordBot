@@ -241,10 +241,10 @@ async def on_message(message):
     await client.process_commands(message)
 
 #hiatus family tingz
-hiatus_List = []
 @client.command()
 async def hiatusadd(ctx, arg):
     if (ctx.message.channel.id == 738107566692761721):
+        hiatus_List = []
         counter = 0
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         messages = await ctx.message.history(limit=1, before=senpog).flatten()
@@ -252,10 +252,10 @@ async def hiatusadd(ctx, arg):
             hiatus_List.append(arg)
             counter += 1
 
-@client.command()
-async def hiatus(message):
-    if (message.channel.id == 738107566692761721):
-        await message.send(hiatus_List)
+    @client.command()
+    async def hiatus(message):
+        if (message.channel.id == 738107566692761721):
+            await message.send(hiatus_List)
 
 
 
