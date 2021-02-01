@@ -240,7 +240,7 @@ async def on_message(message):
 
 #bot testing tingz
 bot = commands.Bot(command_prefix='-')
-@bot.commands
+@bot.command()
 async def test(ctx, *, arg):
     await ctx.send(arg)
 
