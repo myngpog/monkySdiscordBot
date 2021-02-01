@@ -248,11 +248,9 @@ async def hiatusadd(ctx, arg):
     for ctx.message in messages:
         hiatus_List.append(arg)
 
-hiatus_Final = (f'**Staff on hiatus/quit:**' + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
-
 @client.command()
 async def hiatus(ctx):
-    await ctx.send(hiatus_Final)
+    await ctx.send(f'**Staff on hiatus/quit:**' + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
 
 
 
