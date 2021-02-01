@@ -252,8 +252,7 @@ async def hiatusadd(ctx, arg):
 @client.command()
 async def hiatus(message):
     if (message.channel.id == (738107566692761721) or (736704193905164441) or (736741523051511851) or (750183897165463653)):
-        if (message.content == '-hiatus'):
-            await message.send(f'**Staff on hiatus/quit:**' + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
+        await message.send(f'**Staff on hiatus/quit:**' + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
 
 
 
