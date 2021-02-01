@@ -241,9 +241,9 @@ async def on_message(message):
     await client.process_commands(message)
 
 #bot testing tingz
+hiatus_List = []
 @client.command()
 async def hiatusadd(ctx, arg):
-    hiatus_List = []
     counter = 0
     hiatusaddpeople = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
     counter += 1
@@ -251,8 +251,8 @@ async def hiatusadd(ctx, arg):
     for ctx.message in hiatusaddpeople:
         hiatus_List.append(arg)
 
-    if ctx.message.content.startswith('-hiatus'):
-        await ctx.send(f'**Staff on hiatus/quit:**' + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
+async def hiatus(ctx):
+    await ctx.send(f'**Staff on hiatus/quit:**' + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
 
 
 
