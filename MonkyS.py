@@ -242,10 +242,9 @@ async def on_message(message):
 
 #hiatus family tingz
 hiatus_List = []
-channel = ('test') or ('monky-shrine')
 @client.command()
 async def hiatusadd(ctx, arg):
-    if ctx.channel == channel:
+    if ctx.channel.name == ('test') or ('monky-shrine'):
         await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         for ctx.message in hiatusadd:
             hiatus_List.append(arg)
@@ -254,7 +253,7 @@ hiatus_Final = (f'**Staff on hiatus/quit:**' + '\n'.join([''.join(map(str, item)
 
 @client.command()
 async def hiatus(ctx):
-    if ctx.channel == channel:
+    if ctx.channel.name == ('test') or ('monky-shrine'):
         await ctx.send(hiatus_Final)
 
 
