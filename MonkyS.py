@@ -240,20 +240,22 @@ async def on_message(message):
 
     await client.process_commands(message)
 
-#bot testing tingz
+#hiatus family tingz
 hiatus_List = []
+channel = ('test') or ('monky-shrine')
 @client.command()
 async def hiatusadd(ctx, arg):
-    counter = 0
-    hiatusaddpeople = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
-    counter += 1
+    if ctx.channel == channel:
+        await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
+        for ctx.message in hiatusadd:
+            hiatus_List.append(arg)
 
-    for ctx.message in hiatusaddpeople:
-        hiatus_List.append(arg)
+hiatus_Final = (f'**Staff on hiatus/quit:**' + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
 
 @client.command()
 async def hiatus(ctx):
-    await ctx.send(f'**Staff on hiatus/quit:**' + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
+    if ctx.channel == channel:
+        await ctx.send(hiatus_Final)
 
 
 
