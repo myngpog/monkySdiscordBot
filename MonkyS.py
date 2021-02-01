@@ -252,6 +252,7 @@ async def hiatusadd(ctx, arg):
         for ctx.message in messages:
             hiatus_List.append(arg)
             counter += 1
+        await ctx.send(hiatus_List)
 
 @client.command()
 async def hiatus(message):
