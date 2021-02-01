@@ -248,11 +248,11 @@ async def hiatusadd(ctx, arg):
         hiatus_List = []
         counter = 0
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
+        await ctx.send(hiatus_List)
         messages = await ctx.message.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
             hiatus_List.append(arg)
             counter += 1
-        await ctx.send(hiatus_List)
 
 @client.command()
 async def hiatus(message):
