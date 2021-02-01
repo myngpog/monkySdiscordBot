@@ -244,15 +244,15 @@ async def on_message(message):
 
 @client.command()
 async def hiatusadd(ctx, arg):
+    hiatus_List = []
     if (ctx.message.channel.id == 738107566692761721):
-        hiatus_List = []
         counter = 0
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
             hiatus_List.append(arg)
             counter += 1
-        await ctx.send(hiatus_List)
+    await ctx.send(hiatus_List + hiatus_List)
 
 @client.command()
 async def hiatus(message):
