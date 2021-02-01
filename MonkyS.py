@@ -242,13 +242,8 @@ async def on_message(message):
 
 #bot testing tingz
 @client.command()
-async def test(*args):
-    bot_test = client.get_channel(738107566692761721)
-    output = ''
-    for word in args:
-        output += word
-        output += ' '
-    await bot_test.send(output)
+async def ping(ctx):
+    await ctx.send('Pong!')
 
 
 
