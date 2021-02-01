@@ -253,7 +253,6 @@ async def hiatusadd(ctx, arg):
             counter += 1
     await ctx.send(hiatus_List)
 
-@client.command()
 async def hiatus(message):
     if (message.channel.id == 738107566692761721):
         await message.send(hiatus_List)
