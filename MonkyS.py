@@ -10,8 +10,6 @@ def read_token():
 
 token = read_token()
 
-bot = commands.Bot(command_prefix='-')
-
 intents = discord.Intents.default()
 intents.members = True
 
@@ -241,9 +239,10 @@ async def on_message(message):
             await monky_shrine.send(BUD)
 
     #bot testing tingz
+    bot = commands.Bot(command_prefix='-')
     @bot.commands
-    async def test(ctx, *args):
-        await ctx.send('{} arguments: {}'.format(len(args), ', '.join(args)))
+    async def test(ctx, *, arg):
+        await ctx.send(arg)
 
 
 # bot playing game
