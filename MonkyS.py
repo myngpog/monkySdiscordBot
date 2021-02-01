@@ -244,17 +244,21 @@ async def on_message(message):
 hiatus_List = []
 @client.command()
 async def hiatusadd(ctx, arg):
-    if ctx.channel.name == ('test') or ('monky-shrine'):
-        await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
-        for ctx.message in hiatusadd:
+    if ctx.channel.name == ('test'):
+        messages = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
+        for ctx.message in messages:
             hiatus_List.append(arg)
+    else:
+        pass
 
 hiatus_Final = (f'**Staff on hiatus/quit:**' + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
 
 @client.command()
 async def hiatus(ctx):
-    if ctx.channel.name == ('test') or ('monky-shrine'):
+    if ctx.channel.name == ('test'):
         await ctx.send(hiatus_Final)
+    else:
+        pass
 
 
 
