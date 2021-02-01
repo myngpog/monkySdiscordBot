@@ -239,10 +239,12 @@ async def on_message(message):
             await monky_shrine.send(BUD)
 
 #bot testing tingz
-bot = commands.Bot(command_prefix='-')
+bot = commands.Bot(command_prefix='$')
 @bot.command()
 async def test(ctx, *, arg):
     await ctx.send(arg)
+bot.add_command(test)
+
 
 
 # bot playing game
