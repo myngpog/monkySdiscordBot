@@ -242,7 +242,7 @@ async def on_message(message):
 
     #bot testing tingz
     @bot.commands
-    async def hiatus(ctx,*args):
+    async def hiatusadd(ctx,*args):
         bot_test = client.get_channel(738107566692761721)
         hiatus_List = []
         await ctx.send("Added to hiatus list! When you are off hiatus, please do -hiatusremove [the name you inputted]")
