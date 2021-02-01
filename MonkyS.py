@@ -238,11 +238,11 @@ async def on_message(message):
         if str(message.content) == '-BUD':
             await monky_shrine.send(BUD)
 
-    #bot testing tingz
-    bot = commands.Bot(command_prefix='-')
-    @bot.commands
-    async def test(ctx, *, arg):
-        await ctx.send(arg)
+#bot testing tingz
+bot = commands.Bot(command_prefix='-')
+@bot.commands
+async def test(ctx, *, arg):
+    await ctx.send(arg)
 
 
 # bot playing game
