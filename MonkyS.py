@@ -10,6 +10,8 @@ def read_token():
 
 token = read_token()
 
+bot = commands.Bot(command_prefix='-')
+
 intents = discord.Intents.default()
 intents.members = True
 
@@ -99,7 +101,6 @@ async def on_message(message):
     links = client.get_channel(736741434652360765)
     updates = client.get_channel(736747148263292929)
     ss = client.get_channel(736735728364683264)
-    bot_test = client.get_channel(738107566692761721)
 
 
     # Variables because APCSP is actually good for something
@@ -240,21 +241,15 @@ async def on_message(message):
             await monky_shrine.send(BUD)
 
     #bot testing tingz
-    hiatus_List = []
-    if message.channel == bot_test:
-        if message.content.startswith("-hiatusadd"):
-            def check(author):
-                return message.author == author
-            await bot_test.send("Add yourself to our hiatus list by giving us the name you go by on the sheets. Ex: Peng, aoieuy, manjuu, sen")
-            msg = await client.wait_for('message', check=check(message.author))
-            hiatus_List.append(msg.content)
-            await bot_test.send("Added to hiatus list! When you are off hiatus, please do -hiatusremove [the name you inputted]")
-        if str(message.content) == "-hiatus":
-            people = "\n".join(map(str, hiatus_List))
-            await bot_test.send("**People on hiatus:**\n" + people)
+    @bot.commands
+    async def hiatus(ctx,*args):
+        bot_test = client.get_channel(738107566692761721)
+        hiatus_List = []
+        await ctx.send("Added to hiatus list! When you are off hiatus, please do -hiatusremove [the name you inputted]")
+        hiatus_List.append(args)
 
-
-
+        if message.content.startswith("-hiatus"):
+            await ctx.send('People on hiatus' + '\n\n'.join([''.join(map(str, args)) for args in hiatus_List]))
 
 
 # bot playing game
