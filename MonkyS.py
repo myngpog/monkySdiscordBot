@@ -242,11 +242,13 @@ async def on_message(message):
 
 #hiatus family tingz
 hiatus_List = []
+bot_test = client.get_channel(738107566692761721)
 @client.command()
 async def hiatusadd(ctx, arg):
-    messages = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
-    for ctx.message in messages:
-        hiatus_List.append(arg)
+    if ctx.message.channel == bot_test:
+        messages = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
+        for ctx.message in messages:
+            hiatus_List.append(arg)
 
 @client.command()
 async def hiatus(ctx):
