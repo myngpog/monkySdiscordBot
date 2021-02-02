@@ -244,7 +244,7 @@ async def on_message(message):
 hiatus_List = []
 @client.command()
 async def hiatusadd(ctx, arg):
-    if (ctx.message.channel.id == 738107566692761721):
+    if (ctx.message.channel.id == 736741523051511851):
         counter = 0
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
@@ -254,13 +254,13 @@ async def hiatusadd(ctx, arg):
 
 @client.command()
 async def hiatusremove(ctx, arg):
-    if (ctx.message.channel.id == 738107566692761721):
+    if (ctx.message.channel.id == 736741523051511851):
         hiatus_List.remove(arg)
 
 @client.command()
 async def hiatus(message):
-    if (message.channel.id == 738107566692761721):
-        await message.send(hiatus_List)
+    if (message.channel.id == 736741523051511851):
+        await message.send("**Monks on hiatus: **" + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
 
 
 
