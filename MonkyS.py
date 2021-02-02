@@ -81,7 +81,18 @@ async def on_message(message):
                 for message in messages:
                     dm.append(message.content)
                 final = "```" + '\n\n'.join([''.join(map(str, item)) for item in dm]) + "```"
-                await channelbruhbruh.send(final)
+
+                #embed
+                applicationembed = discord.Embed(
+                    title=('New Applicant! Pog'),
+                    color=discord.Colour.blue()
+                )
+
+                applicationembed.set_footer(text='Respond to them ASAP')
+                applicationembed.set_thumbnail(url='https://i.imgur.com/dtRtTAZ.jpg')
+                applicationembed.add_field(name='Interview', value=final, inline=True)
+
+                await channelbruhbruh.send(embed=applicationembed)
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
@@ -246,10 +257,10 @@ async def halp(message):
             color= discord.Colour.blue()
     )
 
-        helpembed.set_footer(text='To remove yourself from the list, do -hiatusremove [name as it is on the list]')
-        helpembed.set_author(name='Monks on vacation', icon_url='https://i.imgur.com/177AazQ.jpg')
-        helpembed.set_thumbnail(url='https://i.imgur.com/XvOQVVb.jpg')
-        helpembed.add_field(name="Peng wuz here", value=
+        helpembed.set_footer(text="Peng wuz here")
+        helpembed.set_author(name='Bot commands', icon_url='https://i.imgur.com/177AazQ.jpg')
+        helpembed.set_thumbnail(url='https://i.imgur.com/bJYt1Ob.jpg')
+        helpembed.add_field(name="Remember to use the not-bot channel and update the sheets!", value=
                     "-help for bot help lol\n"
                 "-abb for series abbreviations\n"
                 "-[Series abbreviation] for the link to the series drive\n"
