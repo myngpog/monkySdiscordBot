@@ -240,6 +240,7 @@ async def on_message(message):
 
     await client.process_commands(message)
 
+
 #hiatus family tingz
 hiatus_List = []
 @client.command()
@@ -260,7 +261,18 @@ async def hiatusremove(ctx, arg):
 @client.command()
 async def hiatus(message):
     if (message.channel.id == 736741523051511851):
-        await message.send("**Monks on hiatus: \n**" + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
+        hiatusembed = discord.Embed(
+            title= 'Monks on Hiatus/Quit',
+            description= 'A list of monks who are on hiatus (for whatever reason), MIA!!, freeloaders, or quitters',
+            color= discord.Colour.blue()
+    )
+
+        hiatusembed.set_footer(text='To remove yourself from the list, do -hiatusremove [name as it is on the list]')
+        hiatusembed.set_author(name='Hiatus Monks', icon_url='https://i.imgur.com/HCJ7ABF.jpg')
+        hiatusembed.set_thumbnail(url='https://i.imgur.com/XvOQVVb.jpg')
+        hiatusembed.add_field(name="Come back soon pls", value='\n'.join([''.join(map(str, item)) for item in hiatus_List]), inline=True)
+
+        await message.send(embed=hiatusembed)
 
 
 
@@ -282,6 +294,7 @@ async def update_your_sheets():
         await staff_shenanimonks.send(random.choice(images))
         # frequency is every 2 days
         await asyncio.sleep(172800)
+
 
 
 # penguin penguin penguin
