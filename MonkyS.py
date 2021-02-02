@@ -40,7 +40,7 @@ async def applicationembed(message):
     embed.set_footer(text='Get back to them ASAP!')
     embed.set_author(name='New Applicant', icon_url='https://i.imgur.com/177AazQ.jpg')
     embed.set_thumbnail(url='https://i.imgur.com/bJYt1Ob.jpg')
-    embed.add_field(name="Interview", value=message, inline=True)
+    embed.add_field(name="Interview", value=final, inline=True)
 
 
 
@@ -95,7 +95,7 @@ async def on_message(message):
                 for message in messages:
                     dm.append(message.content)
                 final = "```" + '\n\n'.join([''.join(map(str, item)) for item in dm]) + "```"
-                await channelbruhbruh.send(embed=applicationembed(final))
+                await channelbruhbruh.send(embed=applicationembed)
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
