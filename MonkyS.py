@@ -260,7 +260,7 @@ async def hiatusremove(ctx, arg):
 @client.command()
 async def hiatus(message):
     if (message.channel.id == 736741523051511851):
-        await message.send("**Monks on hiatus: **" + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
+        await message.send("**Monks on hiatus: \n**" + '\n'.join([''.join(map(str, item)) for item in hiatus_List]))
 
 
 
