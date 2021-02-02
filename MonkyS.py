@@ -135,8 +135,6 @@ async def on_message(message):
     if message.channel == ss:
         if str(message.content) == "-abb":
             await ss.send(abb)
-        if str(message.content) == "-halp":
-            await ss.send(bot_help)
         if message.content.startswith("-whalecum"):
             user = message.mentions[0]
             await ss.send(f"Welcome " + user.mention + "! To start off, please put your email under {email.mention} for future references."
@@ -172,8 +170,6 @@ async def on_message(message):
             await actual_work.send(sheets)
         if str(message.content) == '-BUD':
             await actual_work.send(BUD)
-        if str(message.content) == "-halp":
-            await actual_work.send(bot_help)
         if message.content.startswith("-whalecum"):
             user = message.mentions[0]
             await actual_work.send(f"Welcome " + user.mention + f"! To start off, please put your email under {email.mention} for future references."
@@ -210,8 +206,6 @@ async def on_message(message):
             await not_bot.send(sheets)
         if str(message.content) == '-BUD':
             await not_bot.send(BUD)
-        if str(message.content) == "-halp":
-            await not_bot.send(bot_help)
 
     #monky shrine
     if message.channel == monky_shrine:
@@ -243,20 +237,20 @@ async def on_message(message):
     await client.process_commands(message)
 
 #help embed
-@client.command
-async def help(message):
+@client.command()
+async def halp(message):
     if(message.channel.id == 750183897165463653 or 750183897165463653 or 736735728364683264):
         helpembed = discord.Embed(
             title= 'Thank you for using the bot!',
             description='What I can do',
             color= discord.Colour.blue()
-        )
+    )
 
         helpembed.set_footer(text='To remove yourself from the list, do -hiatusremove [name as it is on the list]')
         helpembed.set_author(name='Monks on vacation', icon_url='https://i.imgur.com/177AazQ.jpg')
         helpembed.set_thumbnail(url='https://i.imgur.com/XvOQVVb.jpg')
         helpembed.add_field(name="Peng wuz here", value=
-                "-help for bot help lol\n"
+                    "-help for bot help lol\n"
                 "-abb for series abbreviations\n"
                 "-[Series abbreviation] for the link to the series drive\n"
                 "-sheets for link to sheets\n"
