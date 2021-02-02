@@ -255,8 +255,9 @@ async def hiatusadd(ctx, arg):
 @client.command()
 async def hiatusremove(ctx, arg):
     if (ctx.message.channel.id == 738107566692761721):
-        for ctx.message in hiatusremove:
-            if arg == hiatus_List[arg.hiatusadd]:
+        for i in range(len(hiatus_List)):
+            name = hiatus_List[i]
+            if name == arg:
                 hiatus_List.remove(arg)
     await ctx.send(hiatus_List)
 
