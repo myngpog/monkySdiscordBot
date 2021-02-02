@@ -30,20 +30,6 @@ async def on_raw_reaction_add(payload):
                           f" READ the corresponding docs for further instructions. After you're done, please type 'APPLY' to begin your application process.")
 
 
-async def applicationembed(message):
-    embed= discord.Embed(
-        title= 'New Application POG',
-        description= 'We do be needing the help',
-        color= discord.Colour.blue()
-    )
-
-    embed.set_footer(text='Get back to them ASAP!')
-    embed.set_author(name='New Applicant', icon_url='https://i.imgur.com/177AazQ.jpg')
-    embed.set_thumbnail(url='https://i.imgur.com/bJYt1Ob.jpg')
-    embed.add_field(name="Interview", value=final, inline=True)
-
-
-
 # APPLY
 @client.event
 async def on_message(message):
@@ -95,7 +81,7 @@ async def on_message(message):
                 for message in messages:
                     dm.append(message.content)
                 final = "```" + '\n\n'.join([''.join(map(str, item)) for item in dm]) + "```"
-                await channelbruhbruh.send(embed=applicationembed)
+                await channelbruhbruh.send(final)
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
@@ -139,6 +125,8 @@ async def on_message(message):
                 "-dropped for our dropped series\n"
                 "-hiatusadd [name] to add yourself to our hiatus list\n"
                 "-hiatusremove [name on hiatus list] to remove yourself from our hiatus list```")
+
+
 
 
 #should also look into changing on_message() to prefixes
@@ -254,17 +242,44 @@ async def on_message(message):
 
     await client.process_commands(message)
 
+#help embed
+@client.command
+async def help(message):
+    if(message.channel.id == 750183897165463653 or 750183897165463653 or 736735728364683264):
+        helpembed = discord.Embed(
+            title= 'Thank you for using the bot!',
+            description='What I can do',
+            color= discord.Colour.blue()
+        )
+
+        helpembed.set_footer(text='To remove yourself from the list, do -hiatusremove [name as it is on the list]')
+        helpembed.set_author(name='Monks on vacation', icon_url='https://i.imgur.com/177AazQ.jpg')
+        helpembed.set_thumbnail(url='https://i.imgur.com/XvOQVVb.jpg')
+        helpembed.add_field(name="Peng wuz here", value=
+                "-help for bot help lol\n"
+                "-abb for series abbreviations\n"
+                "-[Series abbreviation] for the link to the series drive\n"
+                "-sheets for link to sheets\n"
+                "-drive for link to drive\n"
+                "-dropped for our dropped series\n"
+                "-hiatusadd [name] to add yourself to our hiatus list\n"
+                "-hiatusremove [name on hiatus list] to remove yourself from our hiatus list", inline=True)
+
+        await message.send(embed=helpembed)
+
+
+
 
 #hiatus family tingz
 hiatus_List = []
 @client.command()
-async def hiatusadd(ctx, *args):
+async def hiatusadd(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
         counter = 0
-        senpog = await ctx.send(f'{args} has been added to the hiatus list! To remove please do -hiatusremove {args}')
+        senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
-            hiatus_List.append(args)
+            hiatus_List.append(arg)
             counter += 1
 
 @client.command()
