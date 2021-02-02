@@ -30,6 +30,20 @@ async def on_raw_reaction_add(payload):
                           f" READ the corresponding docs for further instructions. After you're done, please type 'APPLY' to begin your application process.")
 
 
+async def applicationembed(message):
+    embed= discord.Embed(
+        title= 'New Application POG',
+        description= 'We do be needing the help',
+        color= discord.Colour.blue()
+    )
+
+    embed.set_footer(text='Get back to them ASAP!')
+    embed.set_author(name='New Applicant', icon_url='https://i.imgur.com/177AazQ.jpg')
+    embed.set_thumbnail(url='https://i.imgur.com/bJYt1Ob.jpg')
+    embed.add_field(name="Interview", value=message, inline=True)
+
+
+
 # APPLY
 @client.event
 async def on_message(message):
@@ -81,7 +95,7 @@ async def on_message(message):
                 for message in messages:
                     dm.append(message.content)
                 final = "```" + '\n\n'.join([''.join(map(str, item)) for item in dm]) + "```"
-                await channelbruhbruh.send(final)
+                await channelbruhbruh.send(embed=applicationembed(final))
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
@@ -244,31 +258,33 @@ async def on_message(message):
 #hiatus family tingz
 hiatus_List = []
 @client.command()
-async def hiatusadd(ctx, arg):
+async def hiatusadd(ctx, *args):
     if (ctx.message.channel.id == 736741523051511851):
         counter = 0
-        senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
+        senpog = await ctx.send(f'{args} has been added to the hiatus list! To remove please do -hiatusremove {args}')
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
-            hiatus_List.append(arg)
+            hiatus_List.append(args)
             counter += 1
 
 @client.command()
-async def hiatusremove(ctx, arg):
+async def hiatusremove(ctx, *args):
     if (ctx.message.channel.id == 736741523051511851):
-        hiatus_List.remove(arg)
+        hiatus_List.remove(*args)
 
 @client.command()
 async def hiatus(message):
     if (message.channel.id == 736741523051511851):
         hiatusembed = discord.Embed(
-            title= 'Monks on Hiatus/Quit',
-            description= 'A list of monks who are on hiatus (for whatever reason), MIA!!, freeloaders, or quitters',
+            title= 'Monks on Hiatus/Quit/MIA',
+            description= 'Please put these next to your name if you are:\n'
+                         'Missing in action → (?)\n'
+                         'Has reason for hiatus → (*)\n',
             color= discord.Colour.blue()
     )
 
         hiatusembed.set_footer(text='To remove yourself from the list, do -hiatusremove [name as it is on the list]')
-        hiatusembed.set_author(name='Hiatus Monks', icon_url='https://i.imgur.com/HCJ7ABF.jpg')
+        hiatusembed.set_author(name='Monks on vacation', icon_url='https://i.imgur.com/HCJ7ABF.jpg')
         hiatusembed.set_thumbnail(url='https://i.imgur.com/XvOQVVb.jpg')
         hiatusembed.add_field(name="Come back soon pls", value='\n'.join([''.join(map(str, item)) for item in hiatus_List]), inline=True)
 
