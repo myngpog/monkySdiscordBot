@@ -80,7 +80,7 @@ async def on_message(message):
                     messages = message.content.split('\n')
                 for message in messages:
                     dm.append(message.content)
-                final = "```" + '\n\n'.join([''.join(map(str, item)) for item in dm]) + "```"
+                final = '\n\n'.join([''.join(map(str, item)) for item in dm])
 
                 #embed
                 applicationembed = discord.Embed(
@@ -113,54 +113,32 @@ async def on_message(message):
 
 
     # Variables because APCSP is actually good for something
-    abb = ("**Series abbreviations:** \n**TMM** for Take My Money \n**APITS** for A Place in the Sun \n**IAM** for I am Han Sanqian"
-            "\n**OG** for Ordinary Girl (*on haitus*) "
-            "\n**BTY** for Blind to You \n -drive to get drive link")
-    droppedseries = ('**Dropped series -** One Plus One, Someday I want to die, Young Lady')
     TMM = ("https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
     BTY = ("https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
     APITS = ("https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
     IAM = ("https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
-    DIE = ("dropped, the raws page was taken down")
     OG = ("**ON CONFIRMED HIATUS** https://drive.google.com/drive/folders/1c4z_7VA4vFgBNPb2bnlGKsHZcdqfGbBN?usp=sharing")
     drive = ('https://drive.google.com/drive/folders/1gBRNYPAqWtQ26j1uCoCqioWBoAg0nXJa?usp=sharing')
     YL = ('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
     sheets = ('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
     BUD = ('https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
-    bot_help = ("```Thank you for using the bot~\n"
-                "-halp for bot help lol\n"
-                "-abb for series abbreviations\n"
-                "-[Series abbreviation] for the link to the series drive\n"
-                "-sheets for link to sheets\n"
-                "-drive for link to drive\n"
-                "-dropped for our dropped series\n"
-                "-hiatusadd [name] to add yourself to our hiatus list\n"
-                "-hiatusremove [name on hiatus list] to remove yourself from our hiatus list```")
-
-
 
 
 #should also look into changing on_message() to prefixes
 # should look to changing these into function with parameters
     #staff shenanimonks
     if message.channel == ss:
-        if str(message.content) == "-abb":
-            await ss.send(abb)
         if message.content.startswith("-whalecum"):
             user = message.mentions[0]
             await ss.send(f"Welcome " + user.mention + "! To start off, please put your email under {email.mention} for future references."
         f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
         f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
-        f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing -halp."
+        f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing `-halp`."
         f" Once again, welcome!")
 
 
     #actual work channel
     if message.channel == actual_work:
-        if str(message.content) == "-abb":
-            await actual_work.send (abb)
-        if str(message.content) == '-dropped':
-            await actual_work.send(droppedseries)
         if str(message.content) == '-TMM':
             await actual_work.send(TMM)
         if str(message.content) == '-BTY':
@@ -169,8 +147,6 @@ async def on_message(message):
             await actual_work.send(APITS)
         if str(message.content) == '-IAM':
             await actual_work.send(IAM)
-        if str(message.content) == '-DIE':
-            await actual_work.send(DIE)
         if str(message.content) == '-OG':
             await actual_work.send(OG)
         if str(message.content) == '-drive':
@@ -186,17 +162,13 @@ async def on_message(message):
             await actual_work.send(f"Welcome " + user.mention + f"! To start off, please put your email under {email.mention} for future references."
         f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
         f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
-        f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing -halp."
+        f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing `-halp`."
         f" Once again, welcome!")
 
 
 
     #not_bot channel
     if message.channel == not_bot:
-        if str(message.content) == "-abb":
-            await not_bot.send (abb)
-        if str(message.content) == '-dropped':
-            await not_bot.send(droppedseries)
         if str(message.content) == '-TMM':
             await not_bot.send(TMM)
         if str(message.content) == '-BTY':
@@ -205,8 +177,6 @@ async def on_message(message):
             await not_bot.send(APITS)
         if str(message.content) == '-IAM':
             await not_bot.send(IAM)
-        if str(message.content) == '-DIE':
-            await not_bot.send(DIE)
         if str(message.content) == '-OG':
             await not_bot.send(OG)
         if str(message.content) == '-drive':
@@ -220,10 +190,6 @@ async def on_message(message):
 
     #monky shrine
     if message.channel == monky_shrine:
-        if str(message.content) == "-abb":
-            await monky_shrine.send(abb)
-        if str(message.content) == '-dropped':
-            await monky_shrine.send(droppedseries)
         if str(message.content) == '-TMM':
             await monky_shrine.send(TMM)
         if str(message.content) == '-BTY':
@@ -232,8 +198,6 @@ async def on_message(message):
             await monky_shrine.send(APITS)
         if str(message.content) == '-IAM':
             await monky_shrine.send(IAM)
-        if str(message.content) == '-DIE':
-            await monky_shrine.send(DIE)
         if str(message.content) == '-OG':
             await monky_shrine.send(OG)
         if str(message.content) == '-drive':
@@ -288,9 +252,9 @@ async def hiatusadd(ctx, arg):
             counter += 1
 
 @client.command()
-async def hiatusremove(ctx, *args):
+async def hiatusremove(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
-        hiatus_List.remove(*args)
+        hiatus_List.remove(arg)
 
 @client.command()
 async def hiatus(message):
@@ -310,6 +274,67 @@ async def hiatus(message):
 
         await message.send(embed=hiatusembed)
 
+
+#active series tingz
+
+active_List = []
+@client.command()
+async def activeadd(ctx, arg):
+    if (ctx.message.channel.id == 736741523051511851):
+        counter = 0
+        manjuupog = await ctx.send(f'{arg} has been added to the active series list!{arg}')
+        messages = await ctx.channel.history(limit=1, before=manjuupog).flatten()
+        for ctx.message in messages:
+            active_List.append(arg)
+            counter += 1
+
+@client.command()
+async def activeremove(ctx, arg):
+    if (ctx.message.channel.id == 736741523051511851):
+        active_List.remove(arg)
+
+@client.command()
+async def active(message):
+    if (message.channel.id == 736741523051511851):
+        activeembed = discord.Embed(
+            title= 'Active Monky Series',
+            color= discord.Colour.blue()
+    )
+
+        activeembed.set_author(name='Monky Scnas', icon_url='https://i.imgur.com/mqkwaLh.jpg')
+        activeembed.set_thumbnail(url='https://i.imgur.com/nRxOLm0.jpg')
+        activeembed.add_field(name="Yes.", value='\n'.join([''.join(map(str, item)) for item in active_List]), inline=True)
+        activeembed.set_footer(text='-[Series abbreviation] for drive link')
+
+        await message.send(embed=activeembed)
+
+#dropped series list
+
+dropped_List = []
+@client.command()
+async def droppedadd(ctx, arg):
+    if (ctx.message.channel.id == 736741523051511851):
+        counter = 0
+        aoipog = await ctx.send(f'{arg} has been added to the active series list!{arg}')
+        messages = await ctx.channel.history(limit=1, before=aoipog).flatten()
+        for ctx.message in messages:
+            dropped_List.append(arg)
+            counter += 1
+
+@client.command()
+async def dropped(message):
+    if (message.channel.id == 736741523051511851):
+        droppedembed = discord.Embed(
+            title= 'Dropped Monky Series',
+            color= discord.Colour.blue(),
+            description='Never to be opened again'
+    )
+
+        droppedembed.set_author(name='Monky Scnas', icon_url='https://i.imgur.com/E7XHm1J.jpg')
+        droppedembed.set_thumbnail(url='https://i.imgur.com/dtRtTAZ.jpg')
+        droppedembed.add_field(name="Yes.", value='\n'.join([''.join(map(str, item)) for item in dropped_List]), inline=True)
+
+        await message.send(embed=droppedembed)
 
 
 
