@@ -225,8 +225,7 @@ async def halp(message):
         helpembed.set_author(name='Bot commands', icon_url='https://i.imgur.com/177AazQ.jpg')
         helpembed.set_thumbnail(url='https://i.imgur.com/bJYt1Ob.jpg')
         helpembed.add_field(name="Remember to use the not-bot channel and update the sheets!", value=
-                    "-help for bot help lol\n"
-                "-abb for series abbreviations\n"
+                "-help for bot help lol\n"
                 "-[Series abbreviation] for the link to the series drive\n"
                 "-sheets for link to sheets\n"
                 "-drive for link to drive\n"
@@ -263,7 +262,8 @@ async def hiatus(message):
             title= 'Monks on Hiatus/Quit/MIA',
             description= 'Please put these next to your name if you are:\n'
                          'Missing in action → (?)\n'
-                         'Has reason for hiatus → (*)\n',
+                         'Has reason for hiatus → (*)\n'
+                         'Wrap your name in " " if there is any spaces in between ur name',
             color= discord.Colour.blue()
     )
 
@@ -279,7 +279,7 @@ async def hiatus(message):
 
 active_List = []
 @client.command()
-async def activeadd(ctx, arg):
+async def seriesadd(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
         counter = 0
         manjuupog = await ctx.send(f'{arg} has been added to the active series list!{arg}')
@@ -289,12 +289,12 @@ async def activeadd(ctx, arg):
             counter += 1
 
 @client.command()
-async def activeremove(ctx, arg):
+async def seriesremove(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
         active_List.remove(arg)
 
 @client.command()
-async def active(message):
+async def series(message):
     if (message.channel.id == 736741523051511851):
         activeembed = discord.Embed(
             title= 'Active Monky Series',
@@ -303,7 +303,7 @@ async def active(message):
 
         activeembed.set_author(name='Monky Scnas', icon_url='https://i.imgur.com/mqkwaLh.jpg')
         activeembed.set_thumbnail(url='https://i.imgur.com/nRxOLm0.jpg')
-        activeembed.add_field(name="Yes.", value='\n'.join([''.join(map(str, item)) for item in active_List]), inline=True)
+        activeembed.add_field(name="-drive for link to drive.", value='\n'.join([''.join(map(str, item)) for item in active_List]), inline=True)
         activeembed.set_footer(text='-[Series abbreviation] for drive link')
 
         await message.send(embed=activeembed)
