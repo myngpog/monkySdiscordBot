@@ -258,7 +258,6 @@ async def hiatusadd(ctx, arg):
 async def hiatusremove(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
         del hiatus[str(arg)]
-        #change
 
 
 
