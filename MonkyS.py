@@ -243,17 +243,13 @@ async def halp(message):
 @client.command()
 async def hiatusadd(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
-        counter = 0
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
-        messages = await ctx.channel.history(limit=1, before=senpog).flatten()
-        for ctx.message in messages:
-            counter += 1
-            with open("hiatus.txt", "a+") as hiatusfile:
-                hiatus1 = json.load(hiatusfile)
-                hiatus1["Hiatus"].append(arg)
-                hiatusfile.seek(0)
-                hiatusfile.close()
-                await ctx.send("peng wuz here")
+        with open("hiatus.txt", "a+") as hiatusfile:
+            hiatus1 = json.load(hiatusfile)
+            hiatus1["Hiatus"].append(arg)
+            hiatusfile.seek(0)
+            hiatusfile.close()
+            await ctx.send("peng wuz here")
 
 
 
