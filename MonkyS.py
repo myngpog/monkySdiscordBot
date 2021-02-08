@@ -249,7 +249,7 @@ async def hiatusadd(ctx, arg):
             with open("hiatus.txt", "a") as f:
                     hiatusbrr = json.load(f)
             hiatusbrr["Hiatus"].append(arg)
-            f.write(json.dump(hiatusbrr, f))
+            json.dumps(hiatusbrr, indent = 4)
             f.seek(0)
             f.close()
             await ctx.message("peng wuz here")
