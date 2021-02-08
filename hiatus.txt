@@ -1,6 +1,4 @@
-{
-"Hiatus":
-[
+
 "Moon",
 "Meryl",
 "Calvo",
@@ -19,6 +17,3 @@
 "Nom Nom",
 "klausilver(?)",
 "Sarcasm(*)"
-]
-
-}
