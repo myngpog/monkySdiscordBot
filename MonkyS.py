@@ -238,6 +238,7 @@ async def halp(message):
 
 
 
+
 #hiatus family tingz
 
 @client.command()
@@ -246,11 +247,11 @@ async def hiatusadd(ctx, arg):
         counter = 0
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
-        for ctx.message in messages:
-            counter += 1
-            with open("hiatus.txt", "a") as file:
-                file.write(json.dumps(arg))
-                file.close()
+        with open("hiatus.txt", 'a') as file:
+            for ctx.message in messages:
+                x = json.dumps(arg, indent=4)
+                file.write(x + '\n')
+
 
 
 @client.command()
