@@ -254,6 +254,7 @@ async def hiatusadd(ctx, arg):
                 json.dump(hiatus1, hiatusfile)
                 hiatusfile.seek(0)
                 hiatusfile.close()
+                await ctx.send("peng wuz here")
 
 
 
