@@ -249,13 +249,12 @@ async def hiatusadd(ctx, arg):
         for ctx.message in messages:
             with open("hiatus.txt", "a") as hiatusfile:
                 hiatusbrr = json.load(hiatusfile)
-                hiatusbrr["Hiatus"].append(arg)
+                hiatusbrr["Hiatus"].append({arg})
                 counter += 1
                 json.dump(hiatusbrr, hiatusfile)
+                await ctx.send("peng wuz here")
                 hiatusfile.seek(0)
                 hiatusfile.close()
-                await ctx.send("peng wuz here")
-
 
 
 
