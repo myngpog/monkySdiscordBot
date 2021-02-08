@@ -249,9 +249,9 @@ async def hiatusadd(ctx, arg):
         for ctx.message in messages:
             hiatusperson = {arg}
             counter += 1
-            file = open("hiatus.txt", "w")
-            json.dump(hiatusperson, file)
-            file.close()
+            json_file = open("hiatus.txt", "w")
+            json.dumps(hiatusperson)
+            json_file.close()
 
 
 
