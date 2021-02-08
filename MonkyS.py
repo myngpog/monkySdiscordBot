@@ -250,8 +250,8 @@ async def hiatusadd(ctx, arg):
             counter += 1
             json_file = open("hiatus.txt", "r+")
             hiatus1 = json.load(json_file)
-            await ctx.send('Peng wuz here')
             hiatus1["Hiatus"].append(arg)
+            await ctx.send('Peng wuz here')
             json.dump(hiatus1, json_file)
             json_file.seek(0)
             json_file.close()
