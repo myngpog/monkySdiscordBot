@@ -247,7 +247,7 @@ async def hiatusadd(ctx, arg):
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
-            hiatusperson = {arg}
+            hiatusperson = {"hiatus": arg}
             counter += 1
             open("hiatus.txt", "w")
             json.dumps(hiatusperson)
