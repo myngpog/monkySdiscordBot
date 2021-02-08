@@ -236,12 +236,15 @@ async def halp(message):
         await message.send(embed=helpembed)
 
 
-
-def hiatus_save(data, filename="hiatus.json"):
+filename = "hiatus.json"
+def hiatus_save(data, filename):
     with open(filename, "w") as f:
        json.dump(data, f, indent=4)
 
-hiatus_save("Peng")
+with open(filename, "r") as json_file:
+    data = json.load(json_file)
+    hiatus_save("Peng", filename)
+
 
 #hiatus family tingz
 @client.command()
