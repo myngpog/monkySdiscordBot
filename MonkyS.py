@@ -244,7 +244,7 @@ async def halp(message):
 async def hiatusadd(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
         await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
-        hiatusfile = json.load(open("hiatus.txt", "r"))
+        hiatusfile = json.load(open("hiatus.txt", "a"))
         hiatusfile['Hiatus'].append(arg)
         json.dump(hiatusfile, open("hiatus.txt", "a"))
         hiatusfile.seek(0)
