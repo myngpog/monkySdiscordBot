@@ -245,8 +245,7 @@ async def hiatusadd(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         with open("hiatus.txt", "a+") as hiatusfile:
-            hiatus1 = json.load(hiatusfile)
-            hiatus1["Hiatus"].append(arg)
+            ["Hiatus"].append(arg)
             hiatusfile.seek(0)
             hiatusfile.close()
             await ctx.send("peng wuz here")
