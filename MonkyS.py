@@ -255,7 +255,7 @@ async def hiatusadd(ctx, arg):
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
             #the code where i deleted
-            hiatus_save(arg)
+            hiatus_save(arg, filename)
 
 
 @client.command()
