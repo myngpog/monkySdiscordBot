@@ -237,10 +237,11 @@ async def halp(message):
 
 
 
-def write_json(data, filename="hiatus.json"):
+def hiatus_save(data, filename="hiatus.json"):
     with open(filename, "w") as f:
-        json.dump(data, f, indent=4)
+       json.dump(data, f, indent=4)
 
+hiatus_save("Peng")
 
 #hiatus family tingz
 @client.command()
@@ -250,9 +251,8 @@ async def hiatusadd(ctx, arg):
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
-            hiatus.json.append(arg)
-            counter += 1
-        write_json(arg, hiatus.json)
+            #the code where i deleted
+            hiatus_save(arg)
 
 
 @client.command()
