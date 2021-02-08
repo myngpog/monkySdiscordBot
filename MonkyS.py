@@ -246,7 +246,7 @@ async def hiatusadd(ctx, arg):
         await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         hiatusfile = json.load(open("hiatus.txt", "a"))
         hiatusfile['Hiatus'].append(arg)
-        json.dump(hiatusfile, open("hiatus.txt", "a"))
+        json.dumps(hiatusfile)
         hiatusfile.seek(0)
         hiatusfile.close()
 
