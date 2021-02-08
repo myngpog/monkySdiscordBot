@@ -1,4 +1,4 @@
-import discord, asyncio, random, json
+import discord, asyncio, random
 from discord.ext import commands
 
 #id: 739660030512595054
@@ -236,17 +236,11 @@ async def halp(message):
         await message.send(embed=helpembed)
 
 
-filename = "hiatus.json"
-def hiatus_save(data, filename):
-    with open(filename, "w") as f:
-       json.dump(data, f, indent=4)
 
-with open(filename, "r") as json_file:
-    data = json.load(json_file)
-    hiatus_save("Peng", filename)
 
 
 #hiatus family tingz
+hiatus_List = []
 @client.command()
 async def hiatusadd(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
@@ -254,14 +248,13 @@ async def hiatusadd(ctx, arg):
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
-            #the code where i deleted
-            hiatus_save(arg, filename)
-
+            hiatus_List.append(arg)
+            counter += 1
 
 @client.command()
 async def hiatusremove(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
-        hiatus.json.remove(arg)
+        hiatus_List.remove(arg)
 
 
 
@@ -280,7 +273,7 @@ async def hiatus(message):
         hiatusembed.set_footer(text='To remove yourself from the list, do -hiatusremove [name as it is on the list]')
         hiatusembed.set_author(name='Monks on vacation', icon_url='https://i.imgur.com/HCJ7ABF.jpg')
         hiatusembed.set_thumbnail(url='https://i.imgur.com/XvOQVVb.jpg')
-        hiatusembed.add_field(name="Come back soon pls", value='\n'.join([''.join(map(str, item)) for item in hiatus.json]), inline=True)
+        hiatusembed.add_field(name="Come back soon pls", value='\n'.join([''.join(map(str, item)) for item in hiatus_List]), inline=True)
 
         await message.send(embed=hiatusembed)
 
