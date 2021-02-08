@@ -246,6 +246,7 @@ async def hiatusadd(ctx, arg):
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         with open("hiatus.txt", "a+") as hiatusfile:
             ["Hiatus"].append(arg)
+            json.dumps(hiatusfile)
             hiatusfile.seek(0)
             hiatusfile.close()
             await ctx.send("peng wuz here")
