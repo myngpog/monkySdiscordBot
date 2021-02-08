@@ -1,6 +1,18 @@
 {
 "Hiatus":
-["Moon", "Meryl", "Calvo", "amiee", "Luna", "kadayu", "Seren","Aeris(?)", "Selah", "Yesen", "Wanheda(?)", "Kyv(?)",
+[
+"Moon",
+"Meryl",
+"Calvo",
+"amiee",
+"Luna",
+"kadayu",
+"Seren",
+"Aeris(?)",
+"Selah",
+"Yesen",
+"Wanheda(?)",
+"Kyv(?)",
 "Yohan",
 "leaf",
 "nezucoat(?)",
