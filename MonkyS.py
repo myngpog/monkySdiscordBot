@@ -247,10 +247,12 @@ async def hiatusadd(ctx, arg):
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
-            hiatusperson = {"hiatus": arg}
+            hiatusperson = {}
+            hiatusperson["Hiatus"] = arg
             counter += 1
-            open("hiatus.txt", "w")
-            json.dumps(hiatusperson)
+            file = open("hiatus.txt", "a")
+            json.dump(hiatusperson, file)
+            file.close()
 
 
 
@@ -267,13 +269,13 @@ async def hiatus(message):
     )
         json_file = open("hiatus.txt")
         hiatus2 = json.load(json_file)
-        json_file.close()
         hiatusembed.set_footer(text='To remove yourself from the list, do -hiatusremove [name as it is on the list]')
         hiatusembed.set_author(name='Monks on vacation', icon_url='https://i.imgur.com/HCJ7ABF.jpg')
         hiatusembed.set_thumbnail(url='https://i.imgur.com/XvOQVVb.jpg')
         hiatusembed.add_field(name="Come back soon pls", value='\n'.join([''.join(map(str, item)) for item in hiatus2["Hiatus"]]), inline=True)
 
         await message.send(embed=hiatusembed)
+        json_file.close()
 
 
 #active series tingz
