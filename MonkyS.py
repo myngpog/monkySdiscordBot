@@ -248,11 +248,9 @@ async def hiatusadd(ctx, arg):
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
             counter += 1
-            json_file = open("hiatus.txt", "a")
-            hiatus1 = json.load(json_file)
-            hiatus1["Hiatus"].append(f'{arg}')
-            json.dumps(hiatus1)
-
+            with open("hiatus.txt", "a") as file:
+                file.write(json.dumps(arg))
+                file.close()
 
 
 @client.command()
