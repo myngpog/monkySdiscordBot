@@ -1,4 +1,4 @@
-import discord, asyncio, random
+import discord, asyncio, random, json
 from discord.ext import commands
 
 #id: 739660030512595054
@@ -240,7 +240,7 @@ async def halp(message):
 
 
 #hiatus family tingz
-hiatus_List = []
+
 @client.command()
 async def hiatusadd(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
@@ -248,13 +248,11 @@ async def hiatusadd(ctx, arg):
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
-            hiatus_List.append(arg)
+            hiatusperson = {arg}
             counter += 1
-
-@client.command()
-async def hiatusremove(ctx, arg):
-    if (ctx.message.channel.id == 736741523051511851):
-        hiatus_List.remove(arg)
+            file = open("hiatus.txt", "w")
+            json.dump(hiatusperson, file)
+            file.close()
 
 
 
@@ -273,7 +271,7 @@ async def hiatus(message):
         hiatusembed.set_footer(text='To remove yourself from the list, do -hiatusremove [name as it is on the list]')
         hiatusembed.set_author(name='Monks on vacation', icon_url='https://i.imgur.com/HCJ7ABF.jpg')
         hiatusembed.set_thumbnail(url='https://i.imgur.com/XvOQVVb.jpg')
-        hiatusembed.add_field(name="Come back soon pls", value='\n'.join([''.join(map(str, item)) for item in hiatus_List]), inline=True)
+        hiatusembed.add_field(name="Come back soon pls", value='\n'.join([''.join(map(str, item)) for item in "hiatus.txt"]), inline=True)
 
         await message.send(embed=hiatusembed)
 
