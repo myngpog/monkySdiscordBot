@@ -248,7 +248,7 @@ async def hiatusadd(ctx, arg):
         for ctx.message in messages:
             with open("hiatus.txt", "r") as f:
                     hiatusbrr = json.load(f)
-            hiatusbrr.append(arg)
+            hiatusbrr["Hiatus"].append(arg)
             with open("hiatus.txt", "w") as f:
                 json.dump(hiatusbrr, f)
                 f.seek(0)
