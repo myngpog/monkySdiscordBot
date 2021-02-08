@@ -1,19 +1,19 @@
 
-"Moon",
-"Meryl",
-"Calvo",
-"amiee",
-"Luna",
-"kadayu",
-"Seren",
-"Aeris(?)",
-"Selah",
-"Yesen",
-"Wanheda(?)",
-"Kyv(?)",
-"Yohan",
-"leaf",
-"nezucoat(?)",
-"Nom Nom",
-"klausilver(?)",
-"Sarcasm(*)"
+Moon
+Meryl
+Calvo
+amiee
+Luna
+kadayu
+Seren
+Aeris(?)
+Selah
+Yesen
+Wanheda(?)
+Kyv(?)
+Yohan
+leaf
+nezucoat(?)
+Nom Nom
+klausilver(?)
+Sarcasm(*)
