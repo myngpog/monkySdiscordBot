@@ -248,10 +248,10 @@ async def hiatusadd(ctx, arg):
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
             counter += 1
-            with open("hiatus.txt", "a") as data:
+            with open("hiatus.txt", "a") as file:
                 hiatusperson = {"Hiatus": arg}
-                data.write(json.dumps(hiatusperson))
-                data.close()
+                file.write(json.dumps(hiatusperson))
+                file.close()
 
 
 
@@ -266,7 +266,7 @@ async def hiatus(message):
                          'Wrap your name in " " if there is any spaces in between ur name',
             color= discord.Colour.blue()
     )
-        json_file = open("hiatus.txt")
+        json_file = open("hiatus.txt", "r")
         hiatus2 = json.load(json_file)
         hiatusembed.set_footer(text='To remove yourself from the list, do -hiatusremove [name as it is on the list]')
         hiatusembed.set_author(name='Monks on vacation', icon_url='https://i.imgur.com/HCJ7ABF.jpg')
