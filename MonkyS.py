@@ -253,7 +253,6 @@ async def hiatusadd(ctx, arg):
                 json.dump(hiatusbrr, f)
                 f.seek(0)
                 f.close()
-            await ctx.send("peng wuz here")
 
 
 @client.command()
