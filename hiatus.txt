@@ -5,7 +5,6 @@
 "Meryl",
 "Calvo",
 "amiee",
-"Luna",
 "kadayu",
 "Seren",
 "Aeris(?)",
@@ -18,7 +17,8 @@
 "nezucoat(?)",
 "Nom Nom",
 "klausilver(?)",
-"Sarcasm(*)"
+"Sarcasm(*)",
+"mecha"
 ]
 
 }
