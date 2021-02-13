@@ -247,7 +247,8 @@ async def halp(message):
 # add thing to the text
 def thing(para):
     with open('hiatus.txt', 'a') as file:
-        file.write(f'{para}')
+        file.write(f'\n{para}')
+        file.close()
 
 
 #hiatus family tingz
@@ -255,10 +256,8 @@ def thing(para):
 @client.command()
 async def hiatusadd(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
-        senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
-        messages = await ctx.channel.history(limit=1, before=senpog).flatten()
-        for ctx.message in messages:
-            thing(arg)
+        await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
+        thing(arg)
 
 
 @client.command()
