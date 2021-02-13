@@ -1,4 +1,4 @@
-import discord, asyncio, random, json
+import discord, asyncio, random
 from discord.ext import commands
 
 #id: 739660030512595054
@@ -245,10 +245,19 @@ async def halp(message):
 
 
 # add thing to the text
-def thing(para):
+def add(para):
     with open('hiatus.txt', 'a') as file:
         file.write(f'\n{para}')
         file.close()
+
+def remove(para):
+    with open("hiatus.txt", "r+") as file:
+        d = file.readlines()
+        file.seek(0)
+        for i in d:
+            if i != (f'{para}'):
+                file.write(i)
+        file.truncate()
 
 
 #hiatus family tingz
@@ -257,7 +266,7 @@ def thing(para):
 async def hiatusadd(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
         await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
-        thing(arg)
+        add(arg)
 
 
 @client.command()
@@ -280,6 +289,12 @@ async def hiatus(message):
         await message.send(embed=hiatusembed)
         file.seek(0)
         file.close()
+
+@client.command()
+async def hiatusremove(ctx, arg):
+    if (ctx.message.channel.id == 736741523051511851):
+        await ctx.send(f'{arg} has been removed from the hiatus list!')
+        remove(arg)
 
 
 #active series tingz
