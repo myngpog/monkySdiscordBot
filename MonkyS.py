@@ -247,7 +247,8 @@ async def halp(message):
 #test things
 def test():
     f = open("peng.txt", "a+")
-    f.write("peng likes penguins\r\n")
+    for i in range(2):
+        f.write("peng likes penguins %d\r\n" % (i+1))
     f.close()
 
 
@@ -361,7 +362,6 @@ async def dropped(message):
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name="wear a mask and wash your hands kekw + we're recruiting!"))
-    test()
 
 
 # update the sheets image
