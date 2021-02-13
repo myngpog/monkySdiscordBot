@@ -122,6 +122,7 @@ async def on_message(message):
     YL = ('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
     sheets = ('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
     BUD = ('https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
+    guide = ('https://drive.google.com/drive/folders/1RVCtqUmUpESvCVHv8wEiQqGHqWrmhaVZ?usp=sharing')
 
 
 #should also look into changing on_message() to prefixes
@@ -164,6 +165,8 @@ async def on_message(message):
         f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
         f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing `-halp`."
         f" Once again, welcome!")
+        if str(message.content) == '-guide':
+            await actual_work.send(guide)
 
 
 
@@ -187,6 +190,8 @@ async def on_message(message):
             await not_bot.send(sheets)
         if str(message.content) == '-NFB':
             await not_bot.send(BUD)
+        if str(message.content) == '-guide':
+            await not_bot.send(guide)
 
     #monky shrine
     if message.channel == monky_shrine:
@@ -208,6 +213,8 @@ async def on_message(message):
             await monky_shrine.send(sheets)
         if str(message.content) == '-NFB':
             await monky_shrine.send(BUD)
+        if str(message.content) == '-guide':
+            await monky_shrine.send(guide)
 
     await client.process_commands(message)
 
@@ -231,11 +238,19 @@ async def halp(message):
                 "-drive for link to drive\n"
                 "-dropped for our dropped series\n"
                 "-hiatusadd [name] to add yourself to our hiatus list\n"
+                "-guide to get our certified monky guides"
                 "-hiatusremove [name on hiatus list] to remove yourself from our hiatus list", inline=True)
 
         await message.send(embed=helpembed)
 
 
+#test things
+def test():
+    f = open("peng.txt", "a")
+
+    for i in range(2):
+        f.write("peng likes penguins\r\n")
+        f.close()
 
 
 #hiatus family tingz
