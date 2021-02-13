@@ -276,7 +276,7 @@ async def hiatus(message):
         hiatusembed.set_author(name='Monks on vacation', icon_url='https://i.imgur.com/HCJ7ABF.jpg')
         hiatusembed.set_thumbnail(url='https://i.imgur.com/XvOQVVb.jpg')
         with open('hiatus.txt', 'r') as hiatus2:
-            hiatusembed.add_field(name="Come back soon pls", value='\n'.join(hiatus2), inline=True)
+            hiatusembed.add_field(name="Come back soon pls", value='\n'.join([''.join(map(str, item)) for item in hiatus2]), inline=True)
 
         await message.send(embed=hiatusembed)
         hiatus2.seek(0)
