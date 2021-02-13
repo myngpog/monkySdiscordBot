@@ -250,12 +250,12 @@ def add(para):
         file.write(f'\n{para}')
         file.close()
 
-def remove(para):
+def remove(para2):
     with open("hiatus.txt", "r+") as file:
         d = file.readlines()
         file.seek(0)
         for i in d:
-            if i != (f'{para}'):
+            if i != (f'{para2}'):
                 file.write(i)
         file.truncate()
 
