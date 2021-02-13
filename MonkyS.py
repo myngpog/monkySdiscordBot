@@ -156,7 +156,7 @@ async def on_message(message):
             await actual_work.send(YL)
         if str(message.content) == '-sheets':
             await actual_work.send(sheets)
-        if str(message.content) == '-BUD':
+        if str(message.content) == '-NFB':
             await actual_work.send(BUD)
         if message.content.startswith("-whalecum"):
             user = message.mentions[0]
@@ -246,12 +246,13 @@ async def halp(message):
 
 # add thing to the text
 def add(para):
-    with open('hiatus.txt', 'a') as file:
+    with open('C:\Users\miku3\PycharmProjects\MonkyS\hiatus.txt', 'a') as file:
+        file.read()
         file.write(f'\n{para}')
         file.close()
 
 def remove(para):
-    with open("hiatus.txt", "r+") as file:
+    with open("C:\Users\miku3\PycharmProjects\MonkyS\hiatus.txt", "r+") as file:
         d = file.readlines()
         file.seek(0)
         for i in d:
@@ -283,7 +284,7 @@ async def hiatus(message):
         hiatusembed.set_footer(text='To remove yourself from the list, do -hiatusremove [name as it is on the list]')
         hiatusembed.set_author(name='Monks on vacation', icon_url='https://i.imgur.com/HCJ7ABF.jpg')
         hiatusembed.set_thumbnail(url='https://i.imgur.com/XvOQVVb.jpg')
-        with open('hiatus.txt', 'r') as file:
+        with open('C:\Users\miku3\PycharmProjects\MonkyS\hiatus.txt', 'r') as file:
             hiatusembed.add_field(name="Come back soon pls", value=(file.read()), inline=True)
 
         await message.send(embed=hiatusembed)
