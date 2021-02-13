@@ -247,12 +247,11 @@ async def halp(message):
 # add thing to the text
 def add(para):
     with open('hiatus.txt', 'a') as file:
-        file.read()
         file.write(f'\n{para}')
         file.close()
 
 def remove(para):
-    with open('hiatus.txt', "r+") as file:
+    with open("hiatus.txt", "r+") as file:
         d = file.readlines()
         file.seek(0)
         for i in d:
@@ -295,7 +294,8 @@ async def hiatus(message):
 async def hiatusremove(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
         remove(arg)
-        await ctx.send(f'{arg} has been removed from the hiatus list. Welcome back!')
+        await ctx.send(f'{arg} has been removed from the hiatus list!')
+
 
 
 #active series tingz
