@@ -250,6 +250,8 @@ def test():
     f.write("peng likes penguins\r\n")
     f.close()
 
+test()
+
 
 #hiatus family tingz
 
