@@ -362,7 +362,7 @@ async def dropped(message):
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name="wear a mask and wash your hands kekw + we're recruiting!"))
-
+    test()
 
 # update the sheets image
 async def update_your_sheets():
