@@ -246,11 +246,10 @@ async def halp(message):
 
 #test things
 def test():
-    f = open("peng.txt", "a")
+    f = open("peng.txt", "a+")
     f.write("peng likes penguins\r\n")
     f.close()
 
-test()
 
 
 #hiatus family tingz
@@ -362,6 +361,7 @@ async def dropped(message):
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name="wear a mask and wash your hands kekw + we're recruiting!"))
+    test()
 
 
 # update the sheets image
