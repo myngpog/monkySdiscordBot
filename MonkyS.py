@@ -247,7 +247,7 @@ async def halp(message):
 # add thing to the text
 def thing(para):
     with open('hiatus.txt', 'a') as file:
-        file.write(f'\n{para}')
+        file.write(f'{para}')
 
 
 #hiatus family tingz
