@@ -245,9 +245,9 @@ async def halp(message):
 
 
 # add thing to the text
-def thing():
+def thing(para):
     with open('hiatus.txt', 'a') as file:
-        file.write(f'\n{arg}')
+        file.write(f'\n{para}')
 
 
 #hiatus family tingz
@@ -258,7 +258,7 @@ async def hiatusadd(ctx, arg):
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
-            thing()
+            thing(arg)
 
 
 @client.command()
@@ -272,15 +272,16 @@ async def hiatus(message):
                          'Wrap your name in " " if there is any spaces in between ur name',
             color= discord.Colour.blue()
     )
+        json_file = open("hiatus.txt", "r")
+        hiatus2 = json.load(json_file)
         hiatusembed.set_footer(text='To remove yourself from the list, do -hiatusremove [name as it is on the list]')
         hiatusembed.set_author(name='Monks on vacation', icon_url='https://i.imgur.com/HCJ7ABF.jpg')
         hiatusembed.set_thumbnail(url='https://i.imgur.com/XvOQVVb.jpg')
-        with open('hiatus.txt', 'r') as hiatus2:
-            hiatusembed.add_field(name="Come back soon pls", value='\n'.join([''.join(map(str, item)) for item in hiatus2]), inline=True)
+        hiatusembed.add_field(name="Come back soon pls", value='\n'.join([''.join(map(str, item)) for item in hiatus2["Hiatus"]]), inline=True)
 
         await message.send(embed=hiatusembed)
-        hiatus2.seek(0)
-        hiatus2.close()
+        json_file.seek(0)
+        json_file.close()
 
 
 #active series tingz
