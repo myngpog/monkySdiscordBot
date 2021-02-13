@@ -244,12 +244,6 @@ async def halp(message):
         await message.send(embed=helpembed)
 
 
-#test things
-def test():
-    f = open("peng.txt", "a+")
-    for i in range(2):
-        f.write("peng likes penguins %d\r\n" % (i+1))
-    f.close()
 
 
 
@@ -261,13 +255,9 @@ async def hiatusadd(ctx, arg):
         senpog = await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         messages = await ctx.channel.history(limit=1, before=senpog).flatten()
         for ctx.message in messages:
-            with open("hiatus.txt", "a") as f:
-                    hiatusbrr = json.load(f)
-            hiatusbrr["Hiatus"].append(arg)
-            json.dumps(hiatusbrr, indent = 4)
-            f.seek(0)
-            f.close()
-            await ctx.message("peng wuz here")
+            file = open("hiatus.txt", "a")
+            file.write(f"{arg} \n")
+            file.close()
 
 
 @client.command()
@@ -362,7 +352,6 @@ async def dropped(message):
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name="wear a mask and wash your hands kekw + we're recruiting!"))
-    test()
 
 # update the sheets image
 async def update_your_sheets():
