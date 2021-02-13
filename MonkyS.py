@@ -247,10 +247,8 @@ async def halp(message):
 #test things
 def test():
     f = open("peng.txt", "a")
-
-    for i in range(2):
-        f.write("peng likes penguins\r\n")
-        f.close()
+    f.write("peng likes penguins\r\n")
+    f.close()
 
 
 #hiatus family tingz
