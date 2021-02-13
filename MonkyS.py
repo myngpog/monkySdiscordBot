@@ -246,7 +246,7 @@ async def halp(message):
 
 # add thing to the text
 def add(para):
-    with open('hiatus.txt', 'a+') as file:
+    with open('hiatus.txt', 'a') as file:
         file.write(f'\n{para}')
         file.close()
 
