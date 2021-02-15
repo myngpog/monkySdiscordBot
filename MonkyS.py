@@ -244,7 +244,7 @@ async def halp(message):
         await message.send(embed=helpembed)
 
 
-# add thing to the text
+# beginning of monkaS
 def add(para):
     with open('hiatus.txt', 'a') as file:
         file.write(f'{para}\n')
@@ -259,8 +259,8 @@ def remove(para):
     for line in lines:
         if line.strip("\n") != f"{para}":
             new_file.write(line)
-
     new_file.close()
+#end of monkaS
 
 
 #hiatus family tingz
@@ -268,8 +268,7 @@ def remove(para):
 @client.command()
 async def hiatusadd(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
-        input = arg
-        add(input)
+        add(arg)
         await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
 
 
@@ -297,8 +296,7 @@ async def hiatus(message):
 @client.command()
 async def hiatusremove(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
-        input = arg
-        remove(input)
+        remove(arg)
 
 
 #active series tingz
