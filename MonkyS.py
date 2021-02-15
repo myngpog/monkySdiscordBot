@@ -246,16 +246,16 @@ async def halp(message):
 
 # add thing to the text
 def add(para):
-    with open('hiatus', 'a') as file:
+    with open('hiatus.txt', 'a') as file:
         file.write(f'{para}\n')
         file.close()
 
 def remove(para):
-    a_file = open("hiatus", "r")
+    a_file = open("hiatus.txt", "r")
     lines = a_file.readlines()
     a_file.close()
 
-    new_file = open("hiatus", "w")
+    new_file = open("hiatus.txt", "w")
     for line in lines:
         if line.strip("\n") != f"{para}":
             new_file.write(line)
@@ -286,7 +286,7 @@ async def hiatus(message):
         hiatusembed.set_footer(text='To remove yourself from the list, do -hiatusremove [name as it is on the list]')
         hiatusembed.set_author(name='Monks on vacation', icon_url='https://i.imgur.com/HCJ7ABF.jpg')
         hiatusembed.set_thumbnail(url='https://i.imgur.com/XvOQVVb.jpg')
-        with open('hiatus', 'r') as file:
+        with open('hiatus.txt', 'r') as file:
             hiatusembed.add_field(name="Come back soon pls", value=(file.read()), inline=True)
 
         await message.send(embed=hiatusembed)
