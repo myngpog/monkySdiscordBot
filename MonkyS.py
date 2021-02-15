@@ -252,14 +252,14 @@ def add(para):
         file.write(f'{para}\n')
         file.close()
 
-def remove(para):
+def remove(para2):
     a_file = open("hiatus.txt", "r")
     lines = a_file.readlines()
     a_file.close()
 
     new_file = open("hiatus.txt", "w")
     for line in lines:
-        if line.strip("\n") != f"{para}":
+        if line.strip("\n") != f"{para2}":
             new_file.write(line)
     new_file.close()
 #end of monkaS
