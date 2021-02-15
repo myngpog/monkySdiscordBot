@@ -251,13 +251,16 @@ def add(para):
         file.close()
 
 def remove(para):
-    with open('hiatus.txt', "r+") as file:
-        d = file.readlines()
-        file.seek(0)
-        for i in d:
-            if i != (f'{para}'):
-                file.write(i)
-        file.truncate()
+    a_file = open("hiatus.txt", "r")
+    lines = a_file.readlines()
+    a_file.close()
+
+    new_file = open("hiatus.txt", "w")
+    for line in lines:
+        if line.strip("\n") != f"{para}":
+            new_file.write(line)
+
+    new_file.close()
 
 
 #hiatus family tingz
