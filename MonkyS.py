@@ -269,7 +269,6 @@ def remove(para):
 async def hiatusadd(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
         add(arg)
-        await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
         print(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
 
 
@@ -298,6 +297,8 @@ async def hiatus(message):
 async def hiatusremove(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
         remove(arg)
+        print(f'{arg} has been removed from the hiatus list!')
+
 
 
 #active series tingz
