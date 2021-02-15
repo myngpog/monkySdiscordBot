@@ -268,8 +268,11 @@ def remove(para):
 @client.command()
 async def hiatusadd(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
-        input = arg
-        add(input)
+
+        with open('hiatus.txt', 'a') as file:
+            file.write(f'{arg}\n')
+            file.close()
+
         await ctx.send(f'{arg} has been added to the hiatus list! To remove please do -hiatusremove {arg}')
 
 
@@ -297,8 +300,16 @@ async def hiatus(message):
 @client.command()
 async def hiatusremove(ctx, arg):
     if (ctx.message.channel.id == 736741523051511851):
-        input = arg
-        remove(input)
+        a_file = open("hiatus.txt", "r")
+        lines = a_file.readlines()
+        a_file.close()
+
+        new_file = open("hiatus.txt", "w")
+        for line in lines:
+            if line.strip("\n") != f"{arg}":
+                new_file.write(line)
+
+        new_file.close()
 
 
 #active series tingz
