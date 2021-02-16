@@ -1,9 +1,7 @@
-import discord, asyncio, random, redis, os
+import discord, asyncio, random
 from discord.ext import commands
 
 #id: 739660030512595054
-
-r = redis.from_url(os.environ.get("redis://:pcd597b25214f7830b154f39d4a14fabe6967be7e2a2085de60cb45b6c4d76be8@ec2-34-203-107-40.compute-1.amazonaws.com:23249"))
 
 def read_token():
     with open("token.txt", "r") as f:
