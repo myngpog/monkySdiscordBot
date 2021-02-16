@@ -303,22 +303,6 @@ async def hiatusremove(ctx, arg):
 
 #active series tingz
 
-active_List = []
-@client.command()
-async def seriesadd(ctx, arg):
-    if (ctx.message.channel.id == 736741523051511851):
-        counter = 0
-        manjuupog = await ctx.send(f'{arg} has been added to the active series list!{arg}')
-        messages = await ctx.channel.history(limit=1, before=manjuupog).flatten()
-        for ctx.message in messages:
-            active_List.append(arg)
-            counter += 1
-
-@client.command()
-async def seriesremove(ctx, arg):
-    if (ctx.message.channel.id == 736741523051511851):
-        active_List.remove(arg)
-
 @client.command()
 async def series(message):
     if (message.channel.id == 736741523051511851):
@@ -329,23 +313,13 @@ async def series(message):
 
         activeembed.set_author(name='Monky Scnas', icon_url='https://i.imgur.com/mqkwaLh.jpg')
         activeembed.set_thumbnail(url='https://i.imgur.com/nRxOLm0.jpg')
-        activeembed.add_field(name="-drive for link to drive.", value='\n'.join([''.join(map(str, item)) for item in active_List]), inline=True)
         activeembed.set_footer(text='-[Series abbreviation] for drive link')
+        with open('series.txt', 'r') as file:
+            activeembed.add_field(name="Come back soon pls", value=(file.read()), inline=True)
 
         await message.send(embed=activeembed)
 
 #dropped series list
-
-dropped_List = []
-@client.command()
-async def droppedadd(ctx, arg):
-    if (ctx.message.channel.id == 736741523051511851):
-        counter = 0
-        aoipog = await ctx.send(f'{arg} has been added to the active series list!{arg}')
-        messages = await ctx.channel.history(limit=1, before=aoipog).flatten()
-        for ctx.message in messages:
-            dropped_List.append(arg)
-            counter += 1
 
 @client.command()
 async def dropped(message):
@@ -358,7 +332,8 @@ async def dropped(message):
 
         droppedembed.set_author(name='Monky Scnas', icon_url='https://i.imgur.com/E7XHm1J.jpg')
         droppedembed.set_thumbnail(url='https://i.imgur.com/dtRtTAZ.jpg')
-        droppedembed.add_field(name="Yes.", value='\n'.join([''.join(map(str, item)) for item in dropped_List]), inline=True)
+        with open('dropped.txt', 'r') as file:
+            droppedembed.add_field(name="Come back soon pls", value=(file.read()), inline=True)
 
         await message.send(embed=droppedembed)
 
