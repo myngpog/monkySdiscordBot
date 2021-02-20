@@ -315,7 +315,7 @@ async def series(message):
         activeembed.set_thumbnail(url='https://i.imgur.com/nRxOLm0.jpg')
         activeembed.set_footer(text='-[Series abbreviation] for drive link')
         with open('series.txt', 'r') as file:
-            activeembed.add_field(name="Come back soon pls", value=(file.read()), inline=True)
+            activeembed.add_field(name="Da series we work on", value=(file.read()), inline=True)
 
         await message.send(embed=activeembed)
 
@@ -333,7 +333,7 @@ async def dropped(message):
         droppedembed.set_author(name='Monky Scnas', icon_url='https://i.imgur.com/E7XHm1J.jpg')
         droppedembed.set_thumbnail(url='https://i.imgur.com/dtRtTAZ.jpg')
         with open('dropped.txt', 'r') as file:
-            droppedembed.add_field(name="Come back soon pls", value=(file.read()), inline=True)
+            droppedembed.add_field(name="Da series we don't work on no more", value=(file.read()), inline=True)
 
         await message.send(embed=droppedembed)
 
