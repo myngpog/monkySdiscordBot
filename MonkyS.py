@@ -123,6 +123,7 @@ async def on_message(message):
     sheets = ('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
     BUD = ('https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
     guide = ('https://drive.google.com/drive/folders/1RVCtqUmUpESvCVHv8wEiQqGHqWrmhaVZ?usp=sharing')
+    FM = ('https://drive.google.com/drive/folders/1lQV6PQggvsL4kMYXdDEVnlFhA_hvjbQn?usp=sharing')
 
 
 #should also look into changing on_message() to prefixes
@@ -167,6 +168,8 @@ async def on_message(message):
         f" Once again, welcome!")
         if str(message.content) == '-guide':
             await actual_work.send(guide)
+        if str(message.content) == '-FM':
+            await actual_work.send(FM)
 
 
 
@@ -192,6 +195,8 @@ async def on_message(message):
             await not_bot.send(BUD)
         if str(message.content) == '-guide':
             await not_bot.send(guide)
+        if str(message.content) == '-FM':
+            await not_bot.send(FM)
 
     #monky shrine
     if message.channel == monky_shrine:
@@ -215,6 +220,8 @@ async def on_message(message):
             await monky_shrine.send(BUD)
         if str(message.content) == '-guide':
             await monky_shrine.send(guide)
+        if str(message.content) == '-FM':
+            await not_bot.send(FM)
 
     await client.process_commands(message)
 

@@ -8,7 +8,6 @@ leaf
 nezucoat(?)
 Nom Nom
 klausilver(?)
-Sarcasm(*)
 mecha
 Meryl
 Calvo
