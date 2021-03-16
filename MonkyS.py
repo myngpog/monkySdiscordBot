@@ -61,7 +61,7 @@ async def on_message(message):
             # if DONE
             if str(bruh.content) == 'DONE':
                 newapplicant = message.author.mention
-                NASA1 = client.get_user(315869723373862917)
+                NASA1 = client.get_user(523966739810091029)
                 NASA2 = client.get_user(208108164061593600)
                 NASA3 = client.get_user(472238811691352065)
                 NASA4 = client.get_user(564523794920767488)
