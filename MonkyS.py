@@ -267,7 +267,7 @@ def remove(para2):
         if line.strip("\n") != f"{para2}":
             new_file.write(line)
     new_file.close()
-#end of monkaS xd
+#end of monkaS
 
 
 #hiatus family tingz
