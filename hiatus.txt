@@ -5,5 +5,4 @@ Calvo
 amiee
 kadayu
 Seren
-jammy(tests)
 Shota
