@@ -111,6 +111,7 @@ async def on_message(message):
     links = client.get_channel(736741434652360765)
     updates = client.get_channel(736747148263292929)
     ss = client.get_channel(736735728364683264)
+    staffintro = client.get_channel(736794148320968744)
 
 
     # Variables because APCSP is actually good for something
@@ -152,11 +153,12 @@ async def on_message(message):
             await actual_work.send(BUD)
         if message.content.startswith("-whalecum"):
             user = message.mentions[0]
-            await actual_work.send(f"Welcome " + user.mention + f"! To start off, please put your email under {email.mention} for future references."
-        f"** Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
-        f" After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
-        f" To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing `-halp`."
-        f" Once again, welcome!")
+            await actual_work.send(f"Welcome " + user.mention + f"! \n> To start off, please put your email under {email.mention} for future references."
+        f"\n**> Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
+        f"\n> After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
+        f"\n> To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing `-halp`."
+        f"\n> Feel free to introduce yourself under {staffintro.mention}."
+        f" Once again, welcome! We're glad you're here :D")
         if str(message.content) == '-guide':
             await actual_work.send(guide)
 
@@ -343,7 +345,7 @@ async def completed(message):
 # bot playing game
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game(name="we're recruiting!"))
+    await client.change_presence(activity=discord.Game(name="we're recruiting all roles!"))
 
 # update the sheets image
 async def update_your_sheets():
