@@ -131,11 +131,11 @@ async def on_message(message):
         if message.content.startswith("-whalecum"):
             user = message.mentions[0]
             await ss.send(f"Welcome " + user.mention + f"! \n> To start off, please put your email under {email.mention} for future references."
-        f"\n**> Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
+        f"\n> **Fill out the staff spreadsheet** under {links.mention}, **our scans drive link is also under there**."
         f"\n> After you're done with a chapter, please update under {updates.mention} and *update the sheets*."
         f"\n> To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing `-halp`."
         f"\n> Feel free to introduce yourself under {staffintro.mention}."
-        f" Once again, welcome! We're glad you're here :D")
+        f"\nOnce again, welcome! We're glad you're here :D")
 
 
     #actual work channel
