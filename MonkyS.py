@@ -116,15 +116,11 @@ async def on_message(message):
     # Variables because APCSP is actually good for something
     TMM = ("https://drive.google.com/drive/folders/1b39GLkqvf6O3e4oF8YHpvTyNZI877evH?usp=sharing")
     BTY = ("https://drive.google.com/drive/folders/1AjlmzrOdsbh7D4RlzPpWppiYl7bJMOk9?usp=sharing")
-    APITS = ("https://drive.google.com/drive/folders/1Z9-22iD9S-njMatW2XCILqTF1zM4XENF?usp=sharing")
-    IAM = ("https://drive.google.com/drive/folders/1E5b4fz7OEGC-MnMxScd4SZo5zLwj3z4I?usp=sharing")
     OG = ("**ON CONFIRMED HIATUS** https://drive.google.com/drive/folders/1c4z_7VA4vFgBNPb2bnlGKsHZcdqfGbBN?usp=sharing")
     drive = ('https://drive.google.com/drive/folders/1gBRNYPAqWtQ26j1uCoCqioWBoAg0nXJa?usp=sharing')
-    YL = ('**YL Collab -** https://drive.google.com/drive/folders/1C8hDP_3_JtU6QGCA9y9CaIlYumRqrOvc **Sheets -** https://docs.google.com/spreadsheets/d/1YPVqFFnnsiMeURTpDW056atqII4S5SPWMjBG7JwmeQc/edit#gid=0')
     sheets = ('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
     BUD = ('https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
     guide = ('https://drive.google.com/drive/folders/1RVCtqUmUpESvCVHv8wEiQqGHqWrmhaVZ?usp=sharing')
-    FM = ('https://drive.google.com/drive/folders/1lQV6PQggvsL4kMYXdDEVnlFhA_hvjbQn?usp=sharing')
 
 
 #should also look into changing on_message() to prefixes
@@ -146,16 +142,10 @@ async def on_message(message):
             await actual_work.send(TMM)
         if str(message.content) == '-BTY':
             await actual_work.send(BTY)
-        if str(message.content) == '-APITS':
-            await actual_work.send(APITS)
-        if str(message.content) == '-IAM':
-            await actual_work.send(IAM)
         if str(message.content) == '-OG':
             await actual_work.send(OG)
         if str(message.content) == '-drive':
             await actual_work.send(drive)
-        if str(message.content) == '-YL':
-            await actual_work.send(YL)
         if str(message.content) == '-sheets':
             await actual_work.send(sheets)
         if str(message.content) == '-NFB':
@@ -169,8 +159,6 @@ async def on_message(message):
         f" Once again, welcome!")
         if str(message.content) == '-guide':
             await actual_work.send(guide)
-        if str(message.content) == '-FM':
-            await actual_work.send(FM)
 
 
 
@@ -180,24 +168,16 @@ async def on_message(message):
             await not_bot.send(TMM)
         if str(message.content) == '-BTY':
             await not_bot.send(BTY)
-        if str(message.content) == '-APITS':
-            await not_bot.send(APITS)
-        if str(message.content) == '-IAM':
-            await not_bot.send(IAM)
         if str(message.content) == '-OG':
             await not_bot.send(OG)
         if str(message.content) == '-drive':
             await not_bot.send(drive)
-        if str(message.content) == '-YL':
-            await not_bot.send(YL)
         if str(message.content) == '-sheets':
             await not_bot.send(sheets)
         if str(message.content) == '-NFB':
             await not_bot.send(BUD)
         if str(message.content) == '-guide':
             await not_bot.send(guide)
-        if str(message.content) == '-FM':
-            await not_bot.send(FM)
 
     #monky shrine
     if message.channel == monky_shrine:
@@ -205,24 +185,16 @@ async def on_message(message):
             await monky_shrine.send(TMM)
         if str(message.content) == '-BTY':
             await monky_shrine.send(BTY)
-        if str(message.content) == '-APITS':
-            await monky_shrine.send(APITS)
-        if str(message.content) == '-IAM':
-            await monky_shrine.send(IAM)
         if str(message.content) == '-OG':
             await monky_shrine.send(OG)
         if str(message.content) == '-drive':
             await monky_shrine.send(drive)
-        if str(message.content) == '-YL':
-            await monky_shrine.send(YL)
         if str(message.content) == '-sheets':
             await monky_shrine.send(sheets)
         if str(message.content) == '-NFB':
             await monky_shrine.send(BUD)
         if str(message.content) == '-guide':
             await monky_shrine.send(guide)
-        if str(message.content) == '-FM':
-            await not_bot.send(FM)
 
     await client.process_commands(message)
 
@@ -246,7 +218,8 @@ async def halp(message):
                 "-drive for link to drive\n"
                 "-dropped for our dropped series\n"
                 "-hiatusadd [name] to add yourself to our hiatus list\n"
-                "-guide to get our certified monky guides"
+                "-guide to get our certified monky guides\n"
+                "-completed for a list of our completed series\n"
                 "-hiatusremove [name on hiatus list] to remove yourself from our hiatus list", inline=True)
 
         await message.send(embed=helpembed)
@@ -344,6 +317,24 @@ async def dropped(message):
             droppedembed.add_field(name="Da series we don't work on no more", value=(file.read()), inline=True)
 
         await message.send(embed=droppedembed)
+
+
+#completed series
+@client.command()
+async def completed(message):
+    if (message.channel.id == 736741523051511851):
+        completedembed = discord.Embed(
+            title= 'Completed Monky Series',
+            color= discord.Colour.blue(),
+            description='Kreygasmic, really.'
+    )
+
+        completedembed.set_author(name='Monky Scnas', icon_url='https://i.imgur.com/i52h9o1.jpg')
+        completedembed.set_thumbnail(url='https://i.imgur.com/e5HGWni.jpg')
+        with open('completed.txt', 'r') as file:
+            completedembed.add_field(name="Da series we poured our blood, sweat, and tears on", value=(file.read()), inline=True)
+
+        await message.send(embed=completedembed)
 
 
 
