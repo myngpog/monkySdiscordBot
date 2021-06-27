@@ -204,7 +204,7 @@ async def on_message(message):
         if str(message.content) == '-guides':
             await monky_shrine.send(guide)
         if str(message.content) == '-LSD':
-            await not_bot.send(LSD)
+            await monky_shrine.send(LSD)
 
     await client.process_commands(message)
 
