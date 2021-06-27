@@ -26,7 +26,7 @@ async def on_raw_reaction_add(payload):
     channel5 = client.get_channel(738107566692761721)
     member = payload.member
 
-    if message_id == 740298503854751815:
+    if message_id == 858559645618667520:
         await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," 
                           f" READ the corresponding docs for further instructions. After you're done, please type 'APPLY' to begin your application process.")
 
@@ -122,6 +122,7 @@ async def on_message(message):
     sheets = ('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
     BUD = ('https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
     guide = ('https://drive.google.com/drive/folders/1RVCtqUmUpESvCVHv8wEiQqGHqWrmhaVZ?usp=sharing')
+    LSD = ('https://drive.google.com/drive/folders/1Y0I4CV6hqv0_RG3WVhfKlul9JY7g7_w3?usp=sharing')
 
 
 #should also look into changing on_message() to prefixes
@@ -152,6 +153,8 @@ async def on_message(message):
             await actual_work.send(sheets)
         if str(message.content) == '-NFB':
             await actual_work.send(BUD)
+        if str(message.content) == '-LSD':
+            await not_bot.send(LSD)
         if message.content.startswith("-whalecum"):
             user = message.mentions[0]
             await actual_work.send(f"Welcome " + user.mention + f"! \n> To start off, please put your email under {email.mention} for future references."
@@ -160,7 +163,7 @@ async def on_message(message):
         f"\n> To see what stuff you're assigned, look at the sheets or get a link to the sheets through our bot under {not_bot.mention} by doing `-halp`."
         f"\n> Feel free to introduce yourself under {staffintro.mention}."
         f" Once again, welcome! We're glad you're here :D")
-        if str(message.content) == '-guide':
+        if str(message.content) == '-guides':
             await actual_work.send(guide)
 
 
@@ -179,8 +182,10 @@ async def on_message(message):
             await not_bot.send(sheets)
         if str(message.content) == '-NFB':
             await not_bot.send(BUD)
-        if str(message.content) == '-guide':
+        if str(message.content) == '-guides':
             await not_bot.send(guide)
+        if str(message.content) == '-LSD':
+            await not_bot.send(LSD)
 
     #monky shrine
     if message.channel == monky_shrine:
@@ -196,8 +201,10 @@ async def on_message(message):
             await monky_shrine.send(sheets)
         if str(message.content) == '-NFB':
             await monky_shrine.send(BUD)
-        if str(message.content) == '-guide':
+        if str(message.content) == '-guides':
             await monky_shrine.send(guide)
+        if str(message.content) == '-LSD':
+            await not_bot.send(LSD)
 
     await client.process_commands(message)
 
@@ -220,15 +227,13 @@ async def halp(message):
                 "-sheets for link to sheets\n"
                 "-drive for link to drive\n"
                 "-dropped for our dropped series\n"
-                "-hiatusadd [name] to add yourself to our hiatus list\n"
-                "-guide to get our certified monky guides\n"
-                "-completed for a list of our completed series\n"
-                "-hiatusremove [name on hiatus list] to remove yourself from our hiatus list", inline=True)
+                "-guides to get our certified monky guides\n"
+                "-completed for a list of our completed series\n", inline=True)
 
         await message.send(embed=helpembed)
 
 
-# beginning of monkaS
+# beginning of monkaS PLEASE FIX THIS SHITSHOW
 def add(para):
     with open('hiatus.txt', 'a') as file:
         file.write(f'{para}\n')
@@ -247,7 +252,7 @@ def remove(para2):
 #end of monkaS xd
 
 
-#hiatus family tingz
+#hiatus family tingz FIX
 
 @client.command()
 async def hiatusadd(ctx, arg):
