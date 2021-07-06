@@ -222,13 +222,14 @@ async def halp(message):
         helpembed.set_author(name='Bot commands', icon_url='https://i.imgur.com/177AazQ.jpg')
         helpembed.set_thumbnail(url='https://i.imgur.com/bJYt1Ob.jpg')
         helpembed.add_field(name="Remember to use the not-bot channel and update the sheets!", value=
-                "-help for bot help lol\n"
+                "-halp for bot help lol\n"
                 "-[Series abbreviation] for the link to the series drive\n"
                 "-sheets for link to sheets\n"
                 "-drive for link to drive\n"
-                "-dropped for our dropped series\n"
-                "-guides to get our certified monky guides\n"
-                "-completed for a list of our completed series\n", inline=True)
+                "-guides to get our certified monky guides\n"                
+                "-series for our **current** series\n"
+                "-completed for a list of our **completed** series\n"
+                "-dropped for our **dropped** series\n", inline=True)
 
         await message.send(embed=helpembed)
 
