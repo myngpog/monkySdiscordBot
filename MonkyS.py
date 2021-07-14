@@ -92,7 +92,8 @@ async def on_message(message):
                 applicationembed.set_thumbnail(url='https://i.imgur.com/dtRtTAZ.jpg')
                 applicationembed.add_field(name='Interview', value=final, inline=True)
 
-                await channelbruhbruh.send(embed=applicationembed)
+                #SEND MESSAGE TO CHANNEL
+                await test.send(embed=applicationembed)
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
