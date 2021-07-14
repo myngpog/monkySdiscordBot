@@ -27,8 +27,7 @@ async def on_raw_reaction_add(payload):
     member = payload.member
 
     if message_id == 858559645618667520:
-        await member.send(f"Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing ," 
-                          f" READ the corresponding docs for further instructions. After you're done, please type 'APPLY' to begin your application process.")
+        await member.send("**Hello!**\n> 1) Here is the link to the tests: https://drive.google.com/drive/folders/15_QheyCOo_Xrzfrju7cKkXMPL854p8L8?usp=sharing\n> 2) **__READ__ the corresponding docs for further instructions**\n> 3) After you're done, please type **'APPLY'** to begin your application process.")
 
 
 # APPLY
@@ -38,17 +37,17 @@ async def on_message(message):
         if str(message.content) == 'APPLY':
             def check(no):
                 return no.channel == message.channel
-            ao3pog = await message.author.send('Application process started~')
-            await message.author.send('What role(s) are you interested in applying for?')
+            ao3pog = await message.author.send('**Application process started ~ Make sure to answer all questions**')
+            await message.author.send('What **role(s)** are you interested in applying for?')
             # Chapters
             await client.wait_for('message', check=check)
-            await message.author.send('How many chapters can you do per week?')
+            await message.author.send('How many **chapters **can you do per week?')
             # Volunteer
             await client.wait_for('message', check=check)
             await message.author.send('Do you understand that this is volunteer work?')
             # Link
             await client.wait_for('message', check=check)
-            await message.author.send('Link your test or past work (if test, make sure we have edit/suggestion perms)')
+            await message.author.send('**Link** your __test__ or __past work__ (if test, **make sure we have edit/suggestion perms**)')
             # Finale
             await client.wait_for('message', check=check)
             await message.author.send("Lastly, please type 'DONE' to submit your application, or type 'CANCEL' to cancel lmao. If I don't respond with a confirmation after your reply, redo the app process again by typing 'APPLY'.")
