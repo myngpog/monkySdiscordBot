@@ -67,7 +67,7 @@ async def on_message(message):
                 aoieuy = client.get_user(472238811691352065)
                 Peng = client.get_user(523966739810091029)
                 test = client.get_channel(738107566692761721)
-                (await message.channel.send('Thank you for your application! We will get back to you ASAP!'))
+                (await message.channel.send('Thank you for your application! We will get back to in **2 days** max. If we take longer, then DM one of the NASA space monks the test link and let us know the bot may possibly be broken. Thanks again !'))
 
                 #STARING HERE: THIS DOES NOT WORK
                 (await test.send(f'New application pog! {manjuu.mention}, {aoieuy.mention}, {sen.mention}, {Peng.mention}. App from {newapplicant}'))
