@@ -72,7 +72,6 @@ async def on_message(message):
 
                 # expose dms
                 dm = []
-                channelbruhbruh = client.get_channel(738107566692761721)
                 counter = 0
                 channelbruh = message.channel
                 messages = await channelbruh.history(limit=10, after=ao3pog).flatten()
