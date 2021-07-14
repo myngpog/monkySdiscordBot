@@ -50,7 +50,7 @@ async def on_message(message):
             await message.author.send('**Link** your __test__ or __past work__ (if test, **make sure we have edit/suggestion perms**)')
             # Finale
             await client.wait_for('message', check=check)
-            await message.author.send("Lastly, please type **'DONE'** to **__submit__** your application, or type **'CANCEL'** to __cancel__ lmao. *If I don't respond with a confirmation after your reply, redo the app process again by typing 'APPLY'.*")
+            await message.author.send("Lastly, please type **'DONE'** to **__submit__** your application, or type **'CANCEL'** to __cancel__ lmao.\n\n> *If I don't respond with a confirmation after your reply, redo the app process again by typing 'APPLY'.*")
 
             # 2nd bruh bc im dumb but idk waht this is for
             def check(s):
