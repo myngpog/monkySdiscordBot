@@ -62,14 +62,15 @@ async def on_message(message):
             # if DONE
             if str(bruh.content) == 'DONE':
                 newapplicant = message.author.mention
-                NASA1 = client.get_user(523966739810091029)
-                NASA2 = client.get_user(208108164061593600)
-                NASA3 = client.get_user(472238811691352065)
-                NASA4 = client.get_user(564523794920767488)
+                manjuu = client.get_user(854543883845632000)
+                sen = client.get_user(208108164061593600)
+                aoieuy = client.get_user(472238811691352065)
+                Peng = client.get_user(523966739810091029)
                 test = client.get_channel(738107566692761721)
-                monky=client.get_channel(736704193905164441)
                 (await message.channel.send('Thank you for your application! We will get back to you ASAP!'))
-                (await monky.send(f'New application pog! {NASA1.mention}, {NASA2.mention}, {NASA3.mention}, {NASA4.mention}. App from {newapplicant}'))
+
+                #STARING HERE: THIS DOES NOT WORK
+                (await test.send(f'New application pog! {manjuu.mention}, {aoieuy.mention}, {sen.mention}, {Peng.mention}. App from {newapplicant}'))
 
                 # expose dms
                 dm = []
@@ -95,6 +96,7 @@ async def on_message(message):
 
                 #SEND MESSAGE TO CHANNEL
                 await test.send(embed=applicationembed)
+                #STOPPING HERE, THIS DOES NOT WORK
 
             # if CANCEL
             if str(bruh.content) == 'CANCEL':
