@@ -50,7 +50,7 @@ async def on_message(message):
             await message.author.send('**Link** your __test__ or __past work__ (if test, **make sure we have edit/suggestion perms**)')
             # Prior Work Experience
             await client.wait_for('message', check=check)
-            await message.author.send('Do you have any **prior experience**? If so, please describe them.')
+            await message.author.send('Do you have any **prior scans/work experience**? If so, please describe them.')
             # Other Scans
             await client.wait_for('message', check=check)
             await message.author.send('What **other scans group** are you in?')
