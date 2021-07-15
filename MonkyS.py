@@ -48,6 +48,15 @@ async def on_message(message):
             # Link
             await client.wait_for('message', check=check)
             await message.author.send('**Link** your __test__ or __past work__ (if test, **make sure we have edit/suggestion perms**)')
+            # Prior Work Experience
+            await client.wait_for('message', check=check)
+            await message.author.send('Do you have any **prior experience**? If so, please describe them.')
+            # Other Scans
+            await client.wait_for('message', check=check)
+            await message.author.send('What **other scans group** are you in?')
+            # concerns
+            await client.wait_for('message', check=check)
+            await message.author.send('Any **other notes**? // Tell us a **fun fact** about yourself :D')
             # Finale
             await client.wait_for('message', check=check)
             await message.author.send("Lastly, please type **'DONE'** to **__submit__** your application, or type **'CANCEL'** to __cancel__ lmao.\n\n> *If I don't respond with a confirmation after your reply, redo the app process again by typing 'APPLY'.*")
