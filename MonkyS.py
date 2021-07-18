@@ -84,7 +84,7 @@ async def on_message(message):
                 dm = []
                 counter = 0
                 channelbruh = message.channel
-                messages = await channelbruh.history(limit=10, after=ao3pog).flatten()
+                messages = await channelbruh.history(limit=15, after=ao3pog).flatten()
                 if message.author == client.user:
                     counter += 1
                     messages = message.content.split('\n')
