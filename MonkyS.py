@@ -134,6 +134,7 @@ async def on_message(message):
     BUD = ('https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
     guide = ('https://drive.google.com/drive/folders/1RVCtqUmUpESvCVHv8wEiQqGHqWrmhaVZ?usp=sharing')
     LSD = ('https://drive.google.com/drive/folders/1Y0I4CV6hqv0_RG3WVhfKlul9JY7g7_w3?usp=sharing')
+    SK = ('https://drive.google.com/drive/folders/1-xzS3RM2UsxmuWoEWjFc7CNd-VzhkRu7?usp=sharing')
 
 
 #should also look into changing on_message() to prefixes
@@ -165,7 +166,9 @@ async def on_message(message):
         if str(message.content) == '-NFB':
             await actual_work.send(BUD)
         if str(message.content) == '-LSD':
-            await not_bot.send(LSD)
+            await actual_work.send(LSD)
+        if str(message.content) == '-SK':
+            await actual_work.send(SK)
         if message.content.startswith("-whalecum"):
             user = message.mentions[0]
             await actual_work.send(f"Welcome " + user.mention + f"! \n> To start off, please put your email under {email.mention} for future references."
@@ -197,6 +200,8 @@ async def on_message(message):
             await not_bot.send(guide)
         if str(message.content) == '-LSD':
             await not_bot.send(LSD)
+        if str(message.content) == '-SK':
+            await not_bot.send(SK)
 
     #monky shrine
     if message.channel == monky_shrine:
@@ -216,6 +221,8 @@ async def on_message(message):
             await monky_shrine.send(guide)
         if str(message.content) == '-LSD':
             await monky_shrine.send(LSD)
+        if str(message.content) == '-SK':
+            await monky_shrine.send(SK)
 
     await client.process_commands(message)
 
@@ -233,14 +240,14 @@ async def halp(message):
         helpembed.set_author(name='Bot commands', icon_url='https://i.imgur.com/177AazQ.jpg')
         helpembed.set_thumbnail(url='https://i.imgur.com/bJYt1Ob.jpg')
         helpembed.add_field(name="Remember to use the not-bot channel and update the sheets!", value=
-                "-halp for bot help lol\n"
-                "-[Series abbreviation] for the link to the series drive\n"
-                "-sheets for link to sheets\n"
-                "-drive for link to drive\n"
-                "-guides to get our certified monky guides\n"                
-                "-series for our **current** series\n"
-                "-completed for a list of our **completed** series\n"
-                "-dropped for our **dropped** series\n", inline=True)
+                "**-halp** for bot help lol\n"
+                "**-[Series abbreviation]** for the link to the series drive\n"
+                "**-sheets** for link to sheets\n"
+                "**-drive** for link to drive\n"
+                "**-guides** to get our certified monky guides\n"                
+                "**-series** for our **current** series\n"
+                "**-completed** for a list of our **completed** series\n"
+                "**-dropped** for our **dropped** series\n", inline=True)
 
         await message.send(embed=helpembed)
 
