@@ -135,6 +135,7 @@ async def on_message(message):
     guide = ('https://drive.google.com/drive/folders/1RVCtqUmUpESvCVHv8wEiQqGHqWrmhaVZ?usp=sharing')
     LSD = ('https://drive.google.com/drive/folders/1Y0I4CV6hqv0_RG3WVhfKlul9JY7g7_w3?usp=sharing')
     SK = ('https://drive.google.com/drive/folders/1-xzS3RM2UsxmuWoEWjFc7CNd-VzhkRu7?usp=sharing')
+    US = ('https://drive.google.com/drive/folders/1SlwaFJSM5YQHmbP5YdySqKABnwWzt_-2?usp=sharing')
 
 
 #should also look into changing on_message() to prefixes
@@ -169,6 +170,8 @@ async def on_message(message):
             await actual_work.send(LSD)
         if str(message.content) == '-SK':
             await actual_work.send(SK)
+        if str(message.content) == '-US':
+            await actual_work.send(US)
         if message.content.startswith("-whalecum"):
             user = message.mentions[0]
             await actual_work.send(f"Welcome " + user.mention + f"! \n> To start off, please put your email under {email.mention} for future references."
@@ -202,6 +205,8 @@ async def on_message(message):
             await not_bot.send(LSD)
         if str(message.content) == '-SK':
             await not_bot.send(SK)
+        if str(message.content) == '-US':
+            await not_bot.send(US)
 
     #monky shrine
     if message.channel == monky_shrine:
@@ -223,6 +228,8 @@ async def on_message(message):
             await monky_shrine.send(LSD)
         if str(message.content) == '-SK':
             await monky_shrine.send(SK)
+        if str(message.content) == '-US':
+            await monky_shrine.send(US)
 
     await client.process_commands(message)
 
