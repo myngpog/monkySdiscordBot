@@ -133,7 +133,6 @@ async def on_message(message):
     sheets = ('UPDATE THE SHEETS PLS ISTG https://docs.google.com/spreadsheets/d/1s_k8RTbT5VBCd3yvSH353OX4AlewhfAlVg8uLk3iJT4/edit?usp=sharing')
     BUD = ('https://drive.google.com/drive/folders/1A0soi1Yz2BWQ9dspi7khoTw7jPz3qVyJ?usp=sharing')
     guide = ('https://drive.google.com/drive/folders/1RVCtqUmUpESvCVHv8wEiQqGHqWrmhaVZ?usp=sharing')
-    LSD = ('https://drive.google.com/drive/folders/1Y0I4CV6hqv0_RG3WVhfKlul9JY7g7_w3?usp=sharing')
     SK = ('https://drive.google.com/drive/folders/1-xzS3RM2UsxmuWoEWjFc7CNd-VzhkRu7?usp=sharing')
     UH = ('https://drive.google.com/drive/folders/16t5o0ib7LbPCsUkhrpCAY7nSa-5uXi2s?usp=sharing')
 
@@ -166,8 +165,6 @@ async def on_message(message):
             await actual_work.send(sheets)
         if str(message.content) == '-NFB':
             await actual_work.send(BUD)
-        if str(message.content) == '-LSD':
-            await actual_work.send(LSD)
         if str(message.content) == '-SK':
             await actual_work.send(SK)
         if str(message.content) == '-UH':
@@ -201,8 +198,6 @@ async def on_message(message):
             await not_bot.send(BUD)
         if str(message.content) == '-guides':
             await not_bot.send(guide)
-        if str(message.content) == '-LSD':
-            await not_bot.send(LSD)
         if str(message.content) == '-SK':
             await not_bot.send(SK)
         if str(message.content) == '-UH':
@@ -224,8 +219,6 @@ async def on_message(message):
             await monky_shrine.send(BUD)
         if str(message.content) == '-guides':
             await monky_shrine.send(guide)
-        if str(message.content) == '-LSD':
-            await monky_shrine.send(LSD)
         if str(message.content) == '-SK':
             await monky_shrine.send(SK)
         if str(message.content) == '-UK':
