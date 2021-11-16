@@ -221,8 +221,8 @@ async def on_message(message):
             await monky_shrine.send(guide)
         if str(message.content) == '-SK':
             await monky_shrine.send(SK)
-        if str(message.content) == '-UK':
-            await monky_shrine.send(UK)
+        if str(message.content) == '-UH':
+            await monky_shrine.send(UH)
 
     await client.process_commands(message)
 
